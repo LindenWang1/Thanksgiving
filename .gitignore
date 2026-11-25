@@ -1,0 +1,6 @@
+# Personalized cards, photos and gift codes: never commit these
+private/
+*.private.html
+thanksgiving-*.html
+
+.DS_Store

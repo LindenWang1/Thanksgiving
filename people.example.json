@@ -1,0 +1,66 @@
+{
+  "to": "You",
+  "from": "Linden",
+  "greeting": "Happy Thanksgiving, You",
+  "subtitle": "a few little things, because I'm grateful for you",
+  "theme": "harvest",
+  "leaves": "normal",
+  "letter": {
+    "text": "Hey You,\n\nWrite your main thank-you note here. Blank lines start a new paragraph.\n\nOpen the rest in any order.",
+    "signoff": "— Linden"
+  },
+  "cider": {
+    "title": "a warm drink, on me",
+    "text": "A short, sweet line. Set \"enabled\": false to hide this gift."
+  },
+  "gratitude": {
+    "title": "things I'm thankful for",
+    "items": [
+      "first thing",
+      "second thing",
+      "third thing"
+    ]
+  },
+  "ticket": {
+    "stub": "ADMIT TWO",
+    "title": "you're invited",
+    "text": "Friendsgiving at my place.",
+    "when": "Saturday, Nov 28 · 6 PM",
+    "where": "My place",
+    "date": "2026-11-28T18:00"
+  },
+  "photos": {
+    "title": "us, this year",
+    "items": [
+      {
+        "src": "photos/1.jpg",
+        "caption": "that one trip"
+      },
+      {
+        "src": "photos/2.jpg",
+        "caption": "best day"
+      }
+    ]
+  },
+  "giftcard": {
+    "enabled": true,
+    "title": "dinner, on me",
+    "brand": "DoorDash",
+    "amount": "$25",
+    "code": "",
+    "link": "",
+    "image": "",
+    "note": "Treat yourself this week."
+  },
+  "music": {
+    "title": "a song for you",
+    "artist": "",
+    "mode": "both",
+    "src": ""
+  },
+  "finale": {
+    "title": "Happy Thanksgiving!",
+    "text": "Your closing message.",
+    "signoff": "with love, Linden"
+  }
+}

@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Thanksgiving</title>
+<meta name="description" content="A little Thanksgiving thank-you, made for you.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Happy Thanksgiving 🍁">
+<meta property="og:description" content="A few little things, because I'm grateful for you. Open me first.">
+<meta property="og:type" content="website">
+<!-- After GitHub Pages is on, make this a full address, e.g. https://YOUR-USERNAME.github.io/thanksgiving/og.png -->
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6eee1">
+<meta name="theme-color" content="#f6eee1">
+<meta property="og:title" content="A little Thanksgiving thank-you 🍁">
+<meta property="og:description" content="Open the letter first.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%81%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+/* ==========================================================================
+   PERSONALIZE HERE
+   Easiest: open customize.html (or add #edit to this page's address) for a
+   live editor that downloads a private copy. Or edit this block by hand
+   (keep it valid JSON), or use tools/make_card.py with a JSON file.
+   - Set "enabled": false on any gift to hide it.
+   - Photos / music / gift-card image can be file paths, https:// links, or
+     data: URIs (make_card.py embeds local files automatically).
+   ========================================================================== */
+/* Your live site's address, used when the editor makes share links from a
+   copy on your computer. Example: "https://YOUR-USERNAME.github.io/thanksgiving/" */
+window.SITE_URL = "";
+/* CONFIG START */
+window.CARD = {
+  "to": "You",
+  "from": "Linden",
+  "greeting": "Happy Thanksgiving, You",
+  "subtitle": "a few little things, because I'm grateful for you",
+  "theme": "harvest",
+  "leaves": "normal",
+  "letter": {
+    "text": "Hey you,\n\nThanksgiving always makes me stop and think about the people who made my year better, and you're right at the top of that list.\n\nThanks for showing up, for the late-night talks, and for always having my back. I put together a few little things for you. Open them in any order.",
+    "signoff": "— Linden"
+  },
+  "cider": {
+    "title": "a warm drink, on me",
+    "text": "Hot apple cider, extra cinnamon. Next time we're both home, the first round is mine."
+  },
+  "gratitude": {
+    "title": "things I'm thankful for",
+    "items": [
+      "the way you make every plan more fun",
+      "always picking up the phone",
+      "your terrible (amazing) jokes",
+      "being someone I can count on"
+    ]
+  },
+  "ticket": {
+    "stub": "ADMIT TWO",
+    "title": "you're invited",
+    "text": "Friendsgiving: good food, board games, and way too much pie.",
+    "when": "Saturday, Nov 28 · 6 PM",
+    "where": "My place (bring your appetite)",
+    "date": "2026-11-28T18:00"
+  },
+  "photos": {
+    "title": "us, this year",
+    "items": []
+  },
+  "giftcard": {
+    "title": "dinner, on me",
+    "brand": "",
+    "amount": "$25",
+    "code": "SAMPLE-CODE-1234",
+    "link": "",
+    "image": "",
+    "note": "Treat yourself to a cozy dinner this week."
+  },
+  "music": {
+    "title": "a song for you",
+    "artist": "Harvest Lullaby",
+    "mode": "both",
+    "src": ""
+  },
+  "finale": {
+    "title": "Happy Thanksgiving!",
+    "text": "Thank you for being you. I'm so grateful we're in each other's lives.",
+    "signoff": "with love, Linden"
+  }
+};
+/* CONFIG END */
+</script>
+
+<style>
+:root{
+  --paper:#f6eee1; --paper-2:#efe1cb; --ink:#3a2c25; --muted:#8b7463;
+  --accent:#b5452a; --accent-2:#d9792b; --gold:#e0ad4a; --sheet:#fffaf2;
+  --hand:'Caveat', 'Bradley Hand', 'Segoe Print', cursive;
+  --serif:'Playfair Display', Georgia, serif;
+  --sans:'Inter', system-ui, -apple-system, sans-serif;
+  --light:#fffaf1; --glow:rgba(255,196,120,.38); --glow-2:rgba(222,132,70,.16); --pill:rgba(255,250,242,.75); --grain:.35;
+}
+body[data-theme="cranberry"]{ --paper:#f5ebe7; --paper-2:#ecd3cb; --accent:#9b2335; --accent-2:#c2503d; --glow:rgba(255,190,170,.36); --glow-2:rgba(155,35,53,.12); }
+body[data-theme="sage"]{ --paper:#eef0e5; --paper-2:#dde2cd; --accent:#7a5a2e; --accent-2:#a8743a; --glow:rgba(255,222,150,.34); --glow-2:rgba(110,130,80,.14); }
+body[data-theme="dusk"]{ --paper:#261b25; --paper-2:#3b2531; --ink:#f7ead9; --muted:#d4bba3; --accent:#f2a65e; --accent-2:#e0793a;
+  --light:#3a2733; --glow:rgba(255,140,60,.13); --glow-2:rgba(190,80,60,.12); --pill:rgba(255,240,220,.08); --grain:.18; }
+body[data-theme="dusk"].sealed .item:not(.env){opacity:.9}
+/* panels always use dark ink, whatever the page theme */
+.sheet,.editor,.toast-ink{--ink:#3a2c25; --muted:#8b7463}
+body[data-theme="dusk"] .sheet,body[data-theme="dusk"] .editor{--accent:#c45a2c}
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  min-height:100vh; color:var(--ink); font-family:var(--sans); overflow-x:hidden;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, var(--light) 0, transparent 70%),
+    radial-gradient(ellipse 60% 60% at 100% 100%, var(--paper-2) 0, transparent 70%),
+    var(--paper);
+}
+body::after{ /* warm, slowly drifting window light */
+  content:""; position:fixed; inset:-20%; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(ellipse 45% 40% at 22% 18%, var(--glow) 0, transparent 70%),
+    radial-gradient(ellipse 40% 35% at 85% 80%, var(--glow-2) 0, transparent 70%);
+  animation:drift 26s ease-in-out infinite alternate;
+}
+@keyframes drift{from{transform:translate(-2%,-1%) scale(1)}to{transform:translate(3%,2%) scale(1.08)}}
+body[data-theme="dusk"]::before{mix-blend-mode:screen}
+.garland{position:absolute; top:0; width:clamp(150px,22vw,300px); z-index:1; pointer-events:none; opacity:.95}
+.garland.l{left:0}.garland.r{right:0; transform:scaleX(-1)}
+.garland .sway{transform-origin:0 0; animation:sway 9s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-1.2deg)}to{transform:rotate(1.4deg)}}
+body.editing .garland.r{display:none}
+body::before{ /* paper grain */
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:var(--grain); mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .25 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+#leaves{position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:1}
+#burst{position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:60}
+
+header{position:relative; z-index:3; text-align:center; padding:clamp(22px,4.5vh,52px) 20px 0}
+header h1{font-family:var(--serif); font-weight:500; font-size:clamp(1.8rem,4.6vw,3rem); margin:0; letter-spacing:-.01em}
+header h1 em{font-style:italic; color:var(--accent)}
+header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:var(--muted); margin:.3em 0 0}
+
+.stage{
+  position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:clamp(8px,2vh,32px) 24px 48px;
+  display:grid; gap:clamp(6px,1.6vh,24px) clamp(8px,3vw,40px); align-items:center; justify-items:center;
+  grid-template-columns:1fr 1.25fr 1fr;
+  grid-template-areas:
+    "cider    envelope bag"
+    "music    envelope ticket"
+    "photos   box      giftcard";
+}
+.item{
+  --r:0deg; position:relative; border:0; background:none; padding:6px; cursor:pointer; color:inherit;
+  transform:rotate(var(--r)); transition:transform .45s cubic-bezier(.2,.9,.25,1.2), opacity .4s, filter .4s;
+  filter:drop-shadow(0 16px 14px rgba(80,45,20,.16)) drop-shadow(0 3px 3px rgba(80,45,20,.12));
+  -webkit-tap-highlight-color:transparent;
+}
+.item:hover,.item:focus-visible{transform:translateY(-10px) rotate(calc(var(--r) * .4)) scale(1.05)}
+.item:focus-visible{outline:2px dashed var(--accent); outline-offset:6px; border-radius:14px}
+.item .float{display:block; animation:bob 6s ease-in-out infinite; animation-delay:var(--d,0s)}
+.item svg{display:block; width:100%; height:auto; overflow:visible}
+.item .tag{
+  position:absolute; left:50%; bottom:-8px; transform:translateX(-50%); white-space:nowrap;
+  font-family:var(--hand); font-size:1.15rem; color:var(--muted); opacity:0; transition:opacity .3s;
+}
+.item:hover .tag,.item:focus-visible .tag{opacity:1}
+.unlocked .item:not(.env) .tag{opacity:.85}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+.sealed .item:not(.env){opacity:.78; filter:saturate(.7) drop-shadow(0 12px 12px rgba(80,45,20,.12))}
+.unlocked .item:not(.env){animation:pop .6s cubic-bezier(.2,.9,.25,1.4) both; animation-delay:var(--pd,0s)}
+@keyframes pop{0%{transform:scale(.85) rotate(var(--r))}100%{transform:scale(1) rotate(var(--r))}}
+
+.cider{grid-area:cider; width:clamp(100px,min(13vw,17vh),150px); --r:-6deg; --d:-1s}
+.bag{grid-area:bag; width:clamp(105px,min(14vw,18vh),160px); --r:5deg; --d:-2.5s}
+.music{grid-area:music; width:clamp(100px,min(13vw,19vh),155px); --r:-8deg; --d:-4s}
+.ticket{grid-area:ticket; width:clamp(140px,min(17vw,23vh),205px); --r:9deg; --d:-1.8s}
+.photos{grid-area:photos; width:clamp(120px,min(15vw,20vh),180px); --r:-4deg; --d:-3.2s}
+.giftcard{grid-area:giftcard; width:clamp(140px,min(17vw,23vh),205px); --r:6deg; --d:-.6s}
+.box{grid-area:box; width:clamp(170px,min(22vw,28vh),265px); --r:0deg; --d:-2s}
+.env{grid-area:envelope; width:clamp(210px,min(26vw,36vh),300px); --r:-3deg; align-self:end}
+
+.env .hint{display:block; font-family:var(--hand); font-size:1.5rem; color:var(--ink); text-align:center; margin-bottom:6px; transform:rotate(3deg)}
+.env .hint span{display:block; font-family:var(--sans); font-size:1.1rem; animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.env.wiggle{animation:wiggle .6s ease}
+@keyframes wiggle{0%,100%{transform:rotate(var(--r))}20%{transform:rotate(-8deg)}40%{transform:rotate(5deg)}60%{transform:rotate(-5deg)}80%{transform:rotate(2deg)}}
+.env .flap{transform-box:fill-box; transform-origin:50% 0; transition:transform .55s cubic-bezier(.5,0,.3,1)}
+.env.open .flap{transform:scaleY(-1)}
+.env .seal .half{transition:transform .55s cubic-bezier(.4,0,.6,1), opacity .5s .15s; transform-box:fill-box; transform-origin:center}
+.env.open .seal .half.l{transform:translate(-14px,26px) rotate(-38deg); opacity:0}
+.env.open .seal .half.r{transform:translate(14px,30px) rotate(32deg); opacity:0}
+.env .paper{transition:transform .65s .45s cubic-bezier(.3,.9,.3,1.1)}
+.env.open .paper{transform:translateY(-62px)}
+
+.steam path{animation:steam 3.2s ease-in-out infinite; opacity:0}
+.steam path:nth-child(2){animation-delay:1s}.steam path:nth-child(3){animation-delay:2s}
+@keyframes steam{0%{opacity:0; transform:translateY(8px)}40%{opacity:.7}100%{opacity:0; transform:translateY(-14px)}}
+.box .lid{transition:transform .6s cubic-bezier(.3,1.4,.4,1)}
+.box:hover .lid,.box.opened .lid{transform:translate(-8px,-14px) rotate(-5deg)}
+
+.footer-hint{display:inline-block; margin-top:12px; font-family:var(--sans); font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); background:var(--pill); border:1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding:6px 14px; border-radius:99px}
+
+.music-toggle{position:fixed; top:14px; right:14px; z-index:50; width:46px; height:46px; border-radius:50%;
+  border:1px solid rgba(58,44,37,.15); background:rgba(255,250,242,.85); backdrop-filter:blur(6px);
+  cursor:pointer; display:grid; place-items:center; box-shadow:0 4px 14px rgba(80,45,20,.12); color:#3a2c25}
+.music-toggle svg{width:22px; height:22px}
+.music-toggle.on{background:var(--accent); color:#fff; border-color:transparent}
+.music-toggle.on::after{content:""; position:absolute; inset:-5px; border-radius:50%; border:2px solid var(--accent); opacity:.4; animation:ring 1.8s ease-out infinite}
+@keyframes ring{from{transform:scale(.9); opacity:.5}to{transform:scale(1.3); opacity:0}}
+
+.toast{position:fixed; left:50%; bottom:70px; transform:translate(-50%,20px); opacity:0; z-index:70;
+  background:#3a2c25; color:#fff8ee; padding:10px 18px; border-radius:99px; font-size:.95rem; transition:.35s; pointer-events:none}
+.toast.show{opacity:1; transform:translate(-50%,0)}
+
+/* ---------- modal ---------- */
+.modal{position:fixed; inset:0; z-index:55; display:grid; place-items:center; padding:18px}
+.modal[hidden]{display:none}
+.backdrop{position:absolute; inset:0; background:rgba(60,40,28,.28); backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); animation:fade .3s}
+.sheet{position:relative; width:min(540px,100%); max-height:calc(100vh - 36px); overflow:auto; background:var(--sheet);
+  border-radius:20px; padding:clamp(26px,5vw,42px); box-shadow:0 30px 80px rgba(60,35,15,.3), 0 2px 0 rgba(255,255,255,.7) inset;
+  animation:rise .45s cubic-bezier(.2,.9,.25,1.15)}
+@keyframes fade{from{opacity:0}}
+@keyframes rise{from{opacity:0; transform:translateY(24px) scale(.96)}}
+.close{position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%; border:0; background:rgba(58,44,37,.08);
+  font-size:1.2rem; line-height:1; cursor:pointer; color:var(--ink)}
+.close:hover{background:rgba(58,44,37,.16)}
+.sheet h2{font-family:var(--serif); font-weight:500; font-size:clamp(1.6rem,4vw,2rem); text-align:center; margin:0 0 18px}
+.sheet p{line-height:1.6; margin:0 0 .9em}
+.sheet .hand{font-family:var(--hand); font-size:1.55rem; line-height:1.35}
+.sheet .center{text-align:center}
+.sheet .art{width:120px; margin:0 auto 14px; display:block}
+
+.sheet-letter .body{background:repeating-linear-gradient(transparent 0 35px, rgba(181,69,42,.16) 35px 36px, transparent 36px 38px); font-family:var(--hand); font-size:clamp(1.45rem,3.6vw,1.75rem); line-height:38px; white-space:pre-line; padding-top:8px}
+.sheet-letter .body p{margin:0 0 38px; line-height:38px}
+.sheet-letter .body{padding-top:0; margin-top:8px}
+.sheet-letter .sign{font-family:var(--hand); font-size:1.9rem; text-align:right; margin:0}
+
+.gratitude-list{list-style:none; padding:0; margin:0}
+.gratitude-list li{display:flex; gap:12px; align-items:flex-start; font-family:var(--hand); font-size:1.55rem; line-height:1.3; padding:8px 0; border-bottom:1px dashed rgba(58,44,37,.15)}
+.gratitude-list li:last-child{border:0}
+.gratitude-list svg{flex:0 0 22px; width:22px; margin-top:6px}
+
+.ticket-card{border:2px solid #b89a64; background:#f3e6c6; border-radius:8px; padding:22px; position:relative; text-align:center}
+.ticket-card::before,.ticket-card::after{content:""; position:absolute; top:50%; width:22px; height:22px; border-radius:50%; background:var(--sheet); border:2px solid #b89a64; transform:translateY(-50%)}
+.ticket-card::before{left:-12px; clip-path:inset(0 0 0 50%)}.ticket-card::after{right:-12px; clip-path:inset(0 50% 0 0)}
+.ticket-card .stub{font-family:var(--serif); font-weight:700; letter-spacing:.25em; font-size:.8rem; color:#7a5c2c}
+.ticket-card .row{display:flex; justify-content:space-between; gap:12px; border-top:1px dashed #b89a64; padding-top:10px; margin-top:12px; font-size:.92rem; text-align:left}
+.ticket-card .row b{display:block; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:#7a5c2c}
+
+.gallery{position:relative}
+.album{display:grid; padding:14px 10px 6px; cursor:pointer; -webkit-tap-highlight-color:transparent}
+.album .frame{grid-area:1/1; margin:0; background:#fff; padding:12px 12px 52px; border-radius:3px; position:relative;
+  box-shadow:0 12px 28px rgba(60,35,15,.2), 0 1px 2px rgba(60,35,15,.15);
+  transform:rotate(var(--tilt,0deg)); transition:transform .5s cubic-bezier(.3,.9,.3,1.1), opacity .4s}
+.album .frame[data-pos="1"]{transform:translate(10px,8px) rotate(calc(var(--tilt) * 1.6)); }
+.album .frame[data-pos="2"]{transform:translate(-12px,12px) rotate(calc(var(--tilt) * -1.4)); }
+.album .frame[data-pos="1"] img,.album .frame[data-pos="2"] img{filter:brightness(.97)}
+.album .frame[data-pos="hidden"]{opacity:0; transform:translate(0,14px) rotate(0)}
+.album .frame.toss{animation:toss .5s ease-in}
+.album .frame.back{animation:back .45s ease-out}
+@keyframes toss{0%{transform:rotate(var(--tilt)); opacity:1; z-index:99}60%{transform:translate(70%,-6%) rotate(16deg); opacity:1; z-index:99}100%{opacity:0}}
+@keyframes back{0%{transform:translate(-70%,-6%) rotate(-14deg); opacity:0}100%{transform:rotate(var(--tilt)); opacity:1}}
+.album img{display:block; width:100%; aspect-ratio:1; object-fit:cover; background:#eee; pointer-events:none}
+.album .cap{position:absolute; left:8px; right:8px; bottom:12px; text-align:center; font-family:var(--hand); font-size:1.45rem; color:#3a2c25; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.gallery .count{font-family:var(--hand); font-size:1.3rem; color:var(--muted); min-width:56px; text-align:center}
+.gallery .nav{display:flex; justify-content:center; align-items:center; gap:14px; margin-top:18px}
+.gallery .nav button{border:0; background:rgba(58,44,37,.08); width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1rem; color:var(--ink)}
+.dots{display:flex; gap:6px}.dots i{width:7px; height:7px; border-radius:50%; background:rgba(58,44,37,.2)}.dots i.on{background:var(--accent)}
+
+.gc{border-radius:16px; overflow:hidden; background:#fff; box-shadow:0 12px 30px rgba(60,35,15,.16); border:1px solid rgba(58,44,37,.08)}
+.gc .pic{aspect-ratio:16/9; background:#f6dcb0}
+.gc .pic img,.gc .pic svg{width:100%; height:100%; object-fit:cover; display:block}
+.gc .meta{display:flex; justify-content:space-between; align-items:center; padding:12px 18px}
+.gc .meta small{letter-spacing:.2em; font-size:.68rem; font-weight:600; color:var(--muted); text-transform:uppercase}
+.gc .meta span{font-family:var(--serif); font-size:1.7rem}
+.code{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:16px; background:rgba(58,44,37,.05); border:1px dashed rgba(58,44,37,.25); border-radius:10px; padding:10px 14px; font-family:ui-monospace,Menlo,monospace; font-size:1rem}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:6px; border:0; border-radius:99px; padding:10px 20px; font:600 .95rem var(--sans); cursor:pointer; text-decoration:none; background:var(--accent); color:#fff}
+.btn.ghost{background:transparent; color:var(--accent); border:1.5px solid currentColor; padding:6px 14px; font-size:.85rem}
+.actions{display:flex; justify-content:center; gap:10px; margin-top:18px}
+
+.player{background:linear-gradient(160deg,#eceef1,#cfd3d8); border-radius:22px; padding:18px; max-width:300px; margin:0 auto; box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.player .screen{background:#22262d; color:#fff; border-radius:10px; padding:14px; text-align:left}
+.player .cover{height:120px; border-radius:6px; background:linear-gradient(180deg,#f7b267 0%,#f27059 55%,#6d4c7d 100%); position:relative; overflow:hidden; margin-bottom:10px}
+.player .cover::after{content:""; position:absolute; left:-10%; right:-10%; bottom:-30px; height:70px; background:#3b2a3f; border-radius:50% 50% 0 0}
+.player .cover .sun{position:absolute; width:46px; height:46px; border-radius:50%; background:#ffe3a3; left:50%; top:46px; transform:translateX(-50%); box-shadow:0 0 30px #ffd27a}
+.player .t{font-weight:600; font-size:.95rem}.player .a{font-size:.8rem; opacity:.7}
+.bars{display:flex; gap:3px; align-items:flex-end; height:16px; margin-top:8px}
+.bars i{width:4px; background:#f7b267; height:4px; border-radius:2px}
+.playing .bars i{animation:eq .9s ease-in-out infinite}
+.bars i:nth-child(2){animation-delay:-.3s}.bars i:nth-child(3){animation-delay:-.6s}.bars i:nth-child(4){animation-delay:-.15s}.bars i:nth-child(5){animation-delay:-.45s}
+@keyframes eq{0%,100%{height:3px}50%{height:16px}}
+.wheel{width:150px; height:150px; border-radius:50%; background:#f7f7f8; margin:18px auto 0; display:grid; place-items:center; position:relative; box-shadow:inset 0 2px 6px rgba(0,0,0,.08)}
+.wheel small{position:absolute; top:12px; font-size:.62rem; font-weight:700; letter-spacing:.12em; color:#9aa0a8}
+.wheel button{width:62px; height:62px; border-radius:50%; border:0; background:linear-gradient(#e9ebee,#d5d9de); cursor:pointer; display:grid; place-items:center; color:#3a3f47}
+.wheel button svg{width:24px; height:24px}
+
+.finale h2{font-size:clamp(2rem,6vw,2.6rem); color:var(--accent)}
+.finale .sign{font-family:var(--hand); font-size:1.8rem; text-align:center; margin-top:10px}
+
+@media (max-width:720px){
+  .garland{width:118px; opacity:.85}
+  header{padding-top:64px}
+  .stage{grid-template-columns:1fr 1fr; gap:22px 10px; padding-bottom:110px;
+    grid-template-areas:
+      "envelope envelope"
+      "cider    bag"
+      "music    ticket"
+      "photos   giftcard"
+      "box      box";}
+  .env{width:min(78vw,300px); align-self:center}
+  .cider{width:30vw}.bag{width:32vw}.music{width:31vw}.ticket{width:40vw}.photos{width:36vw}.giftcard{width:40vw}.box{width:min(62vw,250px)}
+  .item .tag{opacity:.85; white-space:normal; width:100%; text-align:center; font-size:1.02rem; line-height:1.05; bottom:-14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important}
+}
+.sheet-letter .body p,.sheet-letter .sign,.gratitude-list li,.finale .hand p,.finale .sign{animation:ink .7s both; animation-delay:calc(var(--i,0) * .35s + .15s)}
+@keyframes ink{from{opacity:0; transform:translateY(6px); filter:blur(2px)}}
+.vh{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+
+/* ---------- opened-gift stickers + next nudge ---------- */
+.item.seen::after{content:"✓"; position:absolute; top:2px; right:2px; width:24px; height:24px; border-radius:50%;
+  background:var(--accent); color:#fff; font:600 13px/24px var(--sans); text-align:center; box-shadow:0 3px 8px rgba(80,45,20,.25); animation:pop .4s both}
+.box.next .float{animation:bob 6s ease-in-out infinite, glow 1.8s ease-in-out infinite}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 0 rgba(224,173,74,0))}50%{filter:drop-shadow(0 0 18px rgba(224,173,74,.85))}}
+.env:not(.open):hover .paper,.env:not(.open):focus-visible .paper{transform:translateY(-20px); transition-delay:0s}
+
+/* ---------- in-browser editor (open index.html#edit) ---------- */
+body.editing{padding-right:400px}
+body.editing.ed-collapsed{padding-right:0}
+body.editing .music-toggle{right:414px}
+body.editing.ed-collapsed .music-toggle{right:14px}
+body.editing:not(.ed-collapsed) .modal{right:400px}
+.editor{position:fixed; top:0; right:0; bottom:0; width:400px; z-index:58; background:#fffaf2; color:var(--ink);
+  border-left:1px solid rgba(58,44,37,.12); box-shadow:-12px 0 40px rgba(60,35,15,.12); display:flex; flex-direction:column;
+  font:14px/1.45 var(--sans); transition:transform .35s cubic-bezier(.3,.9,.3,1)}
+.ed-collapsed .editor{transform:translateX(100%)}
+.ed-head{padding:18px 18px 14px; border-bottom:1px solid rgba(58,44,37,.1)}
+.ed-head h2{font-family:var(--serif); font-weight:500; margin:0; font-size:1.45rem}
+.ed-head p{margin:2px 0 12px; color:var(--muted); font-size:.8rem}
+.ed-x{position:absolute; top:14px; right:14px}
+.ed-actions{display:flex; gap:8px; flex-wrap:wrap}
+.ed-actions .btn{padding:8px 14px; font-size:.85rem}
+.ed-body{overflow:auto; padding:4px 18px 60px; flex:1}
+.ed-body details{border-bottom:1px solid rgba(58,44,37,.1); padding:12px 0}
+.ed-body summary{cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:10px; list-style:none}
+.ed-body summary::-webkit-details-marker{display:none}
+.ed-body summary::after{content:"+"; color:var(--muted); font-weight:400; font-size:1.2rem}
+.ed-body details[open] summary::after{content:"–"}
+.ed-body label{display:block; margin-top:10px; font-size:.76rem; color:var(--muted); font-weight:500}
+.ed-body input:not([type=checkbox]):not([type=file]),.ed-body textarea,.ed-body select{width:100%; margin-top:4px; padding:8px 10px;
+  border:1px solid rgba(58,44,37,.18); border-radius:8px; font:inherit; background:#fff; color:var(--ink)}
+.ed-body input:focus,.ed-body textarea:focus,.ed-body select:focus{outline:2px solid rgba(181,69,42,.35); border-color:var(--accent)}
+.ed-body textarea{min-height:96px; resize:vertical}
+.ed-toggle{display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--ink); margin-top:8px}
+.ed-toggle input{accent-color:var(--accent); width:16px; height:16px}
+.ed-off .ed-fields{opacity:.45; pointer-events:none}
+.ed-note{font-size:.75rem; color:var(--muted); margin-top:6px}
+.ph-row{display:flex; gap:8px; align-items:center; margin-top:8px}
+.ph-row img{width:52px; height:52px; object-fit:cover; border-radius:6px; flex:0 0 52px; background:#eee}
+.ph-row input{flex:1}
+.mini{border:0; background:rgba(58,44,37,.08); color:var(--ink); border-radius:8px; padding:6px 9px; cursor:pointer; font:500 .8rem var(--sans)}
+.mini:hover{background:rgba(58,44,37,.15)}
+.file-btn{display:inline-flex; margin-top:8px}
+.ed-link input{width:100%; margin-top:10px; padding:7px 9px; border:1px solid rgba(58,44,37,.18); border-radius:8px; font:12px ui-monospace,Menlo,monospace; color:var(--ink); background:#fff}
+.ed-warn{color:#9b2335}
+.file-btn input{display:none}
+.ed-fab{position:fixed; right:16px; bottom:16px; z-index:57; display:none}
+.ed-collapsed .ed-fab{display:inline-flex}
+@media (max-width:720px){
+  body.editing{padding-right:0; padding-bottom:60vh}
+  body.editing .music-toggle{right:14px}
+  body.editing:not(.ed-collapsed) .modal{right:0; bottom:60vh}
+  .editor{top:auto; left:0; width:auto; height:60vh; border-left:0; border-top:1px solid rgba(58,44,37,.12); border-radius:18px 18px 0 0}
+  .ed-collapsed .editor{transform:translateY(100%)}
+}
+</style>
+</head>
+<body data-theme="harvest" class="sealed">
+
+<!-- shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="leaf" viewBox="0 0 100 100"><path d="M50 3 L57 22 L69 15 L66 38 L83 28 L79 43 L96 45 L83 57 L89 63 L64 69 L66 82 L52.5 74 L52.5 97 L47.5 97 L47.5 74 L34 82 L36 69 L11 63 L17 57 L4 45 L21 43 L17 28 L34 38 L31 15 L43 22 Z"/></symbol>
+    <linearGradient id="g-cider" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0ad55"/><stop offset="1" stop-color="#b65d1c"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f2f4"/><stop offset="1" stop-color="#bfc3c9"/></linearGradient>
+    <linearGradient id="g-sunset" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7b267"/><stop offset=".6" stop-color="#f27059"/><stop offset="1" stop-color="#6d4c7d"/></linearGradient>
+    <linearGradient id="g-field" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbd38d"/><stop offset="1" stop-color="#e98b4a"/></linearGradient>
+    <linearGradient id="g-table" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dcb0"/><stop offset="1" stop-color="#e7b979"/></linearGradient>
+    <clipPath id="clip-polaroid"><rect x="0" y="0" width="94" height="94"/></clipPath>
+  </defs>
+</svg>
+
+<canvas id="leaves" aria-hidden="true"></canvas>
+<canvas id="burst" aria-hidden="true"></canvas>
+<svg class="garland l" viewBox="0 0 300 200" aria-hidden="true"><g class="sway">
+  <path d="M-10 30 C60 40 110 70 150 60 S240 20 310 34" fill="none" stroke="#7a4b2a" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <path d="M-10 46 C50 90 90 120 140 116" fill="none" stroke="#7a4b2a" stroke-width="2.2" stroke-linecap="round" opacity=".55"/>
+  <use href="#leaf" x="2" y="14" width="56" height="56" fill="#c0502b" transform="rotate(-20 30 42)"/>
+  <use href="#leaf" x="44" y="40" width="46" height="46" fill="#e0ad4a" transform="rotate(25 67 63)"/>
+  <use href="#leaf" x="92" y="44" width="40" height="40" fill="#a8322a" transform="rotate(-35 112 64)"/>
+  <use href="#leaf" x="140" y="34" width="34" height="34" fill="#d9792b" transform="rotate(40 157 51)"/>
+  <use href="#leaf" x="196" y="16" width="28" height="28" fill="#b9772f" transform="rotate(-10 210 30)"/>
+  <use href="#leaf" x="22" y="70" width="38" height="38" fill="#d9792b" transform="rotate(60 41 89)"/>
+  <use href="#leaf" x="74" y="98" width="30" height="30" fill="#c0502b" transform="rotate(-50 89 113)"/>
+  <g fill="#9b2335"><circle cx="70" cy="34" r="5"/><circle cx="79" cy="40" r="4.5"/><circle cx="68" cy="44" r="4"/><circle cx="182" cy="52" r="4"/><circle cx="189" cy="45" r="3.6"/><circle cx="58" cy="96" r="4"/></g>
+  <g fill="#fff" opacity=".45"><circle cx="68.5" cy="32.5" r="1.4"/><circle cx="77.5" cy="38.5" r="1.2"/><circle cx="180.5" cy="50.5" r="1.1"/></g>
+  <ellipse cx="128" cy="22" rx="11" ry="7" fill="#8a4b26" transform="rotate(-20 128 22)"/><path d="M128 15 q2 -6 6 -7" stroke="#5b3a1e" stroke-width="2" fill="none"/>
+</g></svg>
+<svg class="garland r" viewBox="0 0 300 200" aria-hidden="true"></svg>
+
+<button class="music-toggle" id="musicToggle" aria-label="Play music" title="Play music">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 18.5a2.5 2.5 0 1 1-2-2.45V5.5l12-2.5v11.5a2.5 2.5 0 1 1-2-2.45V6.6L9 8.2v10.3z"/></svg>
+</button>
+
+<header>
+  <h1 id="greeting">Happy Thanksgiving</h1>
+  <p id="subtitle"></p>
+  <div class="footer-hint" id="footerHint" role="status" aria-live="polite">open the letter to begin</div>
+</header>
+
+<noscript><p style="position:relative;z-index:5;text-align:center;font-family:Georgia,serif">This card needs JavaScript. Please open it in Chrome, Safari, Edge or Firefox.</p></noscript>
+<main class="stage" id="stage">
+  <!-- ENVELOPE -->
+  <button class="item env" data-open="letter" aria-label="Open the letter first">
+    <span class="hint">open me first<span>↓</span></span>
+    <span class="float">
+    <svg viewBox="0 0 240 160">
+      <rect x="4" y="4" width="232" height="152" rx="6" fill="#e9d8b8"/>
+      <g class="flapwrap"><path class="flap" d="M4 6 Q4 4 7 4 H233 Q236 4 236 6 L124 94 Q120 97 116 94 Z" fill="#f3e6cd" stroke="#d6bf96" stroke-width="1.2"/></g>
+      <g class="paper">
+        <rect x="22" y="14" width="196" height="128" rx="3" fill="#fffdf7"/>
+        <path d="M40 38 H180 M40 54 H200 M40 70 H170" stroke="#e5c9b5" stroke-width="2" stroke-linecap="round"/>
+        <use href="#leaf" x="176" y="24" width="24" height="24" fill="#d9792b"/>
+      </g>
+      <path d="M4 10 L112 90 L4 154 Z" fill="#ecdcbd"/>
+      <path d="M236 10 L128 90 L236 154 Z" fill="#ecdcbd"/>
+      <path d="M4 156 L120 82 L236 156 Z" fill="#e6d2ad"/>
+      <path d="M4 156 L120 82 L236 156" fill="none" stroke="#d9c29a" stroke-width="1"/>
+      <g class="flapfront"></g>
+      <g class="addr">
+        <text id="envTo" x="22" y="144" font-family="Caveat, 'Segoe Print', cursive" font-size="17" fill="#6b4a2e" transform="rotate(-4 22 144)">for You</text>
+        <g transform="translate(196 104) rotate(5)">
+          <rect x="0" y="0" width="30" height="36" fill="#fffaf0" stroke="#c9b48c" stroke-width="1.4" stroke-dasharray="2.2 1.6"/>
+          <rect x="3.5" y="3.5" width="23" height="29" fill="#e9a457"/>
+          <use href="#leaf" x="7" y="7" width="16" height="16" fill="#a8322a"/>
+          <text x="15" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="4.6" font-weight="700" fill="#fff8ec">THANKS</text>
+        </g>
+        <g transform="translate(182 121)" opacity=".55" fill="none" stroke="#6b4a2e">
+          <circle r="14.5" stroke-width="1.2"/><circle r="11.5" stroke-width=".6"/>
+          <path d="M16 -4 q6 -3 12 0 t12 0 M16 1 q6 -3 12 0 t12 0 M16 6 q6 -3 12 0 t12 0" stroke-width="1"/>
+          <text id="postYear" x="0" y="2.2" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#6b4a2e" stroke="none">2026</text>
+          <text x="0" y="-5.4" text-anchor="middle" font-family="Inter, sans-serif" font-size="3" font-weight="600" fill="#6b4a2e" stroke="none">THANKS</text>
+          <text x="0" y="8.4" text-anchor="middle" font-family="Inter, sans-serif" font-size="3" font-weight="600" fill="#6b4a2e" stroke="none">GIVING</text>
+        </g>
+      </g>
+      <defs>
+        <g id="sealArt">
+          <circle cx="120" cy="92" r="16" fill="#a8322a"/>
+          <circle cx="120" cy="92" r="16" fill="none" stroke="#7d1f19" stroke-width="2" stroke-dasharray="3 2"/>
+          <circle cx="120" cy="92" r="11" fill="none" stroke="#c9574b" stroke-width="1.2"/>
+          <use href="#leaf" x="112" y="84" width="16" height="16" fill="#e7897c"/>
+        </g>
+        <clipPath id="sealL"><path d="M100 70 H121 L117 82 L123 92 L116 102 L120 114 H100 Z"/></clipPath>
+        <clipPath id="sealR"><path d="M140 70 H121 L117 82 L123 92 L116 102 L120 114 H140 Z"/></clipPath>
+      </defs>
+      <g class="seal">
+        <use class="half l" href="#sealArt" clip-path="url(#sealL)"/>
+        <use class="half r" href="#sealArt" clip-path="url(#sealR)"/>
+      </g>
+    </svg>
+    </span>
+  </button>
+
+  <!-- CIDER -->
+  <button class="item cider" data-open="cider" aria-label="A warm drink"><span class="float">
+    <svg viewBox="0 0 140 170">
+      <g class="steam" stroke="#c9b6a3" stroke-width="3" fill="none" stroke-linecap="round">
+        <path d="M52 30 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M70 28 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M88 30 q-8 -10 0 -20 q8 -10 0 -20"/>
+      </g>
+      <path d="M110 66 Q138 68 136 98 Q134 128 104 128" fill="none" stroke="#e3d7c8" stroke-width="9" stroke-linecap="round"/>
+      <path d="M110 66 Q138 68 136 98 Q134 128 104 128" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+      <path d="M32 60 L38 148 Q40 157 49 157 H91 Q100 157 102 148 L108 60 Z" fill="url(#g-cider)"/>
+      <ellipse cx="70" cy="60" rx="38" ry="6" fill="#f6c88a"/>
+      <rect x="76" y="10" width="9" height="76" rx="3" fill="#8a4a24" transform="rotate(16 80 48)"/>
+      <rect x="86" y="12" width="6" height="74" rx="3" fill="#a35b2f" transform="rotate(16 80 48)"/>
+      <path d="M26 42 L34 150 Q36 162 48 162 H92 Q104 162 106 150 L114 42" fill="rgba(255,255,255,.35)" stroke="#d8cbbb" stroke-width="2.5"/>
+      <path d="M40 70 L45 140" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+      <g transform="rotate(-18 34 44)"><path d="M14 46 A20 20 0 0 1 54 46 Z" fill="#fbecc4"/><path d="M14 46 A20 20 0 0 1 54 46" fill="none" stroke="#c0392b" stroke-width="4"/><circle cx="30" cy="40" r="1.6" fill="#5b3a1e"/><circle cx="38" cy="40" r="1.6" fill="#5b3a1e"/></g>
+    </svg></span><span class="tag">warm drink</span>
+  </button>
+
+  <!-- BAG -->
+  <button class="item bag" data-open="gratitude" aria-label="Things I'm thankful for"><span class="float">
+    <svg viewBox="0 0 150 180">
+      <path d="M52 54 V24 Q52 12 64 12 H86 Q98 12 98 24 V54" fill="none" stroke="#6b4a2e" stroke-width="7" stroke-linecap="round"/>
+      <path d="M22 50 H128 L138 174 H12 Z" fill="#cf9c62"/>
+      <path d="M128 50 L138 174 H120 L113 50 Z" fill="#b8854c"/>
+      <path d="M22 50 H128 V62 H22 Z" fill="#bf8b52"/>
+      <path d="M22 62 L28 70 L34 62 L40 70 L46 62 L52 70 L58 62 L64 70 L70 62 L76 70 L82 62 L88 70 L94 62 L100 70 L106 62 L112 70 L118 62 L124 70 L128 62" fill="none" stroke="#a87542" stroke-width="1.2"/>
+      <use href="#leaf" x="46" y="86" width="52" height="52" fill="#9c3a1f"/>
+      <text x="72" y="160" text-anchor="middle" font-family="Caveat, cursive" font-size="16" fill="#6b4a2e">thankful</text>
+    </svg></span><span class="tag">thankful for you</span>
+  </button>
+
+  <!-- MUSIC PLAYER -->
+  <button class="item music" data-open="music" aria-label="A song for you"><span class="float">
+    <svg viewBox="0 0 150 210">
+      <path d="M75 190 C75 206 30 206 16 186 C2 166 6 126 18 106" stroke="#f4f4f4" stroke-width="3" fill="none"/>
+      <path d="M75 190 C75 206 30 206 16 186 C2 166 6 126 18 106" stroke="#d0d0d0" stroke-width="1" fill="none"/>
+      <ellipse cx="18" cy="100" rx="9" ry="11" fill="#f7f7f7" stroke="#d6d6d6"/>
+      <rect x="22" y="8" width="110" height="182" rx="16" fill="url(#g-metal)" stroke="#b5b9bf"/>
+      <rect x="34" y="22" width="86" height="68" rx="5" fill="#262a31"/>
+      <rect x="39" y="34" width="76" height="40" rx="2" fill="url(#g-sunset)"/>
+      <circle cx="77" cy="62" r="8" fill="#ffe3a3"/>
+      <path d="M39 74 L39 66 Q58 56 77 66 Q96 58 115 66 L115 74 Z" fill="#3b2a3f"/>
+      <text x="42" y="31" font-family="Inter, sans-serif" font-size="6" fill="#fff" opacity=".85">Now playing</text>
+      <rect x="40" y="80" width="74" height="3" rx="1.5" fill="#555"/><rect class="prog" x="40" y="80" width="30" height="3" rx="1.5" fill="#f7b267"/>
+      <circle cx="77" cy="136" r="35" fill="#f6f6f7" stroke="#cdd1d6"/>
+      <circle cx="77" cy="136" r="13" fill="#e1e4e8" stroke="#cdd1d6"/>
+      <text x="77" y="113" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#9aa0a8">MENU</text>
+      <path d="M100 133 l5 3 l-5 3 z M54 133 l-5 3 l5 3 z" fill="#9aa0a8"/>
+    </svg></span><span class="tag">a song for you</span>
+  </button>
+
+  <!-- TICKET -->
+  <button class="item ticket" data-open="ticket" aria-label="An invitation"><span class="float">
+    <svg viewBox="0 0 200 130">
+      <g transform="rotate(-7 100 65)">
+        <rect x="18" y="12" width="172" height="92" rx="4" fill="#e6d3a8" stroke="#b39558"/>
+      </g>
+      <path d="M8 24 H192 V50 A9 9 0 0 0 192 68 V116 H8 V68 A9 9 0 0 0 8 50 Z" fill="#f2e4c2" stroke="#b39558" stroke-width="1.5"/>
+      <rect x="16" y="32" width="168" height="76" rx="2" fill="none" stroke="#b39558" stroke-dasharray="3 3"/>
+      <text x="100" y="50" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="8" letter-spacing="2.5" fill="#7a5c2c">★ THE HARVEST TABLE ★</text>
+      <text id="ticketStub" x="100" y="80" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="22" letter-spacing="2" fill="#5a3f1c">ADMIT ONE</text>
+      <text x="100" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" letter-spacing="3" fill="#7a5c2c">FRIENDSGIVING · NO. 001</text>
+    </svg></span><span class="tag">you're invited</span>
+  </button>
+
+  <!-- PHOTOS -->
+  <button class="item photos" data-open="photos" aria-label="Our photos"><span class="float">
+    <svg viewBox="0 0 170 170">
+      <g transform="translate(18 26) rotate(-12 55 65)">
+        <rect width="110" height="130" fill="#fff" stroke="#ece6dc"/>
+        <g transform="translate(8 8)"><rect width="94" height="94" fill="url(#g-table)"/>
+          <ellipse cx="47" cy="62" rx="34" ry="12" fill="#fff" opacity=".8"/><path d="M22 60 A25 9 0 0 0 72 60 L68 52 H26 Z" fill="#d58b3a"/><ellipse cx="47" cy="52" rx="21" ry="7" fill="#e9a457"/>
+          <rect x="74" y="26" width="10" height="26" fill="#fff" opacity=".7"/><path d="M79 26 q-3 -6 0 -10 q3 4 0 10" fill="#f6b34a"/>
+          <image id="polaroidImg2" x="0" y="0" width="94" height="94" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-polaroid)" style="display:none"/>
+        </g>
+      </g>
+      <g transform="translate(46 22) rotate(8 55 65)">
+        <rect width="110" height="130" fill="#fff" stroke="#ece6dc"/>
+        <g transform="translate(8 8)" clip-path="url(#clip-polaroid)">
+          <rect width="94" height="94" fill="url(#g-field)"/>
+          <circle cx="62" cy="40" r="12" fill="#fff1c9"/>
+          <path d="M0 70 Q24 54 48 66 T94 60 V94 H0 Z" fill="#b2562a"/><path d="M0 80 Q30 68 60 78 T94 76 V94 H0 Z" fill="#8a3d1f"/>
+          <image id="polaroidImg" x="0" y="0" width="94" height="94" preserveAspectRatio="xMidYMid slice" style="display:none"/>
+        </g>
+        <text x="55" y="120" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="#5a4636">us ♡</text>
+      </g>
+    </svg></span><span class="tag">photos</span>
+  </button>
+
+  <!-- GIFT BOX -->
+  <button class="item box" data-open="finale" aria-label="One last surprise"><span class="float">
+    <svg viewBox="-10 0 250 215">
+      <ellipse cx="122" cy="200" rx="78" ry="10" fill="#7a4a2a" opacity=".12"/>
+      <path d="M40 82 L120 122 L120 202 L40 162 Z" fill="#d9732e"/>
+      <path d="M120 122 L200 82 L200 162 L120 202 Z" fill="#b65a1f"/>
+      <path d="M40 82 L120 42 L200 82 L120 122 Z" fill="#6e3312"/>
+      <path d="M52 82 L120 48 L188 82 L120 116 Z" fill="#5a2a0f"/>
+      <path d="M76 100 L84 104 L84 184 L76 180 Z" fill="#f2c75c"/>
+      <path d="M156 104 L164 100 L164 180 L156 184 Z" fill="#d9ab42"/>
+      <g class="lid">
+        <path d="M-2 66 L12 76 L96 118 L96 104 Z" fill="#c4651f"/>
+        <path d="M96 104 L96 118 L178 70 L178 56 Z" fill="#a9541a"/>
+        <path d="M-2 62 L80 20 L178 56 L96 104 Z" fill="#e8893d"/>
+        <path d="M34 44 L42 40 L138 76 L130 80 Z" fill="#f2c75c"/>
+        <path d="M84 24 L92 28 L48 84 L40 80 Z" fill="#f6d57a"/>
+        <g transform="translate(88 50)">
+          <ellipse cx="-14" cy="-8" rx="16" ry="9" fill="#f2c75c" stroke="#d29f37" stroke-width="2" transform="rotate(-25)"/>
+          <ellipse cx="14" cy="-8" rx="16" ry="9" fill="#f2c75c" stroke="#d29f37" stroke-width="2" transform="rotate(25)"/>
+          <circle r="6" fill="#e2b14a"/>
+        </g>
+      </g>
+    </svg></span><span class="tag">one last thing</span>
+  </button>
+
+  <!-- GIFT CARD -->
+  <button class="item giftcard" data-open="giftcard" aria-label="Dinner, on me"><span class="float">
+    <svg viewBox="0 0 200 140">
+      <rect x="6" y="8" width="188" height="124" rx="10" fill="#fff" stroke="#eadfce"/>
+      <g transform="translate(14 16)"><svg width="172" height="84" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><use href="#pieScene"/></svg></g>
+      <text x="16" y="120" font-family="Inter, sans-serif" font-size="7" font-weight="600" letter-spacing="2" fill="#8b7463">GIFT CARD</text>
+      <text id="gcAmt" x="184" y="122" text-anchor="end" font-family="Playfair Display, Georgia, serif" font-size="18" fill="#3a2c25">$25</text>
+    </svg></span><span class="tag">dinner, on me</span>
+  </button>
+</main>
+
+<!-- illustration reused by the gift card -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pieScene" viewBox="0 0 320 180">
+    <rect width="320" height="180" fill="#f7dfb6"/>
+    <rect y="0" width="320" height="70" fill="#f3d2a0"/>
+    <rect x="200" y="12" width="96" height="58" rx="4" fill="#fbe9c9" stroke="#e7c48d" stroke-width="3"/>
+    <path d="M248 12 V70 M200 41 H296" stroke="#e7c48d" stroke-width="3"/>
+    <path d="M0 110 H320 V180 H0 Z" fill="#c75b2a"/>
+    <path d="M0 110 H320" stroke="#a9481e" stroke-width="4"/>
+    <g fill="#e9a457" opacity=".55"><rect x="0" y="122" width="320" height="6"/><rect x="0" y="146" width="320" height="6"/><rect x="0" y="170" width="320" height="6"/></g>
+    <ellipse cx="120" cy="120" rx="80" ry="22" fill="#fff8ec"/>
+    <path d="M62 112 A58 16 0 0 0 178 112 L170 96 H70 Z" fill="#c9782f"/>
+    <ellipse cx="120" cy="96" rx="50" ry="13" fill="#e6923f"/>
+    <ellipse cx="120" cy="94" rx="40" ry="9" fill="#ef9f4a"/>
+    <path d="M78 98 Q86 92 94 98 Q102 92 110 98 Q118 92 126 98 Q134 92 142 98 Q150 92 158 98" fill="none" stroke="#b5662a" stroke-width="3"/>
+    <ellipse cx="120" cy="88" rx="12" ry="5" fill="#fff6e3"/>
+    <rect x="214" y="80" width="30" height="34" rx="5" fill="#fff8ec"/><path d="M244 88 q12 2 10 12 q-2 8 -10 8" fill="none" stroke="#fff8ec" stroke-width="5"/>
+    <rect x="218" y="84" width="22" height="8" fill="#b65d1c"/>
+    <use href="#leaf" x="262" y="96" width="26" height="26" fill="#b5452a" transform="rotate(20 275 109)"/>
+    <use href="#leaf" x="34" y="132" width="22" height="22" fill="#e0ad4a"/>
+  </symbol>
+</svg>
+
+<footer class="site-foot" id="siteFoot"></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="modal" hidden>
+  <div class="backdrop" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+"use strict";
+/* Snapshot the untouched page first; the editor uses it to export personalized cards. */
+const SRC = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+const MARK_A = "/* CONFIG " + "START */", MARK_B = "/* CONFIG " + "END */";
+let C = window.CARD || {};
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const EDIT = /(^|[?&#])edit(&|$)/.test(location.search + location.hash);
+
+function el(tag, props = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(props)) {
+    if (v == null || v === false) continue;
+    if (k === "class") n.className = v;
+    else if (k === "text") n.textContent = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+    else if (k === "value" || k === "checked") n[k] = v;
+    else n.setAttribute(k, v);
+  }
+  for (const k of kids.flat()) if (k != null && k !== false) n.append(k);
+  return n;
+}
+const svgEl = (markup) => { const t = document.createElement("template"); t.innerHTML = markup.trim(); return t.content.firstChild; };
+const stagger = (nodes, start = 0) => nodes.map((n, k) => (n.style.setProperty("--i", k + start), n));
+const paras = (t) => String(t || "").split(/\n\s*\n/).filter((p) => p.trim()).map((p) => el("p", { text: p.trim() }));
+const safeUrl = (u) => {
+  if (typeof u !== "string" || !u.trim()) return "";
+  u = u.trim();
+  const scheme = (u.match(/^([a-z][\w+.-]*):/i) || [])[1];
+  if (!scheme) return u; // relative path like photos/us.jpg
+  if (/^https?$/i.test(scheme) || /^data:(image|audio)\//i.test(u) || /^blob$/i.test(scheme)) return u;
+  return "";
+};
+const on = (k) => !!C[k] && C[k].enabled !== false;
+const slug = (s) => String(s || "card").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "card";
+const LEAF_D = $("#leaf path").getAttribute("d");
+const leafIcon = (color) => svgEl(`<svg viewBox="0 0 100 100"><path d="${LEAF_D}" fill="${color}"/></svg>`);
+function download(name, data, type) {
+  const a = el("a", { href: URL.createObjectURL(new Blob([data], { type })), download: name });
+  document.body.append(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+}
+
+const GIFTS = { cider: ".cider", gratitude: ".bag", ticket: ".ticket", photos: ".photos", giftcard: ".giftcard", music: ".music", finale: ".box" };
+const TAGS = { cider: "warm drink", gratitude: "thankful for you", ticket: "you're invited", photos: "photos", giftcard: "dinner, on me", music: "a song for you", finale: "one last thing" };
+const seen = new Set();
+let unlocked = false;
+
+/* ---------- apply config to the desk ---------- */
+function applyConfig() {
+  document.body.dataset.theme = C.theme || "harvest";
+  const greet = C.greeting || (C.to ? `Happy Thanksgiving, ${C.to}` : "Happy Thanksgiving");
+  document.title = greet;
+  const h1 = $("#greeting"); h1.textContent = "";
+  const comma = greet.lastIndexOf(", ");
+  if (comma > -1) h1.append(greet.slice(0, comma + 2), el("em", { text: greet.slice(comma + 2) }));
+  else h1.textContent = greet;
+  $("#subtitle").textContent = C.subtitle || "";
+  for (const [k, sel] of Object.entries(GIFTS)) {
+    const b = $(sel);
+    b.style.visibility = on(k) ? "" : "hidden";
+    b.tabIndex = on(k) ? 0 : -1;
+    $(".tag", b).textContent = k === "finale" ? TAGS.finale : (C[k] && C[k].title) || TAGS[k];
+  }
+  $("#ticketStub").textContent = (C.ticket && C.ticket.stub) || "ADMIT ONE";
+  $("#envTo").textContent = C.to ? `for ${C.to}` : "for you";
+  $("#postYear").textContent = String(new Date().getFullYear());
+  $("#gcAmt").textContent = (C.giftcard && C.giftcard.amount) || "";
+  const pics = ((C.photos && C.photos.items) || []).map((x) => safeUrl(x.src)).filter(Boolean);
+  [["#polaroidImg", pics[0]], ["#polaroidImg2", pics[1]]].forEach(([sel, src]) => {
+    const im = $(sel);
+    if (src) { im.setAttribute("href", src); im.style.display = ""; } else { im.removeAttribute("href"); im.style.display = "none"; }
+  });
+  setDensity();
+  updateProgress();
+}
+function updateProgress() {
+  const hint = $("#footerHint");
+  const list = Object.keys(GIFTS).filter(on);
+  const rest = list.filter((k) => k !== "finale" && !seen.has(k));
+  for (const [k, sel] of Object.entries(GIFTS)) $(sel).classList.toggle("seen", seen.has(k));
+  $(".box").classList.toggle("next", unlocked && on("finale") && !rest.length && !seen.has("finale"));
+  if (!unlocked) { hint.textContent = "open the letter to begin"; return; }
+  const n = list.filter((k) => seen.has(k)).length;
+  if (list.length && n === list.length) hint.textContent = "Happy Thanksgiving ♡";
+  else if (on("finale") && !rest.length) hint.textContent = "one last thing: open the box";
+  else hint.textContent = `${n} of ${list.length} opened · any order`;
+}
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 2400); }
+
+/* ---------- music ---------- */
+const Music = (() => {
+  let ctx, bus, timer, next = 0, step = 0, nextPop = 0, playing = false, audio = null, audioSrc = "", rumble = null;
+  const subs = new Set();
+  const E = 60 / 72 / 2; // eighth note at 72 bpm
+  // A section (C–Am–F–G twice), then a B section that lifts and comes home to C
+  const MEL = [72,0,76,0,79,77,76,0, 74,0,72,0,76,0,0,0, 69,0,72,74,77,76,74,0, 74,72,71,0,67,0,0,0,
+               72,0,76,0,79,0,81,79, 77,0,76,0,72,0,0,0, 74,0,77,76,74,0,72,0, 71,0,74,0,72,0,0,0,
+               69,0,72,0,77,0,76,74, 74,0,71,0,67,0,0,0, 71,0,74,76,79,0,76,0, 76,74,72,0,69,0,0,0,
+               72,0,77,0,81,79,77,0, 79,77,74,0,71,0,0,0, 72,0,76,0,79,0,84,0, 84,0,0,0,79,0,0,0];
+  const C_ = [48,55,60,64], Am = [45,52,57,60], F_ = [41,48,53,57], G_ = [43,50,55,59], Em = [40,47,55,59];
+  const BARS = [C_, Am, F_, G_, C_, Am, F_, G_, F_, G_, Em, Am, F_, G_, C_, C_];
+  const f = (m) => 440 * Math.pow(2, (m - 69) / 12);
+  const mode = () => ["melody", "fireside", "both"].includes(C.music && C.music.mode) ? C.music.mode : "both";
+  let noise;
+  function makeBus() {
+    const sr = ctx.sampleRate;
+    if (!noise) { noise = ctx.createBuffer(1, sr * 2, sr); const d = noise.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+    const master = ctx.createGain(), lp = ctx.createBiquadFilter(), conv = ctx.createConvolver(), dry = ctx.createGain(), wet = ctx.createGain();
+    lp.type = "lowpass"; lp.frequency.value = 3200;
+    const len = sr * 3, ir = ctx.createBuffer(2, len, sr);
+    for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.8); }
+    conv.buffer = ir; dry.gain.value = 0.8; wet.gain.value = 0.42;
+    master.connect(lp); lp.connect(dry).connect(ctx.destination); lp.connect(conv).connect(wet).connect(ctx.destination);
+    master.gain.setValueAtTime(0.0001, ctx.currentTime); master.gain.exponentialRampToValueAtTime(0.9, ctx.currentTime + 2);
+    return master;
+  }
+  function bell(m, t, d, g) { // soft music-box voice: sine + a quiet octave
+    [[1, g], [2, g * 0.18]].forEach(([mul, gg]) => {
+      const o = ctx.createOscillator(), a = ctx.createGain();
+      o.type = "sine"; o.frequency.value = f(m) * mul;
+      a.gain.setValueAtTime(0.0001, t); a.gain.exponentialRampToValueAtTime(gg, t + 0.012); a.gain.exponentialRampToValueAtTime(0.0001, t + d / mul);
+      o.connect(a).connect(bus); o.start(t); o.stop(t + d + 0.05);
+    });
+  }
+  function pad(ch, t, d, g) { // warm filtered strings
+    const filt = ctx.createBiquadFilter(); filt.type = "lowpass"; filt.frequency.value = 850; filt.connect(bus);
+    ch.forEach((m) => [-6, 6].forEach((det) => {
+      const o = ctx.createOscillator(), a = ctx.createGain();
+      o.type = "sawtooth"; o.frequency.value = f(m); o.detune.value = det;
+      a.gain.setValueAtTime(0.0001, t); a.gain.linearRampToValueAtTime(g, t + d * 0.3); a.gain.linearRampToValueAtTime(0.0001, t + d);
+      o.connect(a).connect(filt); o.start(t); o.stop(t + d + 0.05);
+    }));
+  }
+  function pop(t, g) { // one fireplace crackle
+    const s = ctx.createBufferSource(), hp = ctx.createBiquadFilter(), a = ctx.createGain(), dur = 0.004 + Math.random() * 0.025;
+    s.buffer = noise; hp.type = "highpass"; hp.frequency.value = 900 + Math.random() * 2500;
+    a.gain.setValueAtTime(g, t); a.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    s.connect(hp).connect(a).connect(bus); s.start(t, Math.random() * 1.9, dur + 0.02);
+  }
+  function startRumble() { // low, soft fire hum
+    const s = ctx.createBufferSource(), lp = ctx.createBiquadFilter(), a = ctx.createGain();
+    s.buffer = noise; s.loop = true; lp.type = "lowpass"; lp.frequency.value = 320; a.gain.value = 0.05;
+    s.connect(lp).connect(a).connect(bus); s.start(); return s;
+  }
+  function tick() {
+    const M = mode(), music = M !== "fireside", fire = M !== "melody";
+    while (next < ctx.currentTime + 0.3) {
+      const s = step % MEL.length, ch = BARS[Math.floor(s / 8) % BARS.length];
+      if (s % 8 === 0) { pad(ch, next, E * 9, music ? 0.010 : 0.007); if (music) bell(ch[0] - 12, next, E * 7, 0.05); }
+      if (music && s % 2 === 1) bell(ch[1 + ((s >> 1) % 3)] + 12, next, E * 3, 0.014);
+      if (music && MEL[s]) bell(MEL[s], next, E * 5, 0.085);
+      next += E; step++;
+    }
+    if (fire) while (nextPop < ctx.currentTime + 0.3) {
+      pop(nextPop, (Math.random() ** 2) * (music ? 0.22 : 0.34));
+      nextPop += Math.random() < 0.15 ? 0.015 + Math.random() * 0.04 : 0.08 + Math.random() * 0.5;
+    }
+  }
+  function start() {
+    const src = safeUrl((C.music && C.music.src) || "");
+    if (src) {
+      if (!audio || audioSrc !== src) { if (audio) audio.pause(); audio = Object.assign(new Audio(src), { loop: true, volume: 0.6 }); audioSrc = src; }
+      audio.play().catch(() => toast("Tap play again to start the music"));
+    } else {
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      ctx.resume();
+      bus = makeBus();
+      if (mode() !== "melody") rumble = startRumble();
+      next = nextPop = ctx.currentTime + 0.08; step = 0; clearInterval(timer); timer = setInterval(tick, 50); tick();
+    }
+    playing = true; emit();
+  }
+  function stop() {
+    if (audio) audio.pause();
+    clearInterval(timer);
+    if (bus && ctx) { bus.gain.cancelScheduledValues(ctx.currentTime); bus.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.35); }
+    if (rumble) { const r = rumble; rumble = null; setTimeout(() => { try { r.stop(); } catch {} }, 2000); }
+    playing = false; emit();
+  }
+  function emit() { subs.forEach((fn) => fn(playing)); }
+  return { toggle: () => (playing ? stop() : start()), stop, restart: () => { if (playing) { stop(); setTimeout(start, 400); } }, get playing() { return playing; }, sub: (fn) => (subs.add(fn), () => subs.delete(fn)) };
+})();
+const mt = $("#musicToggle");
+mt.addEventListener("click", Music.toggle);
+Music.sub((p) => { mt.classList.toggle("on", p); mt.setAttribute("aria-label", p ? "Pause music" : "Play music"); mt.title = p ? "Pause music" : "Play music"; });
+
+/* ---------- calendar invite ---------- */
+function icsFor(T) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(T.date || "");
+  if (!m) return null;
+  const start = new Date(+m[1], m[2] - 1, +m[3], +m[4], +m[5]), end = new Date(start.getTime() + 3 * 3600e3);
+  const p = (n) => String(n).padStart(2, "0");
+  const fmt = (d) => `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}T${p(d.getHours())}${p(d.getMinutes())}00`;
+  const esc = (s) => String(s || "").replace(/[\;,]/g, (c) => "\\" + c).replace(/\n/g, "\\n");
+  return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//thanksgiving//EN", "BEGIN:VEVENT",
+    `UID:${Date.now()}@thanksgiving`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`,
+    `DTSTART:${fmt(start)}`, `DTEND:${fmt(end)}`, `SUMMARY:${esc(T.title || "Thanksgiving")}`,
+    `DESCRIPTION:${esc(T.text)}`, `LOCATION:${esc(T.where)}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+}
+
+/* ---------- modal content ---------- */
+const playIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+const pauseIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
+let cleanup = null;
+
+const builders = {
+  letter() {
+    const L = C.letter || {};
+    return el("div", {}, el("h2", { id: "sheetTitle", class: "vh", text: "A letter for you" }),
+      el("div", { class: "body" }, stagger(paras(L.text))),
+      el("p", { class: "sign", style: `--i:${paras(L.text).length}`, text: L.signoff || (C.from ? `— ${C.from}` : "") }));
+  },
+  cider() {
+    const art = $(".cider svg").cloneNode(true); art.setAttribute("class", "art");
+    return el("div", { class: "center" }, art, el("h2", { id: "sheetTitle", text: C.cider.title || "a warm drink, on me" }), el("div", { class: "hand" }, paras(C.cider.text)));
+  },
+  gratitude() {
+    const colors = ["#b5452a", "#d9792b", "#e0ad4a", "#8a5a2b"];
+    return el("div", {}, el("h2", { id: "sheetTitle", text: C.gratitude.title || "things I'm thankful for" }),
+      el("ul", { class: "gratitude-list" }, (C.gratitude.items || []).map((t, i) => el("li", { style: `--i:${i * 0.6}` }, leafIcon(colors[i % colors.length]), el("span", { text: t })))));
+  },
+  ticket() {
+    const T = C.ticket, ics = icsFor(T);
+    return el("div", {}, el("h2", { id: "sheetTitle", text: T.title || "you're invited" }),
+      el("div", { class: "ticket-card" },
+        el("div", { class: "stub", text: T.stub || "ADMIT ONE" }),
+        el("p", { class: "hand", style: "margin:10px 0 4px", text: T.text || "" }),
+        (T.when || T.where) && el("div", { class: "row" },
+          T.when && el("div", {}, el("b", { text: "When" }), T.when),
+          T.where && el("div", { style: "text-align:right" }, el("b", { text: "Where" }), T.where))),
+      ics && el("div", { class: "actions" }, el("button", { class: "btn", text: "Add to Calendar", onclick: () => download("invite.ics", ics, "text/calendar") })));
+  },
+  photos() {
+    const items = (C.photos.items || []).filter((p) => safeUrl(p.src));
+    const wrap = el("div", {}, el("h2", { id: "sheetTitle", text: C.photos.title || "us, this year" }));
+    if (!items.length) { wrap.append(el("p", { class: "hand center", text: "(photos of us go here ♡)" })); return wrap; }
+    // A loose stack of polaroids: the top one is in front, the next two peek out behind it.
+    const TILT = [-3, 4, -6, 2, 5, -4, 3, -2];
+    const frames = items.map((p, k) => el("figure", { class: "frame" },
+      el("img", { src: safeUrl(p.src), alt: p.caption || `photo ${k + 1}`, loading: k > 2 ? "lazy" : null }),
+      el("figcaption", { class: "cap", text: p.caption || "" })));
+    const album = el("div", { class: "album", title: items.length > 1 ? "Tap for the next photo" : null }, frames);
+    const count = el("span", { class: "count" });
+    let i = 0;
+    const show = (n, dir = 1) => {
+      const prev = i; i = (n + items.length) % items.length;
+      frames.forEach((f, k) => {
+        const pos = (k - i + items.length) % items.length; // 0 = on top
+        f.style.zIndex = String(items.length - pos);
+        f.style.setProperty("--tilt", `${TILT[k % TILT.length]}deg`);
+        f.dataset.pos = pos > 2 ? "hidden" : String(pos);
+      });
+      if (items.length > 1 && prev !== i) {
+        const gone = frames[dir > 0 ? prev : i];
+        gone.classList.remove("toss", "back"); void gone.offsetWidth; gone.classList.add(dir > 0 ? "toss" : "back");
+      }
+      count.textContent = `${i + 1} / ${items.length}`;
+    };
+    const g = el("div", { class: "gallery" }, album);
+    if (items.length > 1) {
+      album.addEventListener("click", () => show(i + 1, 1));
+      g.append(el("div", { class: "nav" },
+        el("button", { "aria-label": "Previous photo", text: "←", onclick: () => show(i - 1, -1) }), count,
+        el("button", { "aria-label": "Next photo", text: "→", onclick: () => show(i + 1, 1) })));
+      let x0 = null;
+      album.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
+      album.addEventListener("touchend", (e) => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) { e.preventDefault(); show(i + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); } x0 = null; });
+      const key = (e) => { if (e.key === "ArrowLeft") show(i - 1, -1); if (e.key === "ArrowRight") show(i + 1, 1); };
+      document.addEventListener("keydown", key); cleanup = () => document.removeEventListener("keydown", key);
+    }
+    show(0); wrap.append(g); return wrap;
+  },
+  giftcard() {
+    const G = C.giftcard, imgSrc = safeUrl(G.image || ""), link = /^https?:/i.test(G.link || "") ? G.link : "";
+    const pic = el("div", { class: "pic" });
+    if (imgSrc) pic.append(el("img", { src: imgSrc, alt: G.brand ? `${G.brand} gift card` : "gift card" }));
+    else pic.append(svgEl('<svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><use href="#pieScene"/></svg>'));
+    const out = el("div", {}, el("h2", { id: "sheetTitle", text: G.title || "dinner, on me" }),
+      el("div", { class: "gc" }, pic, el("div", { class: "meta" }, el("small", { text: G.brand ? `${G.brand} · gift card` : "gift card" }), el("span", { text: G.amount || "" }))));
+    if (G.code) {
+      const btn = el("button", { class: "btn ghost", text: "Copy", onclick: () => {
+        (navigator.clipboard ? navigator.clipboard.writeText(G.code) : Promise.reject()).then(
+          () => { btn.textContent = "Copied!"; setTimeout(() => (btn.textContent = "Copy"), 1500); },
+          () => toast("Long-press the code to copy"));
+      } });
+      out.append(el("div", { class: "code" }, el("span", { text: G.code }), btn));
+    }
+    if (G.note) out.append(el("p", { class: "hand center", style: "margin-top:14px", text: G.note }));
+    if (link) out.append(el("div", { class: "actions" }, el("a", { class: "btn", href: link, target: "_blank", rel: "noopener", text: "Redeem ↗" })));
+    return out;
+  },
+  music() {
+    const M = C.music, btn = el("button", { "aria-label": "Play / pause" });
+    const player = el("div", { class: "player" },
+      el("div", { class: "screen" }, el("div", { class: "cover" }, el("div", { class: "sun" })),
+        el("div", { class: "t", text: M.title || "a song for you" }), el("div", { class: "a", text: M.artist || "" }),
+        el("div", { class: "bars" }, [1, 2, 3, 4, 5].map(() => el("i")))),
+      el("div", { class: "wheel" }, el("small", { text: "MENU" }), btn));
+    const render = (p) => { btn.innerHTML = p ? pauseIcon : playIcon; player.classList.toggle("playing", p); };
+    btn.addEventListener("click", Music.toggle);
+    render(Music.playing); cleanup = Music.sub(render);
+    return el("div", {}, el("h2", { id: "sheetTitle", text: M.title || "a song for you" }), player,
+      el("p", { class: "hand center", style: "margin-top:14px", text: "press play, then open the rest ♡" }));
+  },
+  finale() {
+    burst();
+    const F = C.finale;
+    return el("div", { class: "finale center" }, el("h2", { id: "sheetTitle", text: F.title || "Happy Thanksgiving!" }),
+      el("div", { class: "hand" }, stagger(paras(F.text), 1)), el("p", { class: "sign", style: `--i:${paras(F.text).length + 1}`, text: F.signoff || (C.from ? `— ${C.from}` : "") }),
+      el("div", { class: "actions" },
+        el("button", { class: "btn ghost", text: "↺ Start Over", onclick: () => resetExperience() })));
+  },
+};
+
+/* ---------- modal open/close ---------- */
+const modal = $("#modal"), sheet = $(".sheet", modal), body = $("#sheetBody");
+let current = null, lastFocus = null;
+function openSheet(kind) {
+  lastFocus = document.activeElement; current = kind;
+  if (cleanup) { cleanup(); cleanup = null; }
+  body.replaceChildren(builders[kind]());
+  sheet.className = `sheet sheet-${kind}`;
+  modal.hidden = false; sheet.scrollTop = 0;
+  $(".close", modal).focus({ preventScroll: true });
+  if (kind !== "letter") { seen.add(kind); updateProgress(); }
+}
+function closeSheet() {
+  if (modal.hidden) return;
+  modal.hidden = true; if (cleanup) { cleanup(); cleanup = null; }
+  if (current === "letter" && !unlocked) unlock();
+  current = null; if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+}
+modal.addEventListener("click", (e) => { if (e.target.closest("[data-close]")) closeSheet(); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeSheet();
+  if (e.key === "Tab" && !modal.hidden) {
+    const f = $$("button, a[href]", sheet); if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  }
+});
+function unlock() {
+  unlocked = true; document.body.classList.remove("sealed"); document.body.classList.add("unlocked");
+  updateProgress();
+}
+
+/* ---------- items ---------- */
+const env = $(".env");
+const flap = $(".flap", env), flapFront = $(".flapfront", env), flapWrap = $(".flapwrap", env);
+flapFront.append(flap); // flap sits on top while sealed; tucks behind the letter once open
+function resetExperience() {
+  closeSheet(); seen.clear(); unlocked = false;
+  document.body.classList.add("sealed"); document.body.classList.remove("unlocked");
+  env.classList.remove("open"); flapFront.append(flap); $(".box").classList.remove("opened");
+  updateProgress(); window.scrollTo({ top: 0, behavior: "smooth" });
+}
+$$(".stage .item").forEach((b) => b.addEventListener("click", () => {
+  const kind = b.dataset.open;
+  if (kind === "letter") {
+    if (env.classList.contains("open")) return openSheet("letter");
+    env.classList.add("open");
+    setTimeout(() => flapWrap.append(flap), 280);
+    setTimeout(() => openSheet("letter"), reduced ? 50 : 1050);
+    return;
+  }
+  if (!unlocked) {
+    env.classList.remove("wiggle"); void env.offsetWidth; env.classList.add("wiggle");
+    return toast("open the letter first 💌");
+  }
+  if (kind === "finale") b.classList.add("opened");
+  openSheet(kind);
+}));
+
+/* ---------- falling leaves: three shapes, depth, gusts, and they drift away from your cursor ---------- */
+const COLORS = ["#c0502b", "#d9792b", "#e0ad4a", "#a8322a", "#b9772f", "#8a4b26", "#d4a03c"];
+const SHAPES = [
+  new Path2D(LEAF_D),
+  new Path2D("M50 3 C58 8 57 15 53 18 C62 15 71 20 65 30 C75 30 81 39 71 46 C81 50 82 60 71 64 C77 72 70 80 61 76 C61 84 57 88 52.5 86 L52.5 97 L47.5 97 L47.5 86 C43 88 39 84 39 76 C30 80 23 72 29 64 C18 60 19 50 29 46 C19 39 25 30 35 30 C29 20 38 15 47 18 C43 15 42 8 50 3 Z"),
+  new Path2D("M50 4 C75 22 79 58 52.5 89 L52.5 97 L47.5 97 L47.5 89 C21 58 25 22 50 4 Z"),
+];
+const VEIN = new Path2D("M50 14 L50 92 M50 40 L36 28 M50 40 L64 28 M50 58 L32 48 M50 58 L68 48");
+function makeCanvas(id) {
+  const cv = $(id), cx = cv.getContext("2d");
+  const fit = () => { const d = Math.min(devicePixelRatio || 1, 2); cv.width = innerWidth * d; cv.height = innerHeight * d; cx.setTransform(d, 0, 0, d, 0, 0); };
+  fit(); addEventListener("resize", fit); return cx;
+}
+const lx = makeCanvas("#leaves"), bx = makeCanvas("#burst");
+const rand = (a, b) => a + Math.random() * (b - a);
+function newLeaf(top) {
+  const z = rand(0.35, 1);
+  return { x: rand(-20, innerWidth + 20), y: top ? rand(-innerHeight, innerHeight * 0.2) : -40, z, s: 10 + 22 * z, vy: 0.2 + 0.7 * z, vx: rand(-0.15, 0.15),
+    r: rand(0, 6.28), vr: rand(-0.015, 0.015), ph: rand(0, 6.28), flip: rand(0, 6.28), shape: SHAPES[(Math.random() * SHAPES.length) | 0],
+    c: COLORS[(Math.random() * COLORS.length) | 0], a: 0.3 + 0.55 * z };
+}
+const DENSITY = { off: 0, light: 12, normal: 24, lots: 44 };
+let leaves = [], density = null;
+function setDensity() {
+  const want = reduced ? "off" : (C.leaves in DENSITY ? C.leaves : "normal");
+  if (want === density) return;
+  density = want;
+  const n = Math.round(DENSITY[want] * (innerWidth < 720 ? 0.6 : 1));
+  leaves = Array.from({ length: n }, () => newLeaf(true)).sort((a, b) => a.z - b.z);
+}
+let bursts = [], wind = 0, gust = 0, nextGust = 600, px = -999, py = -999;
+addEventListener("pointermove", (e) => { px = e.clientX; py = e.clientY; }, { passive: true });
+addEventListener("pointerleave", () => { px = py = -999; });
+function drawLeaf(cx, L) {
+  cx.save(); cx.globalAlpha = L.a; cx.translate(L.x, L.y); cx.rotate(L.r);
+  const sx = L.flip == null ? 1 : Math.cos(L.flip); // tumbling: leaf turns over as it falls
+  cx.scale((L.s / 100) * (0.35 + 0.65 * Math.abs(sx)), L.s / 100); cx.translate(-50, -50);
+  cx.fillStyle = L.c; cx.fill(L.shape || SHAPES[0]);
+  cx.strokeStyle = "rgba(60,25,10,.28)"; cx.lineWidth = 2.5; cx.stroke(VEIN);
+  cx.restore();
+}
+function burst() {
+  if (reduced) return;
+  const b = $(".box").getBoundingClientRect(), ox = b.left + b.width / 2, oy = b.top + b.height / 2;
+  for (let i = 0; i < 80; i++) {
+    const ang = rand(-Math.PI * 0.95, -Math.PI * 0.05), sp = rand(5, 13);
+    bursts.push({ x: ox, y: oy, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp, s: rand(14, 30), r: rand(0, 6.28), vr: rand(-0.2, 0.2), flip: rand(0, 6.28), shape: SHAPES[i % 3], c: COLORS[i % COLORS.length], a: 1, life: 0 });
+  }
+}
+// Dusk theme: a few warm embers drift up, like a fireplace just out of view
+const embers = Array.from({ length: innerWidth < 720 ? 12 : 22 }, () => ({ x: rand(0, innerWidth), y: rand(0, innerHeight), r: rand(0.8, 2.4), vy: rand(0.2, 0.6), ph: rand(0, 6.28), tw: rand(0.02, 0.05) }));
+function drawEmbers() {
+  lx.save(); lx.globalCompositeOperation = "lighter";
+  for (const e of embers) {
+    e.y -= e.vy; e.x += Math.sin(t * 0.01 + e.ph) * 0.35 + wind * 0.2;
+    if (e.y < -10) { e.y = innerHeight + 10; e.x = rand(0, innerWidth); }
+    const a = 0.35 + 0.35 * Math.sin(t * e.tw + e.ph);
+    const g = lx.createRadialGradient(e.x, e.y, 0, e.x, e.y, e.r * 4);
+    g.addColorStop(0, `rgba(255,190,110,${a})`); g.addColorStop(1, "rgba(255,120,40,0)");
+    lx.fillStyle = g; lx.beginPath(); lx.arc(e.x, e.y, e.r * 4, 0, 6.283); lx.fill();
+  }
+  lx.restore();
+}
+let t = 0;
+(function loop() {
+  t += 1;
+  if (!document.hidden) {
+    if (--nextGust <= 0) { gust = rand(1.2, 2.6) * (Math.random() < 0.5 ? -1 : 1); nextGust = rand(700, 1400); }
+    gust *= 0.992; wind = Math.sin(t * 0.004) * 0.25 + gust;
+    lx.clearRect(0, 0, innerWidth, innerHeight);
+    for (const L of leaves) {
+      L.y += L.vy * (1 + Math.abs(gust) * 0.15);
+      L.x += L.vx + wind * L.z + Math.sin(t * 0.012 + L.ph) * 0.5 * L.z;
+      L.r += L.vr + Math.sin(t * 0.01 + L.ph) * 0.004 + gust * 0.002;
+      L.flip += 0.01 + 0.02 * L.z;
+      const dx = L.x - px, dy = L.y - py, d2 = dx * dx + dy * dy;
+      if (d2 < 9000) { const d = Math.sqrt(d2) || 1, k = (1 - d / 95) * 3 * L.z; L.x += (dx / d) * k; L.y += (dy / d) * k * 0.6; L.vr += 0.002; }
+      if (L.y > innerHeight + 40 || L.x < -80 || L.x > innerWidth + 80) Object.assign(L, newLeaf(false), { z: L.z, s: L.s, vy: L.vy, a: L.a });
+      drawLeaf(lx, L);
+    }
+    if (!reduced && density !== "off" && document.body.dataset.theme === "dusk") drawEmbers();
+    bx.clearRect(0, 0, innerWidth, innerHeight);
+    bursts = bursts.filter((L) => L.y < innerHeight + 60 && L.a > 0.02);
+    for (const L of bursts) { L.vy += 0.18; L.vx *= 0.985; L.vy *= 0.985; L.x += L.vx; L.y += L.vy; L.r += L.vr; L.flip += 0.08; L.life++; if (L.life > 90) L.a *= 0.97; drawLeaf(bx, L); }
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* ---------- share links: the whole card lives in the link's #c=… part ----------
+   The part after # never reaches GitHub's servers; it only exists in the link itself. */
+const b64u = { enc: (u8) => { let s = ""; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode(...u8.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); },
+               dec: (str) => Uint8Array.from(atob(str.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0)) };
+async function encodeCard(obj) {
+  const bytes = new TextEncoder().encode(JSON.stringify(obj));
+  if (window.CompressionStream) {
+    const out = await new Response(new Blob([bytes]).stream().pipeThrough(new CompressionStream("deflate-raw"))).arrayBuffer();
+    return "c=" + b64u.enc(new Uint8Array(out));
+  }
+  return "u=" + b64u.enc(bytes);
+}
+async function decodeCard(kind, str) {
+  const bytes = b64u.dec(str);
+  const text = kind === "u" ? new TextDecoder().decode(bytes)
+    : await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text();
+  return JSON.parse(text);
+}
+const HASH = location.hash.slice(1).split("&");
+const linkPart = HASH.find((p) => /^[cu]=/.test(p));
+
+$(".garland.r").innerHTML = $(".garland.l").innerHTML;
+(async () => {
+  if (linkPart) {
+    try { C = await decodeCard(linkPart[0], linkPart.slice(2)); window.CARD = C; }
+    catch { toast("This card link looks incomplete. Ask for it again?"); }
+  }
+  applyConfig();
+  if (EDIT) initEditor();
+})();
+
+
+/* =====================================================================
+   EDITOR: open this file with #edit at the end of the address
+   (or open customize.html). Everything runs locally; nothing is uploaded.
+   ===================================================================== */
+function initEditor() {
+  const DRAFT = "tg-card-draft";
+  const SCHEMA = [
+    { sec: "Basics", fields: [["to", "Recipient's name"], ["from", "Your name"], ["greeting", "Header greeting", "text", "Happy Thanksgiving, …"], ["subtitle", "Subtitle"], ["theme", "Color theme", "select", [["harvest", "Harvest (warm cream)"], ["cranberry", "Cranberry"], ["sage", "Sage"], ["dusk", "Dusk (cozy dark)"]]], ["leaves", "Falling leaves", "select", [["normal", "Normal"], ["light", "A few"], ["lots", "Lots"], ["off", "Off"]]]] },
+    { sec: "Letter (open me first)", key: "letter", fields: [["text", "Your letter (blank line = new paragraph)", "textarea"], ["signoff", "Sign-off"]] },
+    { sec: "Warm drink", key: "cider", toggle: true, fields: [["title", "Title"], ["text", "Message", "textarea"]] },
+    { sec: "Thankful list", key: "gratitude", toggle: true, fields: [["title", "Title"], ["items", "One thing per line", "lines"]] },
+    { sec: "Invitation ticket", key: "ticket", toggle: true, fields: [["stub", "Ticket text (e.g. ADMIT TWO)"], ["title", "Title"], ["text", "Details", "textarea"], ["when", "When (shown)"], ["where", "Where"], ["date", "Calendar date & time (adds an “Add to calendar” button)", "datetime-local"]] },
+    { sec: "Photos", key: "photos", toggle: true, fields: [["title", "Title"], ["items", "Photos", "photos"]] },
+    { sec: "Gift card", key: "giftcard", toggle: true, fields: [["title", "Title"], ["brand", "Store name"], ["amount", "Amount"], ["code", "Gift code"], ["link", "Redeem link (https://…)"], ["image", "Card picture (optional)", "image"], ["note", "Note", "textarea"]] },
+    { sec: "Music", key: "music", toggle: true, fields: [["title", "Song title"], ["artist", "Artist / subtitle"], ["mode", "Built-in sound", "select", [["both", "Melody + fireplace"], ["melody", "Melody only"], ["fireside", "Fireplace + soft pad"]]], ["src", "Your own audio file (optional, otherwise a built-in tune plays)", "audio"]] },
+    { sec: "Gift box finale", key: "finale", toggle: true, fields: [["title", "Title"], ["text", "Closing message", "textarea"], ["signoff", "Sign-off"]] },
+  ];
+  let saveT;
+  const saveDraft = () => { clearTimeout(saveT); saveT = setTimeout(() => {
+    try { localStorage.setItem(DRAFT, JSON.stringify(C)); note.textContent = "Draft saved on this device."; }
+    catch { note.textContent = "Too big to autosave (photos). Download the card to keep your work."; }
+  }, 400); };
+  const changed = () => { applyConfig(); saveDraft(); };
+
+  function compress(file, max = 1400, q = 0.85) {
+    return new Promise((res, rej) => {
+      const url = URL.createObjectURL(file), img = new Image();
+      img.onload = () => {
+        const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+        const cv = el("canvas", { width: Math.round(img.naturalWidth * s), height: Math.round(img.naturalHeight * s) });
+        const g = cv.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, cv.width, cv.height); g.drawImage(img, 0, 0, cv.width, cv.height);
+        URL.revokeObjectURL(url); res(cv.toDataURL("image/jpeg", q));
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); rej(new Error("bad image")); };
+      img.src = url;
+    });
+  }
+  const readAsData = (file) => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = rej; r.readAsDataURL(file); });
+  const fileBtn = (label, accept, multiple, onFiles) => el("label", { class: "file-btn mini" }, label,
+    el("input", { type: "file", accept, multiple: multiple ? "" : null, onchange: (e) => { const fs = [...e.target.files]; e.target.value = ""; if (fs.length) onFiles(fs); } }));
+
+  function field(target, [name, label, type = "text", extra], rerender) {
+    const wrap = el("label", { text: label });
+    let input;
+    if (type === "textarea") input = el("textarea", { value: target[name] || "" });
+    else if (type === "select") input = el("select", {}, extra.map(([v, l]) => el("option", { value: v, text: l, selected: (target[name] || extra[0][0]) === v ? "" : null })));
+    else if (type === "lines") input = el("textarea", { value: (target[name] || []).join("\n") });
+    else if (type === "datetime-local") input = el("input", { type: "datetime-local", value: target[name] || "" });
+    else if (type === "photos") {
+      target.items = target.items || [];
+      const list = el("div");
+      const draw = () => list.replaceChildren(...target.items.map((p, i) => el("div", { class: "ph-row" },
+        el("img", { src: safeUrl(p.src), alt: "" }),
+        el("input", { type: "text", value: p.caption || "", placeholder: "caption", oninput: (e) => { p.caption = e.target.value; changed(); } }),
+        el("button", { class: "mini", title: "Move up", text: "↑", onclick: (e) => { e.preventDefault(); if (i) { target.items.splice(i - 1, 0, target.items.splice(i, 1)[0]); draw(); changed(); } } }),
+        el("button", { class: "mini", title: "Remove", text: "✕", onclick: (e) => { e.preventDefault(); target.items.splice(i, 1); draw(); changed(); } }))));
+      draw();
+      return el("div", {}, el("label", { text: label }), list,
+        fileBtn("+ Add photos", "image/*", true, async (fs) => {
+          for (const f of fs) { try { target.items.push({ src: await compress(f), caption: "" }); } catch { toast(`Couldn't read ${f.name}. Try a JPG.`); } }
+          draw(); changed();
+        }),
+        el("div", { class: "ph-row" }, el("input", { type: "text", placeholder: "or paste an image link (https://…)", onkeydown: (e) => { if (e.key === "Enter") { e.preventDefault(); e.target.nextSibling.click(); } } }),
+          el("button", { class: "mini", text: "Add", onclick: (e) => { e.preventDefault(); const i = e.target.previousSibling, v = i.value.trim();
+            if (!/^https:\/\//i.test(v)) return toast("Use a direct https:// image link"); target.items.push({ src: v, caption: "" }); i.value = ""; draw(); changed(); } })),
+        el("div", { class: "ed-note", text: "Uploaded photos are resized and go into the downloaded file. Share links can only carry image links." }));
+    } else if (type === "image" || type === "audio") {
+      const status = el("span", { class: "ed-note" });
+      const draw = () => { status.textContent = target[name] ? (target[name].startsWith("data:") ? " ✓ file attached" : ` ${target[name]}`) : " none"; };
+      draw();
+      return el("div", {}, el("label", { text: label }), el("div", {},
+        fileBtn(type === "image" ? "Choose image" : "Choose audio", type === "image" ? "image/*" : "audio/*", false, async ([f]) => {
+          try {
+            if (type === "image") target[name] = await compress(f, 1200, 0.88);
+            else { if (f.size > 12e6) toast("That's a big file, so the card will be large"); target[name] = await readAsData(f); Music.stop(); }
+            draw(); changed();
+          } catch { toast("Couldn't read that file"); }
+        }), " ",
+        el("button", { class: "mini", text: "Remove", onclick: (e) => { e.preventDefault(); target[name] = ""; draw(); changed(); } }), status));
+    } else input = el("input", { type: "text", value: target[name] || "", placeholder: extra || "" });
+    input.dataset.name = name;
+    input.addEventListener(type === "select" ? "change" : "input", () => {
+      const old = target[name];
+      target[name] = type === "lines" ? input.value.split("\n").map((s) => s.trim()).filter(Boolean) : input.value;
+      if (target === C && name === "to" && (!C.greeting || C.greeting === `Happy Thanksgiving, ${old || ""}`.replace(/, $/, ""))) {
+        C.greeting = input.value.trim() ? `Happy Thanksgiving, ${input.value.trim()}` : "Happy Thanksgiving";
+        const g = edBody.querySelector('[data-name="greeting"]'); if (g) g.value = C.greeting;
+      }
+      if (target === C && name === "to" && C.letter && typeof C.letter.text === "string") {
+        const m = C.letter.text.match(/^(Hey|Hi|Dear|Hello)\s+([^,\n]*),/i);
+        if (m && (m[2] === (old || "") || !m[2].trim())) {
+          C.letter.text = `${m[1]} ${input.value.trim() || "you"},` + C.letter.text.slice(m[0].length);
+          const lt = edBody.querySelectorAll("textarea")[0]; if (lt) lt.value = C.letter.text;
+        }
+      }
+      if (name === "mode") Music.restart();
+      changed();
+    });
+    wrap.append(input); return wrap;
+  }
+
+  function buildForm() {
+    edBody.replaceChildren(...SCHEMA.map((s, idx) => {
+      const target = s.key ? (C[s.key] = C[s.key] || {}) : C;
+      const fields = el("div", { class: "ed-fields" }, s.fields.map((f) => field(target, f)));
+      const d = el("details", { open: idx < 2 ? "" : null, class: s.toggle && target.enabled === false ? "ed-off" : null },
+        el("summary", { text: s.sec }),
+        s.toggle && el("label", { class: "ed-toggle" }, el("input", { type: "checkbox", checked: target.enabled !== false, onchange: (e) => {
+          target.enabled = e.target.checked; d.classList.toggle("ed-off", !e.target.checked); changed();
+        } }), "Show this gift"),
+        fields);
+      return d;
+    }));
+  }
+
+  async function openFile([f]) {
+    try {
+      const txt = await f.text();
+      let cfg;
+      if (/\.json$/i.test(f.name)) cfg = JSON.parse(txt);
+      else {
+        const a = txt.indexOf(MARK_A), b = txt.indexOf(MARK_B);
+        if (a < 0 || b < 0) throw new Error("no config");
+        cfg = JSON.parse(txt.slice(a + MARK_A.length, b).trim().replace(/^window\.CARD\s*=\s*/, "").replace(/;\s*$/, ""));
+      }
+      C = cfg; window.CARD = C; Music.stop(); buildForm(); changed(); toast(`Loaded ${f.name}`);
+    } catch { toast("Couldn't read a card from that file"); }
+  }
+  async function copyLink() {
+    const base = /^https?:$/.test(location.protocol) ? location.origin + location.pathname.replace(/(customize|index)\.html$/, "") : (window.SITE_URL || "");
+    if (!base) {
+      linkOut.replaceChildren(el("div", { class: "ed-note ed-warn", text: "Links need the online version. Open customize.html on your GitHub Pages site, or set SITE_URL near the top of index.html." }));
+      return;
+    }
+    const card = JSON.parse(JSON.stringify(C)), dropped = [], web = (u) => /^https?:/i.test(u || "");
+    if (card.photos && card.photos.items) { const n = card.photos.items.length; card.photos.items = card.photos.items.filter((x) => web(x.src)); if (card.photos.items.length < n) dropped.push(`${n - card.photos.items.length} uploaded photo(s)`); }
+    if (card.giftcard && card.giftcard.image && !web(card.giftcard.image)) { card.giftcard.image = ""; dropped.push("the gift card picture"); }
+    if (card.music && card.music.src && !web(card.music.src)) { card.music.src = ""; dropped.push("your audio file (the built-in music plays instead)"); }
+    const url = base + "#" + (await encodeCard(card));
+    const box = el("input", { type: "text", readonly: "", value: url, onfocus: (e) => e.target.select() });
+    linkOut.replaceChildren(box,
+      el("div", { class: "ed-note", text: `Copied ✓ · ${url.length.toLocaleString()} characters. Anyone with this link can open the card${card.giftcard && card.giftcard.code && card.giftcard.enabled !== false ? ", including the gift code" : ""}.` }),
+      dropped.length && el("div", { class: "ed-note ed-warn", text: `Not in the link: ${dropped.join(", ")}. Use Download Card to include them.` }),
+      el("a", { class: "mini", href: url, target: "_blank", rel: "noopener", text: "Open link ↗", style: "display:inline-block; margin-top:6px; text-decoration:none" }));
+    try { await navigator.clipboard.writeText(url); } catch { box.focus(); box.select(); }
+  }
+  function exportCard() {
+    const a = SRC.indexOf(MARK_A), b = SRC.indexOf(MARK_B);
+    const json = JSON.stringify(C, null, 2).replace(/</g, "\\u003c");
+    const html = SRC.slice(0, a + MARK_A.length) + "\nwindow.CARD = " + json + ";\n" + SRC.slice(b);
+    download(`thanksgiving-${slug(C.to)}.html`, html, "text/html");
+    toast("Card downloaded. Keep it private and send it directly ♡");
+  }
+
+  document.body.classList.add("editing");
+  unlock();
+  const note = el("div", { class: "ed-note" });
+  const linkOut = el("div", { class: "ed-link" });
+  const edBody = el("div", { class: "ed-body" });
+  let hasDraft = false; try { hasDraft = !!localStorage.getItem(DRAFT); } catch {}
+  const panel = el("aside", { class: "editor", "aria-label": "Card editor" },
+    el("div", { class: "ed-head" },
+      el("button", { class: "close ed-x", "aria-label": "Hide editor", text: "✕", onclick: () => document.body.classList.add("ed-collapsed") }),
+      el("h2", { text: "Personalize Your Card" }),
+      el("p", { text: "Changes show live. Everything stays on this device; nothing is uploaded." }),
+      el("div", { class: "ed-actions" },
+        el("button", { class: "btn", text: "⬇ Download Card", onclick: exportCard }),
+        el("button", { class: "btn", text: "🔗 Copy Link", onclick: copyLink }),
+        fileBtn("Open Card…", ".html,.json", false, openFile),
+        el("button", { class: "mini", text: "Preview", onclick: () => { document.body.classList.add("ed-collapsed"); resetExperience(); } }),
+        hasDraft && el("button", { class: "mini", text: "Restore Draft", onclick: (e) => {
+          try { C = JSON.parse(localStorage.getItem(DRAFT)); window.CARD = C; buildForm(); applyConfig(); e.target.remove(); toast("Draft restored"); } catch { toast("Couldn't restore the draft"); }
+        } })),
+      note, linkOut),
+    edBody);
+  const fab = el("button", { class: "btn ed-fab", text: "✎ Edit Card", onclick: () => document.body.classList.remove("ed-collapsed") });
+  document.body.append(panel, fab);
+  buildForm();
+}
+})();
+</script>
+</body>
+</html>
