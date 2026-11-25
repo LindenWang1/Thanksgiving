@@ -9,14 +9,10 @@
 <meta property="og:title" content="Happy Thanksgiving 🍁">
 <meta property="og:description" content="A few little things, because I'm grateful for you. Open me first.">
 <meta property="og:type" content="website">
-<!-- After GitHub Pages is on, make this a full address, e.g. https://YOUR-USERNAME.github.io/thanksgiving/og.png -->
-<meta property="og:image" content="og.png">
+<!-- Preview picture shown under shared links. It must be a full https:// address. -->
+<meta property="og:image" content="https://lindenwang1.github.io/Thanksgiving/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f6eee1">
-<meta name="theme-color" content="#f6eee1">
-<meta property="og:title" content="A little Thanksgiving thank-you 🍁">
-<meta property="og:description" content="Open the letter first.">
-<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%81%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,8 +29,8 @@
      data: URIs (make_card.py embeds local files automatically).
    ========================================================================== */
 /* Your live site's address, used when the editor makes share links from a
-   copy on your computer. Example: "https://YOUR-USERNAME.github.io/thanksgiving/" */
-window.SITE_URL = "";
+   copy on your computer. Example: "https://YOUR-USERNAME.github.io/Thanksgiving/" */
+window.SITE_URL = "https://lindenwang1.github.io/Thanksgiving/";
 /* CONFIG START */
 window.CARD = {
   "to": "You",
@@ -631,7 +627,6 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
   </symbol>
 </svg>
 
-<footer class="site-foot" id="siteFoot"></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <div class="modal" id="modal" hidden>
@@ -841,7 +836,7 @@ function icsFor(T) {
   const start = new Date(+m[1], m[2] - 1, +m[3], +m[4], +m[5]), end = new Date(start.getTime() + 3 * 3600e3);
   const p = (n) => String(n).padStart(2, "0");
   const fmt = (d) => `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}T${p(d.getHours())}${p(d.getMinutes())}00`;
-  const esc = (s) => String(s || "").replace(/[\;,]/g, (c) => "\\" + c).replace(/\n/g, "\\n");
+  const esc = (s) => String(s || "").replace(/[\\;,]/g, (c) => "\\" + c).replace(/\n/g, "\\n");
   return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//thanksgiving//EN", "BEGIN:VEVENT",
     `UID:${Date.now()}@thanksgiving`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`,
     `DTSTART:${fmt(start)}`, `DTEND:${fmt(end)}`, `SUMMARY:${esc(T.title || "Thanksgiving")}`,
@@ -1152,7 +1147,7 @@ function initEditor() {
     { sec: "Letter (open me first)", key: "letter", fields: [["text", "Your letter (blank line = new paragraph)", "textarea"], ["signoff", "Sign-off"]] },
     { sec: "Warm drink", key: "cider", toggle: true, fields: [["title", "Title"], ["text", "Message", "textarea"]] },
     { sec: "Thankful list", key: "gratitude", toggle: true, fields: [["title", "Title"], ["items", "One thing per line", "lines"]] },
-    { sec: "Invitation ticket", key: "ticket", toggle: true, fields: [["stub", "Ticket text (e.g. ADMIT TWO)"], ["title", "Title"], ["text", "Details", "textarea"], ["when", "When (shown)"], ["where", "Where"], ["date", "Calendar date & time (adds an “Add to calendar” button)", "datetime-local"]] },
+    { sec: "Invitation ticket", key: "ticket", toggle: true, fields: [["stub", "Ticket text (e.g. ADMIT TWO)"], ["title", "Title"], ["text", "Details", "textarea"], ["when", "When (shown)"], ["where", "Where"], ["date", "Calendar date & time (adds an “Add to Calendar” button)", "datetime-local"]] },
     { sec: "Photos", key: "photos", toggle: true, fields: [["title", "Title"], ["items", "Photos", "photos"]] },
     { sec: "Gift card", key: "giftcard", toggle: true, fields: [["title", "Title"], ["brand", "Store name"], ["amount", "Amount"], ["code", "Gift code"], ["link", "Redeem link (https://…)"], ["image", "Card picture (optional)", "image"], ["note", "Note", "textarea"]] },
     { sec: "Music", key: "music", toggle: true, fields: [["title", "Song title"], ["artist", "Artist / subtitle"], ["mode", "Built-in sound", "select", [["both", "Melody + fireplace"], ["melody", "Melody only"], ["fireside", "Fireplace + soft pad"]]], ["src", "Your own audio file (optional, otherwise a built-in tune plays)", "audio"]] },

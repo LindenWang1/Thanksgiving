@@ -7,9 +7,9 @@ Autumn leaves drift down in the background.
 
 ![Preview](preview.png)
 
-**[Live Sample →](https://YOUR-USERNAME.github.io/thanksgiving/)**
+**[Live Sample →](https://lindenwang1.github.io/Thanksgiving/)**
 
-## What It Does
+## Features
 - **Built-in Editor:** open `customize.html` to fill in a form, see the changes live, and download a finished card. No coding needed.
 - Envelope addressed to the recipient by name, with a postage stamp and a wax seal that cracks open. The other gifts unlock after the letter is read, and the letter writes itself in line by line.
 - Check marks on opened gifts and an "x of 7 opened" counter. The gift box glows when it's the last one left.
@@ -47,8 +47,6 @@ To change a link later, open it, add `&edit` to the end of the address, and copy
 
 ### Option C: Script
 
-
-
 ```bash
 mkdir -p private/you/photos
 cp people.example.json private/you/you.json   # edit it
@@ -66,7 +64,7 @@ Send that single `.html` file directly by text, email, or AirDrop. It opens in a
 - For music, use a song you have the rights to share, or leave `src` empty to use the built-in tune.
 
 ## Config Reference
-| Field | What it does |
+| Field | What It Does |
 |---|---|
 | `to`, `from`, `greeting`, `subtitle` | Header text |
 | `theme` | `harvest` · `cranberry` · `sage` · `dusk` |
@@ -74,11 +72,11 @@ Send that single `.html` file directly by text, email, or AirDrop. It opens in a
 | `letter.text` / `signoff` | Main note. Blank lines start new paragraphs. |
 | `cider`, `gratitude`, `ticket`, `photos`, `giftcard`, `music`, `finale` | Each gift. Add `"enabled": false` to hide one. |
 | `photos.items[]` | `{ "src": "photos/1.jpg", "caption": "…" }` |
-| `ticket.date` | `2026-11-28T18:00` adds an "Add to calendar" button |
+| `ticket.date` | `2026-11-28T18:00` adds an "Add to Calendar" button |
 | `giftcard` | `brand`, `amount`, `code`, `link` (https), optional `image` |
 | `music.mode` | Built-in sound: `both` · `melody` · `fireside` |
 | `music.src` | mp3/m4a path or URL. Empty means the built-in sound. |
 
 ## Hosting the Public Sample
 Settings → Pages → Deploy from branch → `main` / root. Then, in `index.html`, change the `og:image` meta tag to the
-full address (`https://YOUR-USERNAME.github.io/thanksgiving/og.png`) so shared links show a preview picture.
+full address (`https://lindenwang1.github.io/Thanksgiving/og.png`) so shared links show a preview picture.
