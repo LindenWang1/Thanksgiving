@@ -1,15 +1,28 @@
 {
   "to": "You",
-  "from": "Linden",
+  "from": "Me",
   "greeting": "Happy Thanksgiving, You",
   "subtitle": "a few little things, because I'm grateful for you",
   "theme": "harvest",
   "leaves": "normal",
+  "cover": {
+    "title": "Happy Thanksgiving",
+    "tagline": "Thankful for You",
+    "icons": [
+      "boba",
+      "basketball",
+      "ramen"
+    ],
+    "palette": "",
+    "style": "sticker",
+    "seed": 3
+  },
   "letter": {
     "text": "Hey You,\n\nWrite your main thank-you note here. Blank lines start a new paragraph.\n\nOpen the rest in any order.",
-    "signoff": "— Linden"
+    "signoff": "— Me"
   },
   "cider": {
+    "art": "cider",
     "title": "a warm drink, on me",
     "text": "A short, sweet line. Set \"enabled\": false to hide this gift."
   },
@@ -17,7 +30,10 @@
     "title": "things I'm thankful for",
     "items": [
       "first thing",
-      "second thing",
+      {
+        "text": "second thing",
+        "icon": "boba"
+      },
       "third thing"
     ]
   },
@@ -61,6 +77,6 @@
   "finale": {
     "title": "Happy Thanksgiving!",
     "text": "Your closing message.",
-    "signoff": "with love, Linden"
+    "signoff": "with love, Me"
   }
 }

@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Happy Thanksgiving</title>
-<meta name="description" content="A little Thanksgiving thank-you, made for you.">
-<meta name="robots" content="noindex">
+<meta name="description" content="A cozy Thanksgiving thank-you desk — create a private card, customize it, and send it without uploading a word.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Thanksgiving Thank-You Card">
 <meta property="og:title" content="Happy Thanksgiving 🍁">
 <meta property="og:description" content="A few little things, because I'm grateful for you. Open me first.">
 <meta property="og:type" content="website">
@@ -16,7 +17,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%81%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script>
 /* ==========================================================================
@@ -34,14 +35,22 @@ window.SITE_URL = "https://lindenwang1.github.io/Thanksgiving/";
 /* CONFIG START */
 window.CARD = {
   "to": "You",
-  "from": "Linden",
+  "from": "Me",
   "greeting": "Happy Thanksgiving, You",
   "subtitle": "a few little things, because I'm grateful for you",
   "theme": "harvest",
   "leaves": "normal",
+  "cover": {
+    "title": "Happy Thanksgiving",
+    "tagline": "Thankful for You",
+    "icons": ["turkey", "pie", "pumpkin"],
+    "palette": "",
+    "style": "sticker",
+    "seed": 3
+  },
   "letter": {
-    "text": "Hey you,\n\nThanksgiving always makes me stop and think about the people who made my year better, and you're right at the top of that list.\n\nThanks for showing up, for the late-night talks, and for always having my back. I put together a few little things for you. Open them in any order.",
-    "signoff": "— Linden"
+    "text": "Hey You,\n\nThanksgiving always makes me stop and think about the people who made my year better, and you're right at the top of that list.\n\nThanks for showing up, for the late-night talks, and for always having my back. I put together a few little things for you. Open them in any order.",
+    "signoff": "— Me"
   },
   "cider": {
     "title": "a warm drink, on me",
@@ -86,7 +95,7 @@ window.CARD = {
   "finale": {
     "title": "Happy Thanksgiving!",
     "text": "Thank you for being you. I'm so grateful we're in each other's lives.",
-    "signoff": "with love, Linden"
+    "signoff": "with love, Me"
   }
 };
 /* CONFIG END */
@@ -94,17 +103,21 @@ window.CARD = {
 
 <style>
 :root{
-  --paper:#f6eee1; --paper-2:#efe1cb; --ink:#3a2c25; --muted:#8b7463;
-  --accent:#b5452a; --accent-2:#d9792b; --gold:#e0ad4a; --sheet:#fffaf2;
+  --paper:#faf3e8; --paper-2:#f3e4cc; --ink:#3a2c25; --muted:#8b7463;
+  --accent:#c04a2e; --accent-2:#e08a3a; --gold:#e8b84e; --sheet:#fffaf4;
   --hand:'Caveat', 'Bradley Hand', 'Segoe Print', cursive;
   --serif:'Playfair Display', Georgia, serif;
-  --sans:'Inter', system-ui, -apple-system, sans-serif;
-  --light:#fffaf1; --glow:rgba(255,196,120,.38); --glow-2:rgba(222,132,70,.16); --pill:rgba(255,250,242,.75); --grain:.35;
+  --sans:'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --light:#fff8ee; --glow:rgba(255,210,140,.42); --glow-2:rgba(232,140,80,.14); --pill:rgba(255,252,246,.82); --grain:.28;
 }
-body[data-theme="cranberry"]{ --paper:#f5ebe7; --paper-2:#ecd3cb; --accent:#9b2335; --accent-2:#c2503d; --glow:rgba(255,190,170,.36); --glow-2:rgba(155,35,53,.12); }
-body[data-theme="sage"]{ --paper:#eef0e5; --paper-2:#dde2cd; --accent:#7a5a2e; --accent-2:#a8743a; --glow:rgba(255,222,150,.34); --glow-2:rgba(110,130,80,.14); }
-body[data-theme="dusk"]{ --paper:#261b25; --paper-2:#3b2531; --ink:#f7ead9; --muted:#d4bba3; --accent:#f2a65e; --accent-2:#e0793a;
-  --light:#3a2733; --glow:rgba(255,140,60,.13); --glow-2:rgba(190,80,60,.12); --pill:rgba(255,240,220,.08); --grain:.18; }
+body[data-theme="cranberry"]{ --paper:#fbf0f2; --paper-2:#f5d6dc; --accent:#c0455c; --accent-2:#e07a8a; --glow:rgba(255,200,210,.42); --glow-2:rgba(192,69,92,.1); }
+body[data-theme="sage"]{ --paper:#f2f6ec; --paper-2:#dde8d0; --accent:#6a8f5e; --accent-2:#98b57a; --glow:rgba(220,240,180,.4); --glow-2:rgba(106,143,94,.1); }
+body[data-theme="maple"]{ --paper:#fcf1ea; --paper-2:#f0d5c4; --accent:#c45e3a; --accent-2:#e08a5c; --glow:rgba(255,200,160,.4); --glow-2:rgba(196,94,58,.1); }
+body[data-theme="cider"]{ --paper:#fff6e0; --paper-2:#f5e0a8; --accent:#d4892a; --accent-2:#f0a83a; --glow:rgba(255,220,140,.48); --glow-2:rgba(212,137,42,.12); }
+body[data-theme="juniper"]{ --paper:#eff7f4; --paper-2:#d2e8e1; --accent:#2f7f78; --accent-2:#5eaca0; --glow:rgba(200,240,225,.42); --glow-2:rgba(47,127,120,.1); }
+body[data-theme="mist"]{ --paper:#f3f6fb; --paper-2:#d9e4f2; --accent:#6a7fa8; --accent-2:#8fa3c4; --glow:rgba(200,220,245,.45); --glow-2:rgba(106,127,168,.1); }
+body[data-theme="dusk"]{ --paper:#2a1f2c; --paper-2:#3f2a38; --ink:#faf0e4; --muted:#e0c8b0; --accent:#f2b46a; --accent-2:#e89050;
+  --light:#3d2a36; --glow:rgba(255,170,90,.16); --glow-2:rgba(200,100,80,.12); --pill:rgba(255,240,220,.1); --grain:.16; }
 body[data-theme="dusk"].sealed .item:not(.env){opacity:.9}
 /* panels always use dark ink, whatever the page theme */
 .sheet,.editor,.toast-ink{--ink:#3a2c25; --muted:#8b7463}
@@ -140,14 +153,14 @@ body::before{ /* paper grain */
 #leaves{position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:1}
 #burst{position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:60}
 
-header{position:relative; z-index:3; text-align:center; padding:clamp(22px,4.5vh,52px) 20px 0}
+header{position:relative; z-index:3; text-align:center; padding:clamp(22px,4.5vh,52px) 20px 4px}
 header h1{font-family:var(--serif); font-weight:500; font-size:clamp(1.8rem,4.6vw,3rem); margin:0; letter-spacing:-.01em}
 header h1 em{font-style:italic; color:var(--accent)}
 header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:var(--muted); margin:.3em 0 0}
 
 .stage{
-  position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:clamp(8px,2vh,32px) 24px 48px;
-  display:grid; gap:clamp(6px,1.6vh,24px) clamp(8px,3vw,40px); align-items:center; justify-items:center;
+  position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:clamp(8px,2vh,32px) 24px 52px;
+  display:grid; gap:clamp(10px,2vh,28px) clamp(8px,3vw,40px); align-items:center; justify-items:center;
   grid-template-columns:1fr 1.25fr 1fr;
   grid-template-areas:
     "cider    envelope bag"
@@ -155,7 +168,7 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
     "photos   box      giftcard";
 }
 .item{
-  --r:0deg; position:relative; border:0; background:none; padding:6px; cursor:pointer; color:inherit;
+  --r:0deg; position:relative; border:0; background:none; padding:6px 6px 12px; cursor:pointer; color:inherit;
   transform:rotate(var(--r)); transition:transform .45s cubic-bezier(.2,.9,.25,1.2), opacity .4s, filter .4s;
   filter:drop-shadow(0 16px 14px rgba(80,45,20,.16)) drop-shadow(0 3px 3px rgba(80,45,20,.12));
   -webkit-tap-highlight-color:transparent;
@@ -165,7 +178,7 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
 .item .float{display:block; animation:bob 6s ease-in-out infinite; animation-delay:var(--d,0s)}
 .item svg{display:block; width:100%; height:auto; overflow:visible}
 .item .tag{
-  position:absolute; left:50%; bottom:-8px; transform:translateX(-50%); white-space:nowrap;
+  position:absolute; left:50%; bottom:-12px; transform:translateX(-50%); white-space:nowrap;
   font-family:var(--hand); font-size:1.15rem; color:var(--muted); opacity:0; transition:opacity .3s;
 }
 .item:hover .tag,.item:focus-visible .tag{opacity:1}
@@ -204,8 +217,8 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
 .box .lid{transition:transform .6s cubic-bezier(.3,1.4,.4,1)}
 .box:hover .lid,.box.opened .lid{transform:translate(-8px,-14px) rotate(-5deg)}
 
-.footer-hint{display:inline-block; margin-top:12px; font-family:var(--sans); font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--accent); background:var(--pill); border:1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding:6px 14px; border-radius:99px}
+.footer-hint{display:inline-block; margin-top:16px; font-family:var(--sans); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--accent); background:var(--pill); border:1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding:7px 15px; border-radius:99px}
 
 .music-toggle{position:fixed; top:14px; right:14px; z-index:50; width:46px; height:46px; border-radius:50%;
   border:1px solid rgba(58,44,37,.15); background:rgba(255,250,242,.85); backdrop-filter:blur(6px);
@@ -231,11 +244,28 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
 .close{position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%; border:0; background:rgba(58,44,37,.08);
   font-size:1.2rem; line-height:1; cursor:pointer; color:var(--ink)}
 .close:hover{background:rgba(58,44,37,.16)}
+.close:focus-visible{outline:2px dashed var(--accent); outline-offset:2px}
 .sheet h2{font-family:var(--serif); font-weight:500; font-size:clamp(1.6rem,4vw,2rem); text-align:center; margin:0 0 18px}
 .sheet p{line-height:1.6; margin:0 0 .9em}
 .sheet .hand{font-family:var(--hand); font-size:1.55rem; line-height:1.35}
 .sheet .center{text-align:center}
 .sheet .art{width:120px; margin:0 auto 14px; display:block}
+.sheet .art-photo{display:block; width:min(260px,100%); max-height:44vh; object-fit:cover; margin:0 auto 18px; border-radius:16px; box-shadow:0 12px 26px rgba(60,35,15,.18)}
+.gratitude-list svg.g-icon{flex:0 0 30px; width:30px; margin:2px 0 0}
+.drink-row{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:6px}
+.drink-opt{display:flex; flex-direction:column; align-items:center; gap:2px; padding:8px 4px 6px; border:1.5px solid rgba(58,44,37,.12); border-radius:12px; background:#fff; cursor:pointer; color:var(--ink)}
+.drink-opt svg{width:44px; height:54px}
+.drink-opt small{font:500 .72rem var(--sans)}
+.drink-opt:hover{border-color:var(--accent)}
+.drink-opt.on{border-color:var(--accent); background:color-mix(in srgb, var(--accent) 10%, #fff)}
+.thanks-list{display:flex; flex-direction:column; gap:6px; margin-top:6px}
+.thanks-row{display:flex; gap:6px; align-items:center}
+.thanks-row input{flex:1; min-width:0}
+.thanks-pic{flex:0 0 38px; height:38px; border:1.5px solid rgba(58,44,37,.14); border-radius:10px; background:#fff; cursor:pointer; display:grid; place-items:center; padding:4px}
+.thanks-pic svg{width:24px; height:24px}
+.thanks-pic:hover,.thanks-pic.on{border-color:var(--accent)}
+.thanks-picker{margin:6px 0 4px 44px; padding:8px; border:1px solid rgba(58,44,37,.12); border-radius:10px; background:#fffdf9}
+.thanks-add{align-self:flex-start; margin-top:2px}
 
 .sheet-letter .body{background:repeating-linear-gradient(transparent 0 35px, rgba(181,69,42,.16) 35px 36px, transparent 36px 38px); font-family:var(--hand); font-size:clamp(1.45rem,3.6vw,1.75rem); line-height:38px; white-space:pre-line; padding-top:8px}
 .sheet-letter .body p{margin:0 0 38px; line-height:38px}
@@ -245,7 +275,7 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
 .gratitude-list{list-style:none; padding:0; margin:0}
 .gratitude-list li{display:flex; gap:12px; align-items:flex-start; font-family:var(--hand); font-size:1.55rem; line-height:1.3; padding:8px 0; border-bottom:1px dashed rgba(58,44,37,.15)}
 .gratitude-list li:last-child{border:0}
-.gratitude-list svg{flex:0 0 22px; width:22px; margin-top:6px}
+.gratitude-list svg{flex:0 0 22px; width:22px; margin:6px 4px 0}
 
 .ticket-card{border:2px solid #b89a64; background:#f3e6c6; border-radius:8px; padding:22px; position:relative; text-align:center}
 .ticket-card::before,.ticket-card::after{content:""; position:absolute; top:50%; width:22px; height:22px; border-radius:50%; background:var(--sheet); border:2px solid #b89a64; transform:translateY(-50%)}
@@ -307,7 +337,7 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
 @media (max-width:720px){
   .garland{width:118px; opacity:.85}
   header{padding-top:64px}
-  .stage{grid-template-columns:1fr 1fr; gap:22px 10px; padding-bottom:110px;
+  .stage{grid-template-columns:1fr 1fr; gap:24px 10px; padding-bottom:110px;
     grid-template-areas:
       "envelope envelope"
       "cider    bag"
@@ -316,10 +346,13 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
       "box      box";}
   .env{width:min(78vw,300px); align-self:center}
   .cider{width:30vw}.bag{width:32vw}.music{width:31vw}.ticket{width:40vw}.photos{width:36vw}.giftcard{width:40vw}.box{width:min(62vw,250px)}
-  .item .tag{opacity:.85; white-space:normal; width:100%; text-align:center; font-size:1.02rem; line-height:1.05; bottom:-14px}
+  .item .tag{opacity:.85; white-space:normal; width:100%; text-align:center; font-size:1.02rem; line-height:1.1; bottom:-16px}
+  .item{padding-bottom:14px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important}
+  .item .tag{transition:none}
+  .cover-art{transition:none}
 }
 .sheet-letter .body p,.sheet-letter .sign,.gratitude-list li,.finale .hand p,.finale .sign{animation:ink .7s both; animation-delay:calc(var(--i,0) * .35s + .15s)}
 @keyframes ink{from{opacity:0; transform:translateY(6px); filter:blur(2px)}}
@@ -330,25 +363,92 @@ header p{font-family:var(--hand); font-size:clamp(1.25rem,2.6vw,1.6rem); color:v
   background:var(--accent); color:#fff; font:600 13px/24px var(--sans); text-align:center; box-shadow:0 3px 8px rgba(80,45,20,.25); animation:pop .4s both}
 .box.next .float{animation:bob 6s ease-in-out infinite, glow 1.8s ease-in-out infinite}
 @keyframes glow{0%,100%{filter:drop-shadow(0 0 0 rgba(224,173,74,0))}50%{filter:drop-shadow(0 0 18px rgba(224,173,74,.85))}}
+@keyframes softIn{from{opacity:0; transform:translateY(10px)}to{opacity:1; transform:none}}
+.create-bar{animation:softIn .6s .2s both}
+.unlocked .item.env .hint{animation:softIn .5s both}
 .env:not(.open):hover .paper,.env:not(.open):focus-visible .paper{transform:translateY(-20px); transition-delay:0s}
 
-/* ---------- in-browser editor (open index.html#edit) ---------- */
-body.editing{padding-right:400px}
+/* ---------- create CTA on the public sample ---------- */
+.create-bar{
+  position:fixed; top:14px; left:14px; z-index:50; display:flex; gap:8px; align-items:center; flex-wrap:wrap;
+  max-width:calc(100vw - 80px);
+}
+.create-bar a,.create-bar button{
+  display:inline-flex; align-items:center; gap:6px; border-radius:99px; padding:10px 16px; font:600 .84rem var(--sans); min-height:40px;
+  text-decoration:none; border:1px solid rgba(58,44,37,.15); background:rgba(255,250,242,.88); color:var(--ink);
+  backdrop-filter:blur(6px); box-shadow:0 4px 14px rgba(80,45,20,.1); cursor:pointer;
+}
+.create-bar .primary{background:var(--accent); color:#fff; border-color:transparent}
+.create-bar a:hover,.create-bar button:hover{transform:translateY(-1px)}
+.create-bar a:focus-visible,.create-bar button:focus-visible{outline:2px dashed var(--accent); outline-offset:3px}
+body.editing .create-bar,body.has-card-link .create-bar,body.personal-card .create-bar{display:none}
+.skip-link{position:absolute; left:-9999px; top:8px; z-index:100; background:var(--accent); color:#fff; padding:8px 14px; border-radius:8px; font:600 .9rem var(--sans)}
+.skip-link:focus{left:14px}
+
+/* ---------- guided create / editor ---------- */
+body.editing{padding-right:min(440px,42vw)}
 body.editing.ed-collapsed{padding-right:0}
-body.editing .music-toggle{right:414px}
+body.editing .music-toggle{right:calc(min(440px,42vw) + 14px)}
 body.editing.ed-collapsed .music-toggle{right:14px}
-body.editing:not(.ed-collapsed) .modal{right:400px}
-.editor{position:fixed; top:0; right:0; bottom:0; width:400px; z-index:58; background:#fffaf2; color:var(--ink);
+body.editing:not(.ed-collapsed) .modal{right:min(440px,42vw)}
+.editor{position:fixed; top:0; right:0; bottom:0; width:min(440px,42vw); z-index:58; background:#fffaf2; color:var(--ink);
   border-left:1px solid rgba(58,44,37,.12); box-shadow:-12px 0 40px rgba(60,35,15,.12); display:flex; flex-direction:column;
   font:14px/1.45 var(--sans); transition:transform .35s cubic-bezier(.3,.9,.3,1)}
 .ed-collapsed .editor{transform:translateX(100%)}
-.ed-head{padding:18px 18px 14px; border-bottom:1px solid rgba(58,44,37,.1)}
-.ed-head h2{font-family:var(--serif); font-weight:500; margin:0; font-size:1.45rem}
-.ed-head p{margin:2px 0 12px; color:var(--muted); font-size:.8rem}
-.ed-x{position:absolute; top:14px; right:14px}
-.ed-actions{display:flex; gap:8px; flex-wrap:wrap}
-.ed-actions .btn{padding:8px 14px; font-size:.85rem}
-.ed-body{overflow:auto; padding:4px 18px 60px; flex:1}
+.ed-head{padding:16px 18px 12px; border-bottom:1px solid rgba(58,44,37,.1); flex:0 0 auto}
+.ed-head h2{font-family:var(--serif); font-weight:500; margin:0; font-size:1.4rem}
+.ed-head .ed-lede{margin:4px 0 0; color:var(--muted); font-size:.8rem}
+.ed-x{position:absolute; top:12px; right:12px}
+.ed-steps{display:flex; gap:4px; margin:14px 0 0; flex-wrap:wrap}
+.ed-step{
+  flex:1 1 0; min-width:64px; border:0; background:transparent; padding:6px 4px; cursor:pointer; color:var(--muted);
+  font:600 .72rem/1.2 var(--sans); letter-spacing:.02em; text-transform:none; border-bottom:2px solid rgba(58,44,37,.12);
+  text-align:center;
+}
+.ed-step[aria-current="step"]{color:var(--accent); border-bottom-color:var(--accent)}
+.ed-step:disabled{opacity:.4; cursor:not-allowed}
+.ed-step:focus-visible{outline:2px dashed var(--accent); outline-offset:2px; border-radius:4px}
+.ed-step .n{display:block; font-family:var(--serif); font-size:1.05rem; font-weight:500; letter-spacing:0; text-transform:none; margin-bottom:2px}
+.ed-privacy{display:flex; align-items:flex-start; gap:8px; margin-top:10px; padding:9px 11px; border-radius:10px;
+  background:color-mix(in srgb, var(--accent) 7%, transparent); border:1px solid color-mix(in srgb, var(--accent) 18%, transparent); font-size:.74rem; color:var(--ink); line-height:1.4}
+.ed-privacy b{font-weight:600}
+.ed-privacy[hidden]{display:none}
+.ed-nav{display:flex; gap:8px; flex-wrap:wrap; padding:12px 18px; border-top:1px solid rgba(58,44,37,.1); flex:0 0 auto; background:#fffaf2}
+.ed-nav .btn{padding:9px 16px; font-size:.88rem}
+.ed-nav .spacer{flex:1}
+.ed-nav [hidden]{display:none}
+.ed-body{overflow:auto; padding:8px 18px 28px; flex:1}
+.ed-pane h3{font-family:var(--serif); font-weight:500; font-size:1.25rem; margin:8px 0 4px}
+.ed-pane .ed-intro{color:var(--muted); font-size:.86rem; margin:0 0 14px}
+.ed-choice{display:grid; gap:10px; margin:12px 0 18px}
+.ed-choice button{
+  text-align:left; border:1.5px solid rgba(58,44,37,.14); background:#fff; border-radius:14px; padding:14px 14px 14px 16px;
+  cursor:pointer; color:var(--ink); font:inherit; transition:border-color .2s, transform .2s, box-shadow .2s;
+}
+.ed-choice button:hover,.ed-choice button:focus-visible{border-color:var(--accent); transform:translateY(-1px); box-shadow:0 8px 18px rgba(60,35,15,.1)}
+.ed-choice button:focus-visible{outline:2px dashed var(--accent); outline-offset:2px}
+.ed-choice strong{display:block; font-family:var(--serif); font-weight:500; font-size:1.1rem; margin-bottom:2px}
+.ed-choice span{display:block; color:var(--muted); font-size:.82rem; line-height:1.35}
+.ed-presets{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:10px 0 14px}
+.ed-preset{border:1.5px solid rgba(58,44,37,.12); background:#fff; border-radius:12px; padding:8px; cursor:pointer; color:var(--ink); font:inherit; text-align:center}
+.ed-preset:hover,.ed-preset.on{border-color:var(--accent); background:color-mix(in srgb, var(--accent) 10%, #fff)}
+.ed-preset svg{display:block; width:100%; height:auto; border-radius:8px; margin-bottom:6px}
+.ed-preset b{display:block; font-size:.78rem; font-weight:600}
+.ed-send{display:grid; gap:12px; margin-top:8px}
+.ed-send-card{
+  border:1.5px solid rgba(58,44,37,.12); background:#fff; border-radius:16px; padding:16px;
+  animation:rise .45s cubic-bezier(.2,.9,.25,1.15) both;
+  transition:border-color .2s, box-shadow .2s;
+}
+.ed-send-card:hover{border-color:color-mix(in srgb, var(--accent) 40%, transparent); box-shadow:0 8px 20px rgba(60,35,15,.08)}
+.ed-send-card:nth-child(2){animation-delay:.08s}
+.ed-send-card h4{font-family:var(--serif); font-weight:500; margin:0 0 4px; font-size:1.15rem}
+.ed-send-card p{margin:0 0 12px; color:var(--muted); font-size:.84rem; line-height:1.4}
+.ed-send-card .btn{width:100%}
+.ed-send-card .btn.secondary{background:transparent; color:var(--accent); border:1.5px solid currentColor}
+.ed-checklist{list-style:none; padding:0; margin:0 0 8px; font-size:.82rem; color:var(--ink)}
+.ed-checklist li{padding:4px 0 4px 22px; position:relative}
+.ed-checklist li::before{content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700}
 .ed-body details{border-bottom:1px solid rgba(58,44,37,.1); padding:12px 0}
 .ed-body summary{cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:10px; list-style:none}
 .ed-body summary::-webkit-details-marker{display:none}
@@ -357,8 +457,9 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
 .ed-body label{display:block; margin-top:10px; font-size:.76rem; color:var(--muted); font-weight:500}
 .ed-body input:not([type=checkbox]):not([type=file]),.ed-body textarea,.ed-body select{width:100%; margin-top:4px; padding:8px 10px;
   border:1px solid rgba(58,44,37,.18); border-radius:8px; font:inherit; background:#fff; color:var(--ink)}
-.ed-body input:focus,.ed-body textarea:focus,.ed-body select:focus{outline:2px solid rgba(181,69,42,.35); border-color:var(--accent)}
+.ed-body input:focus,.ed-body textarea:focus,.ed-body select:focus{outline:2px solid color-mix(in srgb, var(--accent) 35%, transparent); border-color:var(--accent)}
 .ed-body textarea{min-height:96px; resize:vertical}
+.ed-body textarea.tall{min-height:160px}
 .ed-toggle{display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--ink); margin-top:8px}
 .ed-toggle input{accent-color:var(--accent); width:16px; height:16px}
 .ed-off .ed-fields{opacity:.45; pointer-events:none}
@@ -372,18 +473,66 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
 .ed-link input{width:100%; margin-top:10px; padding:7px 9px; border:1px solid rgba(58,44,37,.18); border-radius:8px; font:12px ui-monospace,Menlo,monospace; color:var(--ink); background:#fff}
 .ed-warn{color:#9b2335}
 .file-btn input{display:none}
-.ed-fab{position:fixed; right:16px; bottom:16px; z-index:57; display:none}
+.ed-fab{position:fixed; right:16px; bottom:16px; z-index:57; display:none; gap:8px; flex-wrap:wrap; justify-content:flex-end}
 .ed-collapsed .ed-fab{display:inline-flex}
+.ed-fab .btn{min-height:42px; box-shadow:0 8px 22px rgba(60,35,15,.2)}
+.ed-fab .btn.send{background:var(--accent-2)}
+.ed-actions-mini{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
 @media (max-width:720px){
-  body.editing{padding-right:0; padding-bottom:60vh}
+  body.editing{padding-right:0; padding-bottom:62vh}
   body.editing .music-toggle{right:14px}
-  body.editing:not(.ed-collapsed) .modal{right:0; bottom:60vh}
-  .editor{top:auto; left:0; width:auto; height:60vh; border-left:0; border-top:1px solid rgba(58,44,37,.12); border-radius:18px 18px 0 0}
+  body.editing:not(.ed-collapsed) .modal{right:0; bottom:62vh}
+  .editor{top:auto; left:0; width:auto; height:62vh; border-left:0; border-top:1px solid rgba(58,44,37,.12); border-radius:18px 18px 0 0}
   .ed-collapsed .editor{transform:translateY(100%)}
+  .ed-presets{grid-template-columns:1fr 1fr}
+  .ed-head{padding:12px 16px 8px}
+  .ed-head h2{font-size:1.2rem; padding-right:40px}
+  .ed-head .ed-lede{font-size:.76rem}
+  .ed-steps{margin-top:8px; flex-wrap:nowrap}
+  .ed-step{min-width:0; padding:4px 2px}
+  .ed-step .n{display:inline; margin:0 3px 0 0; font-size:.9rem}
+  .ed-privacy{margin-top:8px; padding:7px 9px}
+  .ed-nav{padding:10px 14px; gap:6px}
+  .ed-nav .btn{padding:8px 13px}
+  .create-bar{top:auto; bottom:18px; left:50%; transform:translateX(-50%); max-width:92vw; justify-content:center}
+  body.editing .create-bar{display:none}
 }
+@media (prefers-reduced-motion:reduce){
+  .ed-send-card,.ed-choice button{animation:none!important; transition:none!important}
+}
+
+/* ---------- card cover: the first thing inside the letter ---------- */
+.cover-wrap{display:flex; flex-direction:column; align-items:center; gap:16px; perspective:1400px; padding-top:22px}
+.cover-art{transition:transform .5s cubic-bezier(.5,0,.3,1), opacity .5s; transform-origin:left center}
+.cover-art{width:min(100%, calc(min(58vh,520px) * 5 / 7))}
+.cover-art svg{display:block; width:100%; height:auto; border-radius:14px; box-shadow:0 14px 30px rgba(60,35,15,.2)}
+.cover-wrap.flip .cover-art{transform:rotateY(-100deg); opacity:0}
+.cover-wrap .btn{animation:rise .5s .3s both}
+.cover-again{display:block; margin:18px auto 0}
+.cov-prev svg{display:block; width:min(220px,100%); height:auto; margin:10px auto 6px; border-radius:10px; box-shadow:0 8px 20px rgba(60,35,15,.18)}
+.cov-pills{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0}
+.cov-pill{border:1px solid rgba(58,44,37,.16); background:#fff; border-radius:99px; padding:5px 10px; font:500 .72rem var(--sans); cursor:pointer; color:var(--muted)}
+.cov-pill[aria-pressed=true]{background:var(--ink); color:#fff; border-color:var(--ink)}
+.cov-chosen{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0}
+.cov-chip{display:inline-flex; align-items:center; gap:4px; border:1px solid rgba(58,44,37,.18); background:#fff; border-radius:99px; padding:2px 9px 2px 3px; font:500 .75rem var(--sans); cursor:pointer; color:var(--ink)}
+.cov-chip:first-child{border-color:var(--accent); background:color-mix(in srgb, var(--accent) 10%, #fff)}
+.cov-chip svg{width:22px; height:22px}
+.cov-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(64px,1fr)); gap:6px; max-height:320px; overflow:auto; margin-top:8px; padding:2px}
+.cov-cat{grid-column:1/-1; font-size:.72rem; font-weight:600; color:var(--muted); margin-top:6px}
+.cov-ib{display:flex; flex-direction:column; align-items:center; gap:1px; border:1.5px solid rgba(58,44,37,.12); background:#fff; border-radius:10px; padding:5px 2px; cursor:pointer; color:var(--ink)}
+.cov-ib:hover{border-color:var(--accent)}
+.cov-ib svg{width:36px; height:36px}
+.cov-ib small{font-size:.62rem; line-height:1.15; text-align:center}
+.cov-ib.on{border-color:var(--accent); background:color-mix(in srgb, var(--accent) 10%, #fff)}
+.cov-ib:disabled{opacity:.35; cursor:not-allowed}
 </style>
 </head>
 <body data-theme="harvest" class="sealed">
+<a class="skip-link" href="#stage">Skip to Gifts</a>
+<div class="create-bar" id="createBar" role="navigation" aria-label="Create Your Own Card">
+  <button type="button" class="primary" id="btnCreate">Create a Thank-You</button>
+  <button type="button" id="btnCreateDefault">Quick Default</button>
+</div>
 
 <!-- shared shapes -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -416,21 +565,21 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
 </g></svg>
 <svg class="garland r" viewBox="0 0 300 200" aria-hidden="true"></svg>
 
-<button class="music-toggle" id="musicToggle" aria-label="Play music" title="Play music">
+<button class="music-toggle" id="musicToggle" aria-label="Play Music" title="Play Music">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 18.5a2.5 2.5 0 1 1-2-2.45V5.5l12-2.5v11.5a2.5 2.5 0 1 1-2-2.45V6.6L9 8.2v10.3z"/></svg>
 </button>
 
 <header>
   <h1 id="greeting">Happy Thanksgiving</h1>
   <p id="subtitle"></p>
-  <div class="footer-hint" id="footerHint" role="status" aria-live="polite">open the letter to begin</div>
+  <div class="footer-hint" id="footerHint" role="status" aria-live="polite">Open the Letter to Begin</div>
 </header>
 
 <noscript><p style="position:relative;z-index:5;text-align:center;font-family:Georgia,serif">This card needs JavaScript. Please open it in Chrome, Safari, Edge or Firefox.</p></noscript>
 <main class="stage" id="stage">
   <!-- ENVELOPE -->
-  <button class="item env" data-open="letter" aria-label="Open the letter first">
-    <span class="hint">open me first<span>↓</span></span>
+  <button class="item env" data-open="letter" aria-label="Open the Letter First">
+    <span class="hint">Open Me First<span>↓</span></span>
     <span class="float">
     <svg viewBox="0 0 240 160">
       <rect x="4" y="4" width="232" height="152" rx="6" fill="#e9d8b8"/>
@@ -451,14 +600,14 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
           <rect x="0" y="0" width="30" height="36" fill="#fffaf0" stroke="#c9b48c" stroke-width="1.4" stroke-dasharray="2.2 1.6"/>
           <rect x="3.5" y="3.5" width="23" height="29" fill="#e9a457"/>
           <use href="#leaf" x="7" y="7" width="16" height="16" fill="#a8322a"/>
-          <text x="15" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="4.6" font-weight="700" fill="#fff8ec">THANKS</text>
+          <text x="15" y="30" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="4.6" font-weight="700" fill="#fff8ec">THANKS</text>
         </g>
         <g transform="translate(182 121)" opacity=".55" fill="none" stroke="#6b4a2e">
           <circle r="14.5" stroke-width="1.2"/><circle r="11.5" stroke-width=".6"/>
           <path d="M16 -4 q6 -3 12 0 t12 0 M16 1 q6 -3 12 0 t12 0 M16 6 q6 -3 12 0 t12 0" stroke-width="1"/>
-          <text id="postYear" x="0" y="2.2" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#6b4a2e" stroke="none">2026</text>
-          <text x="0" y="-5.4" text-anchor="middle" font-family="Inter, sans-serif" font-size="3" font-weight="600" fill="#6b4a2e" stroke="none">THANKS</text>
-          <text x="0" y="8.4" text-anchor="middle" font-family="Inter, sans-serif" font-size="3" font-weight="600" fill="#6b4a2e" stroke="none">GIVING</text>
+          <text id="postYear" x="0" y="2.2" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="6" font-weight="700" fill="#6b4a2e" stroke="none">2026</text>
+          <text x="0" y="-5.4" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="3" font-weight="600" fill="#6b4a2e" stroke="none">THANKS</text>
+          <text x="0" y="8.4" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="3" font-weight="600" fill="#6b4a2e" stroke="none">GIVING</text>
         </g>
       </g>
       <defs>
@@ -480,7 +629,7 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
   </button>
 
   <!-- CIDER -->
-  <button class="item cider" data-open="cider" aria-label="A warm drink"><span class="float">
+  <button class="item cider" data-open="cider" aria-label="A Warm Drink"><span class="float">
     <svg viewBox="0 0 140 170">
       <g class="steam" stroke="#c9b6a3" stroke-width="3" fill="none" stroke-linecap="round">
         <path d="M52 30 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M70 28 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M88 30 q-8 -10 0 -20 q8 -10 0 -20"/>
@@ -498,7 +647,7 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
   </button>
 
   <!-- BAG -->
-  <button class="item bag" data-open="gratitude" aria-label="Things I'm thankful for"><span class="float">
+  <button class="item bag" data-open="gratitude" aria-label="Things I'm Thankful For"><span class="float">
     <svg viewBox="0 0 150 180">
       <path d="M52 54 V24 Q52 12 64 12 H86 Q98 12 98 24 V54" fill="none" stroke="#6b4a2e" stroke-width="7" stroke-linecap="round"/>
       <path d="M22 50 H128 L138 174 H12 Z" fill="#cf9c62"/>
@@ -511,7 +660,7 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
   </button>
 
   <!-- MUSIC PLAYER -->
-  <button class="item music" data-open="music" aria-label="A song for you"><span class="float">
+  <button class="item music" data-open="music" aria-label="A Song for You"><span class="float">
     <svg viewBox="0 0 150 210">
       <path d="M75 190 C75 206 30 206 16 186 C2 166 6 126 18 106" stroke="#f4f4f4" stroke-width="3" fill="none"/>
       <path d="M75 190 C75 206 30 206 16 186 C2 166 6 126 18 106" stroke="#d0d0d0" stroke-width="1" fill="none"/>
@@ -521,17 +670,17 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
       <rect x="39" y="34" width="76" height="40" rx="2" fill="url(#g-sunset)"/>
       <circle cx="77" cy="62" r="8" fill="#ffe3a3"/>
       <path d="M39 74 L39 66 Q58 56 77 66 Q96 58 115 66 L115 74 Z" fill="#3b2a3f"/>
-      <text x="42" y="31" font-family="Inter, sans-serif" font-size="6" fill="#fff" opacity=".85">Now playing</text>
+      <text x="42" y="31" font-family="Source Sans 3, sans-serif" font-size="6" fill="#fff" opacity=".85">Now playing</text>
       <rect x="40" y="80" width="74" height="3" rx="1.5" fill="#555"/><rect class="prog" x="40" y="80" width="30" height="3" rx="1.5" fill="#f7b267"/>
       <circle cx="77" cy="136" r="35" fill="#f6f6f7" stroke="#cdd1d6"/>
       <circle cx="77" cy="136" r="13" fill="#e1e4e8" stroke="#cdd1d6"/>
-      <text x="77" y="113" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#9aa0a8">MENU</text>
+      <text x="77" y="113" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="6" font-weight="700" fill="#9aa0a8">MENU</text>
       <path d="M100 133 l5 3 l-5 3 z M54 133 l-5 3 l5 3 z" fill="#9aa0a8"/>
     </svg></span><span class="tag">a song for you</span>
   </button>
 
   <!-- TICKET -->
-  <button class="item ticket" data-open="ticket" aria-label="An invitation"><span class="float">
+  <button class="item ticket" data-open="ticket" aria-label="An Invitation"><span class="float">
     <svg viewBox="0 0 200 130">
       <g transform="rotate(-7 100 65)">
         <rect x="18" y="12" width="172" height="92" rx="4" fill="#e6d3a8" stroke="#b39558"/>
@@ -540,12 +689,12 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
       <rect x="16" y="32" width="168" height="76" rx="2" fill="none" stroke="#b39558" stroke-dasharray="3 3"/>
       <text x="100" y="50" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="8" letter-spacing="2.5" fill="#7a5c2c">★ THE HARVEST TABLE ★</text>
       <text id="ticketStub" x="100" y="80" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="22" letter-spacing="2" fill="#5a3f1c">ADMIT ONE</text>
-      <text x="100" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" letter-spacing="3" fill="#7a5c2c">FRIENDSGIVING · NO. 001</text>
+      <text x="100" y="98" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="7" letter-spacing="3" fill="#7a5c2c">FRIENDSGIVING · NO. 001</text>
     </svg></span><span class="tag">you're invited</span>
   </button>
 
   <!-- PHOTOS -->
-  <button class="item photos" data-open="photos" aria-label="Our photos"><span class="float">
+  <button class="item photos" data-open="photos" aria-label="Our Photos"><span class="float">
     <svg viewBox="0 0 170 170">
       <g transform="translate(18 26) rotate(-12 55 65)">
         <rect width="110" height="130" fill="#fff" stroke="#ece6dc"/>
@@ -569,7 +718,7 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
   </button>
 
   <!-- GIFT BOX -->
-  <button class="item box" data-open="finale" aria-label="One last surprise"><span class="float">
+  <button class="item box" data-open="finale" aria-label="One Last Surprise"><span class="float">
     <svg viewBox="-10 0 250 215">
       <ellipse cx="122" cy="200" rx="78" ry="10" fill="#7a4a2a" opacity=".12"/>
       <path d="M40 82 L120 122 L120 202 L40 162 Z" fill="#d9732e"/>
@@ -594,11 +743,11 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
   </button>
 
   <!-- GIFT CARD -->
-  <button class="item giftcard" data-open="giftcard" aria-label="Dinner, on me"><span class="float">
+  <button class="item giftcard" data-open="giftcard" aria-label="Dinner, on Me"><span class="float">
     <svg viewBox="0 0 200 140">
       <rect x="6" y="8" width="188" height="124" rx="10" fill="#fff" stroke="#eadfce"/>
       <g transform="translate(14 16)"><svg width="172" height="84" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><use href="#pieScene"/></svg></g>
-      <text x="16" y="120" font-family="Inter, sans-serif" font-size="7" font-weight="600" letter-spacing="2" fill="#8b7463">GIFT CARD</text>
+      <text x="16" y="120" font-family="Source Sans 3, sans-serif" font-size="7" font-weight="600" letter-spacing="2" fill="#8b7463">GIFT CARD</text>
       <text id="gcAmt" x="184" y="122" text-anchor="end" font-family="Playfair Display, Georgia, serif" font-size="18" fill="#3a2c25">$25</text>
     </svg></span><span class="tag">dinner, on me</span>
   </button>
@@ -638,6 +787,1149 @@ body.editing:not(.ed-collapsed) .modal{right:400px}
 </div>
 
 <script>
+/* ---------- card cover: icon bank (100+ icons) + cover renderer ---------- */
+// Thanksgiving card icon bank (expanded).
+// Every icon is drawn in a 100x100 box. Each entry: { label, cat, draw(uid) => SVG markup }.
+// `uid` is a unique prefix for any clipPath ids so many copies can live on one page.
+(function () {
+  const O = '#3a2a1f';
+  const S = `stroke="${O}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
+  const T = `stroke="${O}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"`;
+
+  const f = (n) => +n.toFixed(1);
+  function starPts(cx, cy, R, r, n = 5, rot = -90) {
+    const p = [];
+    for (let i = 0; i < 2 * n; i++) {
+      const a = ((rot + (i * 180) / n) * Math.PI) / 180, rr = i % 2 ? r : R;
+      p.push(f(cx + rr * Math.cos(a)) + ',' + f(cy + rr * Math.sin(a)));
+    }
+    return p.join(' ');
+  }
+  function sparkle(cx, cy, s, fill, stroke = true) {
+    const k = s * 0.2;
+    return `<path d="M${cx} ${cy - s} Q${cx + k} ${cy - k} ${cx + s} ${cy} Q${cx + k} ${cy + k} ${cx} ${cy + s} Q${cx - k} ${cy + k} ${cx - s} ${cy} Q${cx - k} ${cy - k} ${cx} ${cy - s}Z" fill="${fill}" ${stroke ? T : ''}/>`;
+  }
+  const heartD = (cx, cy, s) => {
+    // heart centred at cx,cy, size s (~width)
+    const k = s / 70;
+    const P = (x, y) => `${f(cx + (x - 50) * k)} ${f(cy + (y - 52) * k)}`;
+    return `M${P(50, 84)} C${P(20, 64)} ${P(10, 46)} ${P(18, 32)} C${P(26, 18)} ${P(44, 20)} ${P(50, 34)} C${P(56, 20)} ${P(74, 18)} ${P(82, 32)} C${P(90, 46)} ${P(80, 64)} ${P(50, 84)}Z`;
+  };
+  // full circle as a path (for even-odd holes)
+  const circ = (cx, cy, r) => `M${cx - r} ${cy} a${r} ${r} 0 1 0 ${2 * r} 0 a${r} ${r} 0 1 0 ${-2 * r} 0`;
+  // point inside a quad (a,b,c,d) at (u,v)
+  const quad = (a, b, c, d, u, v) => [0, 1].map((k) => (1 - u) * (1 - v) * a[k] + u * (1 - v) * b[k] + u * v * c[k] + (1 - u) * v * d[k]);
+  const steam = (xs, y0 = 30, h = 18, color = '#b9a99a') =>
+    xs.map((x) => `<path d="M${x} ${y0} q-5 -${h / 4} 0 -${h / 2} t0 -${h / 2}" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round"/>`).join('');
+  const face = (cx, cy, s = 1, blush = '#f29b9b') =>
+    `<circle cx="${cx - 7 * s}" cy="${cy}" r="${2.4 * s}" fill="${O}"/><circle cx="${cx + 7 * s}" cy="${cy}" r="${2.4 * s}" fill="${O}"/>` +
+    `<path d="M${cx - 3.5 * s} ${cy + 4 * s} q${3.5 * s} ${3.5 * s} ${7 * s} 0" fill="none" ${T}/>` +
+    `<ellipse cx="${cx - 12 * s}" cy="${cy + 4 * s}" rx="${3.2 * s}" ry="${2 * s}" fill="${blush}" opacity=".8"/><ellipse cx="${cx + 12 * s}" cy="${cy + 4 * s}" rx="${3.2 * s}" ry="${2 * s}" fill="${blush}" opacity=".8"/>`;
+
+  const ICONS = {
+    /* ---------------- Sports ---------------- */
+    pickleball: { label: 'Pickleball', cat: 'Sports', draw: () => `
+      <g transform="rotate(-25 50 50)">
+        <rect x="43" y="58" width="12" height="32" rx="4" fill="#3d3d4a" ${S}/>
+        <path d="M45 68h8M45 75h8M45 82h8" stroke="#77778a" stroke-width="2"/>
+        <rect x="24" y="10" width="50" height="52" rx="19" fill="#2fa39a" ${S}/>
+        <rect x="31" y="17" width="36" height="38" rx="14" fill="none" stroke="#86dcd2" stroke-width="3"/>
+      </g>
+      <circle cx="24" cy="76" r="14" fill="#d9e84a" ${S}/>
+      ${[[19,70],[28,69],[32,78],[23,82],[16,78]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2.3" fill="#9aa82a"/>`).join('')}` },
+
+    badminton: { label: 'Badminton', cat: 'Sports', draw: () => {
+      let strings = '';
+      for (const dx of [-10, -5, 0, 5, 10]) { const h = 24 * Math.sqrt(1 - (dx / 18) ** 2) - 1; strings += `<line x1="${50 + dx}" y1="${f(30 - h)}" x2="${50 + dx}" y2="${f(30 + h)}"/>`; }
+      for (const dy of [-16, -8, 0, 8, 16]) { const w = 18 * Math.sqrt(1 - (dy / 24) ** 2) - 1; strings += `<line x1="${f(50 - w)}" y1="${30 + dy}" x2="${f(50 + w)}" y2="${30 + dy}"/>`; }
+      return `
+      <g transform="translate(-8 4) rotate(-28 50 50)">
+        <line x1="50" y1="54" x2="50" y2="70" stroke="${O}" stroke-width="4" stroke-linecap="round"/>
+        <rect x="45" y="68" width="10" height="24" rx="4" fill="#d6455d" ${S}/>
+        <ellipse cx="50" cy="30" rx="18" ry="24" fill="#fff8ee"/>
+        <g stroke="#9aa7b5" stroke-width="1.3">${strings}</g>
+        <ellipse cx="50" cy="30" rx="18" ry="24" fill="none" stroke="#2f4f7a" stroke-width="5"/>
+        <ellipse cx="50" cy="30" rx="18" ry="24" fill="none" ${T}/>
+      </g>
+      <g transform="rotate(25 76 72)">
+        <path d="M62 50 L90 50 L81 74 L71 74 Z" fill="#ffffff" ${S}/>
+        <path d="M70 50 L74 74 M82 50 L78 74 M76 50 V74" stroke="#c9c2b8" stroke-width="1.6"/>
+        <path d="M69 74 H83 Q83 88 76 88 Q69 88 69 74Z" fill="#e9b26a" ${S}/>
+      </g>`; } },
+
+    pingpong: { label: 'Ping Pong', cat: 'Sports', draw: () => `
+      <g transform="rotate(30 44 50)">
+        <rect x="38" y="62" width="13" height="30" rx="4" fill="#c98b4f" ${S}/>
+        <path d="M41 70h7" stroke="#a46a35" stroke-width="2"/>
+        <circle cx="44.5" cy="40" r="28" fill="#d94b3d" ${S}/>
+        <path d="M27 30 a20 20 0 0 1 14 -10" fill="none" stroke="#f08a7f" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <path d="M58 16 h10 M60 24 h8" stroke="#c9b8a6" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="80" cy="20" r="9" fill="#fff4e0" ${S}/>` },
+
+    basketball: { label: 'Basketball', cat: 'Sports', draw: () => `
+      <circle cx="50" cy="50" r="40" fill="#e8823a" ${S}/>
+      <g fill="none" stroke="${O}" stroke-width="2.6">
+        <path d="M50 10 V90 M10 50 H90"/>
+        <path d="M23 21 Q42 50 23 79"/><path d="M77 21 Q58 50 77 79"/>
+      </g>
+      <path d="M26 34 a28 28 0 0 1 10 -14" fill="none" stroke="#f6b07a" stroke-width="4" stroke-linecap="round"/>` },
+
+    soccer: { label: 'Soccer', cat: 'Sports', draw: (u) => {
+      const outer = [0, 1, 2, 3, 4].map((i) => { const a = (-90 + i * 72) * Math.PI / 180; return [50 + 36 * Math.cos(a), 50 + 36 * Math.sin(a), -90 + i * 72 + 180]; });
+      const inner = [0, 1, 2, 3, 4].map((i) => { const a = (-90 + i * 72) * Math.PI / 180; return [50 + 12 * Math.cos(a), 50 + 12 * Math.sin(a)]; });
+      return `
+      <clipPath id="${u}c"><circle cx="50" cy="50" r="40"/></clipPath>
+      <circle cx="50" cy="50" r="40" fill="#ffffff"/>
+      <g clip-path="url(#${u}c)">
+        ${outer.map(([x, y, r]) => `<polygon points="${starPts(x, y, 11, 11, 5, r).split(' ').filter((_, i) => i % 2 === 0).join(' ')}" fill="#2d2d33"/>`).join('')}
+        ${inner.map(([x, y], i) => `<line x1="${f(x)}" y1="${f(y)}" x2="${f(outer[i][0])}" y2="${f(outer[i][1])}" stroke="${O}" stroke-width="2"/>`).join('')}
+      </g>
+      <polygon points="${starPts(50, 50, 13, 13, 5, -90).split(' ').filter((_, i) => i % 2 === 0).join(' ')}" fill="#2d2d33"/>
+      <circle cx="50" cy="50" r="40" fill="none" ${S}/>`; } },
+
+    tennis: { label: 'Tennis', cat: 'Sports', draw: () => `
+      <circle cx="50" cy="50" r="38" fill="#cfe04a" ${S}/>
+      <path d="M17 32 Q42 50 17 70" fill="none" stroke="#fffbe8" stroke-width="4"/>
+      <path d="M83 30 Q58 50 83 70" fill="none" stroke="#fffbe8" stroke-width="4"/>` },
+
+    football: { label: 'Football', cat: 'Sports', draw: () => `
+      <g transform="rotate(-30 50 50)">
+        <path d="M10 50 Q50 10 90 50 Q50 90 10 50Z" fill="#8a4b2a" ${S}/>
+        <path d="M22 44 v12 M78 44 v12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M36 50 H64" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        ${[40, 46, 52, 58].map((x) => `<path d="M${x} 45 v10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>`).join('')}
+      </g>` },
+
+    running: { label: 'Running Shoe', cat: 'Sports', draw: () => `
+      <path d="M12 70 L16 40 Q30 44 40 34 L50 30 Q58 46 76 52 Q90 56 90 66 L90 72 Z" fill="#4c7bd9" ${S}/>
+      <path d="M10 70 H92 Q92 80 84 80 H16 Q10 80 10 70Z" fill="#fff8ee" ${S}/>
+      <path d="M40 40 l8 4 M44 36 l8 4 M36 45 l8 4" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M60 58 Q70 62 82 62" fill="none" stroke="#9cc0ff" stroke-width="3" stroke-linecap="round"/>
+      <path d="M2 50 h8 M0 60 h10" stroke="#c9b8a6" stroke-width="3" stroke-linecap="round"/>` },
+
+    /* ---------------- Food & Drink ---------------- */
+    hotpot: { label: 'Hotpot', cat: 'Food & Drink', draw: () => `
+      ${steam([36, 50, 64], 30, 20)}
+      <rect x="4" y="50" width="12" height="7" rx="3" fill="#9aa0a8" ${T}/>
+      <rect x="84" y="50" width="12" height="7" rx="3" fill="#9aa0a8" ${T}/>
+      <path d="M12 46 H88 Q86 84 50 86 Q14 84 12 46Z" fill="#c9ccd1" ${S}/>
+      <path d="M20 62 Q50 70 80 62" fill="none" stroke="#e7e9ec" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="50" cy="46" rx="38" ry="11" fill="#d9442b"/>
+      <path d="M50 35 A38 11 0 0 1 50 57 Q42 51 50 46 Q58 41 50 35Z" fill="#f2d7a0"/>
+      <path d="M50 35 Q58 41 50 46 Q42 51 50 57" fill="none" stroke="#8d929a" stroke-width="2.5"/>
+      <ellipse cx="50" cy="46" rx="38" ry="11" fill="none" ${S}/>
+      <circle cx="28" cy="44" r="2.2" fill="#ffd27a"/><circle cx="36" cy="49" r="2.2" fill="#ffd27a"/><circle cx="25" cy="49" r="1.8" fill="#7a1d12"/>
+      <path d="M33 41 l6 2" stroke="#3f8f3a" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="66" cy="44" rx="5" ry="3" fill="#fff6e6" ${T}/><circle cx="74" cy="49" r="2.4" fill="#6f9e3c"/>
+      <rect x="22" y="86" width="56" height="6" rx="3" fill="#5b5b66" ${T}/>` },
+
+    pho: { label: 'Pho', cat: 'Food & Drink', draw: () => `
+      ${steam([38, 52], 30, 16)}
+      <path d="M60 8 L94 40 M68 4 L98 34" stroke="#b47a43" stroke-width="4" stroke-linecap="round"/>
+      <path d="M10 50 H90 Q88 86 50 88 Q12 86 10 50Z" fill="#fdfaf3" ${S}/>
+      <path d="M16 64 Q50 72 84 64" fill="none" stroke="#4a7fb8" stroke-width="3"/>
+      <path d="M20 70 Q50 78 80 70" fill="none" stroke="#4a7fb8" stroke-width="1.5"/>
+      <ellipse cx="50" cy="50" rx="40" ry="11" fill="#e3a85a" ${S}/>
+      <g fill="none" stroke="#fff3d6" stroke-width="2.2" stroke-linecap="round">
+        <path d="M22 50 q5 -4 10 0 t10 0"/><path d="M48 54 q5 -4 10 0 t10 0"/><path d="M40 46 q5 -3 10 0"/>
+      </g>
+      <ellipse cx="62" cy="46" rx="7" ry="3.5" fill="#9b5a3c" ${T}/><ellipse cx="32" cy="55" rx="6" ry="3" fill="#9b5a3c" ${T}/>
+      <path d="M70 52 q4 -6 8 -2 q-3 5 -8 2Z M44 44 q4 -6 8 -2 q-3 5 -8 2Z" fill="#4c9a44"/>
+      <path d="M22 44 a7 7 0 0 1 12 0 Z" fill="#b8d96a" ${T}/>` },
+
+    ramen: { label: 'Ramen', cat: 'Food & Drink', draw: () => `
+      ${steam([30], 30, 14)}
+      <path d="M58 4 L44 46 M68 6 L50 46" stroke="#b47a43" stroke-width="4" stroke-linecap="round"/>
+      <rect x="62" y="24" width="18" height="26" rx="2" fill="#1f3a2a" ${T} transform="rotate(10 71 37)"/>
+      <path d="M10 50 H90 Q88 86 50 88 Q12 86 10 50Z" fill="#b8312f" ${S}/>
+      <path d="M22 64 l6 6 l6 -6 l6 6 l6 -6 l6 6 l6 -6 l6 6 l6 -6 l6 6" fill="none" stroke="#fbe6c8" stroke-width="2.4" stroke-linejoin="round"/>
+      <ellipse cx="50" cy="50" rx="40" ry="11" fill="#e9b867" ${S}/>
+      <g fill="none" stroke="#fff4cf" stroke-width="2.4" stroke-linecap="round">
+        <path d="M46 46 q2 6 6 8 M50 46 q2 6 6 8"/><path d="M20 52 q5 -3 10 0 t10 0"/>
+      </g>
+      <ellipse cx="30" cy="48" rx="9" ry="5.5" fill="#fffdf6" ${T}/><circle cx="30" cy="48" r="3.4" fill="#f3a623"/>
+      <circle cx="66" cy="53" r="6" fill="#fffdf6" ${T}/><path d="M66 53 m-3 0 a3 3 0 1 1 3 3" fill="none" stroke="#e86a8a" stroke-width="1.8"/>
+      <circle cx="42" cy="55" r="1.8" fill="#4c9a44"/><circle cx="56" cy="44" r="1.8" fill="#4c9a44"/><circle cx="76" cy="48" r="1.8" fill="#4c9a44"/>` },
+
+    steak: { label: 'Steak', cat: 'Food & Drink', draw: () => {
+      const d = 'M18 52 C14 30 40 18 62 22 C84 26 92 44 86 60 C80 78 56 84 38 78 C26 74 20 66 18 52Z';
+      return `
+      <ellipse cx="52" cy="58" rx="46" ry="30" fill="#f4f1ec" ${S}/>
+      <g transform="translate(0 4)">
+        <path d="${d}" fill="#f3d2b3" ${S}/>
+        <path d="${d}" fill="#a8452f" transform="translate(7.5 7.3) scale(.86)"/>
+        <g stroke="#5b2014" stroke-width="3.5" stroke-linecap="round">
+          <path d="M32 58 L50 38"/><path d="M40 68 L62 42"/><path d="M52 72 L74 48"/>
+        </g>
+        <path d="M66 70 q8 -2 14 -10" fill="none" stroke="#3f7a3a" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M70 66 l-3 -3 M74 63 l-2 -4 M76 66 l4 1 M72 69 l3 2" stroke="#3f7a3a" stroke-width="2" stroke-linecap="round"/>
+      </g>`; } },
+
+    boba: { label: 'Boba', cat: 'Food & Drink', draw: () => `
+      <rect x="54" y="2" width="8" height="58" rx="3" fill="#e86a8a" ${T} transform="rotate(12 58 30)"/>
+      <path d="M24 28 H76 L69 92 H31Z" fill="#e8cfae" ${S}/>
+      <path d="M26 40 H74 L69 92 H31Z" fill="#cf9f6d"/>
+      ${[[38,84],[47,86],[56,85],[64,83],[42,77],[52,78],[61,76],[35,76]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4.2" fill="#3b2418"/>`).join('')}
+      <path d="M24 28 H76 L69 92 H31Z" fill="none" ${S}/>
+      <path d="M20 28 Q50 10 80 28 Z" fill="#f7f3ec" ${S}/>
+      ${face(50, 56, 0.9)}` },
+
+    tea: { label: 'Fresh Tea', cat: 'Food & Drink', draw: () => `
+      <rect x="47" y="0" width="7" height="40" rx="3" fill="#2f7a5a" ${T} transform="rotate(-10 50 20)"/>
+      <path d="M26 24 H74 L68 92 H32Z" fill="#f6efe2" ${S}/>
+      <path d="M27.5 40 H72.5 L68 92 H32Z" fill="#c9792e"/>
+      <path d="M27.5 32 H72.5 L72 40 H28Z" fill="#fffaf0"/>
+      <path d="M30 34 q5 -3 10 0 t10 0 t10 0 t10 0" fill="none" stroke="#e9d9bd" stroke-width="2"/>
+      <rect x="36" y="58" width="10" height="10" rx="2" fill="#fff" opacity=".45" transform="rotate(15 41 63)"/>
+      <rect x="52" y="66" width="10" height="10" rx="2" fill="#fff" opacity=".45" transform="rotate(-10 57 71)"/>
+      <path d="M26 24 H74 L68 92 H32Z" fill="none" ${S}/>
+      <rect x="22" y="18" width="56" height="7" rx="3" fill="#ffffff" ${S}/>
+      <path d="M60 46 q14 -14 22 -2 q-10 12 -22 2Z" fill="#5aa35a" ${T}/><path d="M61 46 q10 -3 18 -4" stroke="#2f6b33" stroke-width="1.6" fill="none"/>` },
+
+    marshmallow: { label: 'Marshmallow', cat: 'Food & Drink', draw: () => `
+      <path d="M8 94 L46 56" stroke="#9a6a3d" stroke-width="5" stroke-linecap="round"/>
+      <path d="M32 34 V72 A22 8 0 0 0 76 72 V34Z" fill="#fff9f0" ${S}/>
+      <path d="M32 62 V72 A22 8 0 0 0 76 72 V62 A22 8 0 0 1 32 62Z" fill="#e7b778"/>
+      <path d="M32 34 V72 A22 8 0 0 0 76 72 V34" fill="none" ${S}/>
+      <ellipse cx="54" cy="34" rx="22" ry="8" fill="#fffdf8" ${S}/>
+      ${face(54, 50, 0.95)}
+      <path d="M74 14 q4 6 0 10 q-4 -4 0 -10Z M84 22 q3 4 0 7 q-3 -3 0 -7Z" fill="#f2a03d"/>` },
+
+    dumplings: { label: 'Dumplings', cat: 'Food & Drink', draw: () => `
+      <ellipse cx="50" cy="66" rx="44" ry="20" fill="#f4f1ec" ${S}/>
+      ${[[32,58],[66,58],[49,70]].map(([x,y])=>`<g transform="translate(${x-50} ${y-58})">
+        <path d="M30 62 Q30 40 50 38 Q70 40 70 62 Q50 68 30 62Z" fill="#fbf1de" ${S}/>
+        <path d="M40 44 q2 6 4 6 M50 40 v8 M60 44 q-2 6 -4 6" stroke="${O}" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>`).join('')}
+      ${steam([40, 60], 30, 14)}` },
+
+    sushi: { label: 'Sushi', cat: 'Food & Drink', draw: () => `
+      <rect x="6" y="62" width="88" height="14" rx="4" fill="#b47a43" ${S}/>
+      <rect x="16" y="76" width="8" height="8" fill="#8a5a2f" ${T}/><rect x="76" y="76" width="8" height="8" fill="#8a5a2f" ${T}/>
+      <rect x="12" y="44" width="38" height="18" rx="8" fill="#fffdf6" ${S}/>
+      <path d="M10 46 Q30 30 52 44 Q32 52 10 46Z" fill="#f47c4c" ${S}/>
+      <path d="M22 41 l6 4 M32 38 l6 5 M42 39 l5 4" stroke="#ffc2a3" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="72" cy="48" r="15" fill="#1f3a2a" ${S}/><circle cx="72" cy="48" r="10" fill="#fffdf6"/><circle cx="72" cy="48" r="5" fill="#f47c4c"/><circle cx="70" cy="51" r="2" fill="#7fbf5a"/>` },
+
+    pizza: { label: 'Pizza', cat: 'Food & Drink', draw: () => `
+      <path d="M50 92 L14 20 Q50 4 86 20 Z" fill="#f6c95a" ${S}/>
+      <path d="M14 20 Q50 4 86 20 L82 28 Q50 14 18 28Z" fill="#d9944a" ${S}/>
+      ${[[40,40],[60,44],[50,62],[34,54]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="6" fill="#d14b3a" ${T}/>`).join('')}
+      <path d="M62 30 q3 3 0 6 M46 76 q3 3 0 6" stroke="#4c9a44" stroke-width="3" stroke-linecap="round" fill="none"/>` },
+
+    coffee: { label: 'Coffee', cat: 'Food & Drink', draw: () => `
+      ${steam([40, 54], 28, 16)}
+      <path d="M72 46 q16 0 16 12 q0 12 -18 12" fill="none" ${S} stroke-width="6"/>
+      <path d="M72 46 q16 0 16 12 q0 12 -18 12" fill="none" stroke="#e7ddd0" stroke-width="2"/>
+      <path d="M20 36 H76 L70 84 Q68 90 62 90 H34 Q28 90 26 84Z" fill="#e7ddd0" ${S}/>
+      <ellipse cx="48" cy="36" rx="28" ry="6" fill="#6b3e24" ${S}/>
+      <path d="${heartD(48, 36, 14)}" fill="#f2d7b3"/>
+      <rect x="10" y="90" width="76" height="5" rx="2.5" fill="#c9b8a6" ${T}/>` },
+
+    pie: { label: 'Pie', cat: 'Food & Drink', draw: () => `
+      <ellipse cx="50" cy="62" rx="44" ry="22" fill="#c47a3a" ${S}/>
+      <ellipse cx="50" cy="56" rx="42" ry="18" fill="#e9a650" ${S}/>
+      <ellipse cx="50" cy="56" rx="33" ry="12" fill="#c7642a"/>
+      ${Array.from({length:14},(_,i)=>{const a=i/14*Math.PI*2;return `<circle cx="${f(50+38*Math.cos(a))}" cy="${f(56+15.5*Math.sin(a))}" r="4" fill="#f3c27a"/>`;}).join('')}
+      <path d="M40 52 q-4 -12 6 -14 q8 2 4 10 q8 -4 10 4 q-6 8 -20 0Z" fill="#fffaf0" ${T}/>` },
+
+    turkey: { label: 'Turkey', cat: 'Thanksgiving', draw: () => `
+      ${['#c8553d','#e7a64b','#7a9a4a','#d9773a','#a8323e','#e7a64b','#c8553d'].map((c,i)=>{const a=(-160+i*23.3);return `<ellipse cx="50" cy="28" rx="9" ry="26" fill="${c}" ${T} transform="rotate(${f(a+90)} 50 58)"/>`;}).join('')}
+      <ellipse cx="50" cy="64" rx="24" ry="22" fill="#8a5a3a" ${S}/>
+      <circle cx="50" cy="44" r="13" fill="#a8704a" ${S}/>
+      <circle cx="45" cy="42" r="2.4" fill="${O}"/><circle cx="55" cy="42" r="2.4" fill="${O}"/>
+      <path d="M46 47 L54 47 L50 53Z" fill="#f2b33d" ${T}/>
+      <path d="M51 52 q4 4 0 9 q-4 -4 0 -9Z" fill="#d94b3d"/>
+      <path d="M40 86 v6 m-4 0 h8 M60 86 v6 m-4 0 h8" stroke="#f2b33d" stroke-width="3" stroke-linecap="round"/>` },
+
+    pumpkin: { label: 'Pumpkin', cat: 'Thanksgiving', draw: () => `
+      <path d="M50 26 q2 -10 10 -14" fill="none" stroke="#5b7a33" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="32" cy="58" rx="22" ry="30" fill="#e07a2e" ${S}/>
+      <ellipse cx="68" cy="58" rx="22" ry="30" fill="#e07a2e" ${S}/>
+      <ellipse cx="50" cy="58" rx="18" ry="32" fill="#ef8f3c" ${S}/>
+      <path d="M60 18 q14 -4 18 6 q-10 6 -18 -6Z" fill="#7a9a4a" ${T}/>` },
+
+    leaf: { label: 'Maple Leaf', cat: 'Thanksgiving', draw: () => `
+      <path d="M50 8 L57 26 L68 20 L65 38 L84 30 L78 46 L92 52 L72 62 L76 72 L56 68 L52 90 L48 90 L44 68 L24 72 L28 62 L8 52 L22 46 L16 30 L35 38 L32 20 L43 26 Z" fill="#c8553d" ${S}/>
+      <path d="M50 90 V36 M50 62 L32 50 M50 62 L68 50 M50 48 L40 34 M50 48 L60 34" stroke="#f0a06a" stroke-width="2" fill="none" stroke-linecap="round"/>` },
+
+    cornucopia: { label: 'Harvest', cat: 'Thanksgiving', draw: () => `
+      <path d="M92 30 Q60 20 34 44 Q24 56 32 76 Q60 72 84 50 Q90 40 92 30Z" fill="#c89a5a" ${S}/>
+      <path d="M50 38 Q60 50 74 56 M60 30 Q68 44 84 46" fill="none" stroke="#9a6d36" stroke-width="2"/>
+      <circle cx="30" cy="62" r="12" fill="#d14b3a" ${S}/>
+      <circle cx="20" cy="76" r="10" fill="#f2b33d" ${S}/>
+      <ellipse cx="40" cy="82" rx="12" ry="8" fill="#ef8f3c" ${S}/>
+      ${[[14,56],[10,64],[18,64]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4.5" fill="#7a3a7a" ${T}/>`).join('')}
+      <path d="M30 50 q2 -6 6 -8" stroke="#5b7a33" stroke-width="3" stroke-linecap="round" fill="none"/>` },
+
+    /* ---------------- Games ---------------- */
+    pokerchips: { label: 'Poker Chips', cat: 'Games', draw: () => {
+      const chip = (cy, c, top) => `<path d="M18 ${cy} v9 a32 13 0 0 0 64 0 v-9" fill="${c}" ${S}/>` +
+        (top ? `<ellipse cx="50" cy="${cy}" rx="32" ry="13" fill="${c}" ${S}/>` +
+          [0, 1, 2, 3, 4, 5].map((i) => { const a = i * 60 * Math.PI / 180; return `<ellipse cx="${f(50 + 26 * Math.cos(a))}" cy="${f(cy + 10.5 * Math.sin(a))}" rx="4" ry="2" fill="#fff"/>`; }).join('') +
+          `<ellipse cx="50" cy="${cy}" rx="16" ry="6.5" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 3"/>` : '');
+      return chip(72, '#2f5fa8') + chip(61, '#2d2d33') + chip(50, '#2fa36b') + chip(39, '#d94b3d', true) +
+        `<g transform="translate(58 6) rotate(18)"><rect width="24" height="32" rx="3" fill="#fffdf6" ${T}/><path d="${heartD(12, 17, 14)}" fill="#d94b3d"/></g>`; } },
+
+    cards: { label: 'Playing Cards', cat: 'Games', draw: () => `
+      <g transform="rotate(14 62 62)"><rect x="42" y="18" width="42" height="62" rx="5" fill="#fffdf6" ${S}/>
+        <text x="49" y="35" font-family="Georgia,serif" font-weight="700" font-size="14" fill="#d94b3d">A</text>
+        <path d="${heartD(63, 54, 22)}" fill="#d94b3d"/></g>
+      <g transform="rotate(-14 38 62)"><rect x="14" y="18" width="42" height="62" rx="5" fill="#fffdf6" ${S}/>
+        <text x="21" y="35" font-family="Georgia,serif" font-weight="700" font-size="14" fill="#2d2d33">A</text>
+        <path d="M35 40 C26 50 22 54 26 60 C29 64 33 62 35 59 L33 68 H37 L35 59 C37 62 41 64 44 60 C48 54 44 50 35 40Z" fill="#2d2d33"/></g>` },
+
+    mahjong: { label: 'Mahjong', cat: 'Games', draw: () => {
+      const tile = (x, y, r, inner) => `<g transform="rotate(${r} ${x + 20} ${y + 28})">
+        <rect x="${x}" y="${y + 6}" width="40" height="54" rx="6" fill="#3f8f6a" ${S}/>
+        <rect x="${x}" y="${y}" width="40" height="54" rx="6" fill="#fdf8ec" ${S}/>${inner(x, y)}</g>`;
+      return tile(10, 18, -10, (x, y) => [[x + 12, y + 14], [x + 28, y + 14], [x + 20, y + 27], [x + 12, y + 40], [x + 28, y + 40]].map(([cx, cy], i) =>
+          `<circle cx="${cx}" cy="${cy}" r="5.5" fill="none" stroke="${i === 2 ? '#d94b3d' : '#2f5fa8'}" stroke-width="2.4"/><circle cx="${cx}" cy="${cy}" r="1.8" fill="${i === 2 ? '#d94b3d' : '#2f5fa8'}"/>`).join('')) +
+        tile(48, 22, 8, (x, y) => `<g stroke="#d94b3d" stroke-width="4.5" stroke-linecap="round" fill="none"><rect x="${x + 9}" y="${y + 17}" width="22" height="14" rx="2"/><path d="M${x + 20} ${y + 9} V${y + 46}"/></g>`); } },
+
+    controller: { label: 'Game Controller', cat: 'Games', draw: () => `
+      <path d="M22 30 H78 Q94 30 94 54 Q94 80 80 80 Q72 80 66 68 H34 Q28 80 20 80 Q6 80 6 54 Q6 30 22 30Z" fill="#5a5f7a" ${S}/>
+      <path d="M22 50 h16 M30 42 v16" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="70" cy="44" r="4.5" fill="#f2b33d"/><circle cx="80" cy="52" r="4.5" fill="#d94b3d"/><circle cx="60" cy="52" r="4.5" fill="#4c9a44"/><circle cx="70" cy="60" r="4.5" fill="#4c7bd9"/>
+      <rect x="44" y="40" width="12" height="5" rx="2.5" fill="#9aa0b8"/>` },
+
+    crosshair: { label: 'Crosshair', cat: 'Games', draw: () => `
+      <circle cx="50" cy="50" r="36" fill="#1f2433" ${S}/>
+      <circle cx="50" cy="50" r="26" fill="none" stroke="#ff4f6d" stroke-width="3" stroke-dasharray="20 7"/>
+      <g stroke="#7ff2d6" stroke-width="4" stroke-linecap="round"><path d="M50 26 V40 M50 60 V74 M26 50 H40 M60 50 H74"/></g>
+      <circle cx="50" cy="50" r="3" fill="#7ff2d6"/>
+      ${sparkle(84, 16, 9, '#ff4f6d')}` },
+
+    dice: { label: 'Dice', cat: 'Games', draw: () => `
+      <g transform="rotate(-12 34 56)"><rect x="12" y="34" width="44" height="44" rx="9" fill="#fffdf6" ${S}/>
+        ${[[24,46],[44,46],[34,56],[24,66],[44,66]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4" fill="${O}"/>`).join('')}</g>
+      <g transform="rotate(16 68 40)"><rect x="48" y="18" width="40" height="40" rx="8" fill="#d94b3d" ${S}/>
+        ${[[58,28],[78,48],[68,38]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.8" fill="#fff"/>`).join('')}</g>` },
+
+    /* ---------------- Vibes ---------------- */
+    sun: { label: 'Sunshine', cat: 'Vibes', draw: () => `
+      ${Array.from({length:12},(_,i)=>`<rect x="46" y="4" width="8" height="18" rx="4" fill="#f2a03d" ${T} transform="rotate(${i*30} 50 50)"/>`).join('')}
+      <circle cx="50" cy="50" r="25" fill="#f6c343" ${S}/>
+      ${face(50, 50, 1, '#f08a5a')}` },
+
+    stars: { label: 'Stars', cat: 'Vibes', draw: () => `
+      <polygon points="${starPts(44, 54, 34, 15)}" fill="#f6c343" ${S}/>
+      <path d="M34 50 a4 4 0 0 1 8 0 M48 50 a4 4 0 0 1 8 0" fill="none" ${T}/>
+      ${sparkle(82, 20, 11, '#fff2b3')}${sparkle(84, 74, 7, '#fff2b3')}
+      <polygon points="${starPts(16, 16, 9, 4)}" fill="#fde49a" ${T}/>` },
+
+    sparkles: { label: 'Sparkles', cat: 'Vibes', draw: () => `
+      ${sparkle(42, 54, 32, '#ffd166')}${sparkle(78, 22, 14, '#ff9fb2')}${sparkle(80, 76, 10, '#9fd8ff')}${sparkle(14, 18, 8, '#b7e4a0')}` },
+
+    trophy: { label: 'Success', cat: 'Vibes', draw: () => `
+      <path d="M28 22 Q8 22 12 40 Q16 54 34 54" fill="none" stroke="${O}" stroke-width="9" stroke-linecap="round"/>
+      <path d="M72 22 Q92 22 88 40 Q84 54 66 54" fill="none" stroke="${O}" stroke-width="9" stroke-linecap="round"/>
+      <path d="M28 22 Q8 22 12 40 Q16 54 34 54" fill="none" stroke="#f6c343" stroke-width="4" stroke-linecap="round"/>
+      <path d="M72 22 Q92 22 88 40 Q84 54 66 54" fill="none" stroke="#f6c343" stroke-width="4" stroke-linecap="round"/>
+      <path d="M26 12 H74 V36 Q74 62 50 64 Q26 62 26 36Z" fill="#f6c343" ${S}/>
+      <rect x="44" y="62" width="12" height="12" fill="#e0a92a" ${S}/>
+      <rect x="30" y="74" width="40" height="14" rx="3" fill="#8a5a3a" ${S}/>
+      <polygon points="${starPts(50, 36, 12, 5)}" fill="#fff6d0" ${T}/>
+      <path d="M34 18 v16" stroke="#fff3bf" stroke-width="4" stroke-linecap="round"/>` },
+
+    smile: { label: 'Happiness', cat: 'Vibes', draw: () => `
+      <circle cx="50" cy="50" r="38" fill="#ffd166" ${S}/>
+      <path d="M33 40 q5 -7 10 0 M57 40 q5 -7 10 0" fill="none" ${S}/>
+      <path d="M30 54 Q50 80 70 54Z" fill="#fff" ${S}/>
+      <ellipse cx="26" cy="56" rx="6" ry="4" fill="#f4978e" opacity=".8"/><ellipse cx="74" cy="56" rx="6" ry="4" fill="#f4978e" opacity=".8"/>` },
+
+    heart: { label: 'Heart', cat: 'Vibes', draw: () => `
+      <path d="${heartD(50, 54, 86)}" fill="#e8546f" ${S}/>
+      <path d="M26 38 q4 -10 14 -10" fill="none" stroke="#ffb3c1" stroke-width="5" stroke-linecap="round"/>` },
+
+    rainbow: { label: 'Rainbow', cat: 'Vibes', draw: () => `
+      <path d="M8 66 A42 42 0 0 1 92 66" fill="none" stroke="${O}" stroke-width="3"/>
+      ${['#e8546f','#f2a03d','#f6c343','#6cbf6a','#4c7bd9'].map((c,i)=>`<path d="M${f(11.5+i*7)} 66 A${f(38.5-i*7)} ${f(38.5-i*7)} 0 0 1 ${f(88.5-i*7)} 66" fill="none" stroke="${c}" stroke-width="7"/>`).join('')}
+      <path d="M44 66 A6 6 0 0 1 56 66" fill="none" stroke="${O}" stroke-width="3"/>
+      <path d="M2 74 q0 -12 12 -12 q4 -10 14 -4 q10 2 6 16Z M66 74 q0 -12 12 -12 q4 -10 14 -4 q10 2 6 16Z" fill="#fff" ${S}/>` },
+
+    growth: { label: 'Growth', cat: 'Vibes', draw: () => `
+      <path d="M50 88 V46" stroke="#4c8a44" stroke-width="5" stroke-linecap="round"/>
+      <path d="M50 56 Q26 56 20 32 Q44 30 50 56Z" fill="#7fbf5a" ${S}/>
+      <path d="M50 46 Q74 46 82 20 Q56 18 50 46Z" fill="#6cb04e" ${S}/>
+      <path d="M26 80 H74 L70 94 H30Z" fill="#c8553d" ${S}/>
+      <rect x="22" y="74" width="56" height="8" rx="3" fill="#d9773a" ${S}/>` },
+
+    gradcap: { label: 'Graduation', cat: 'Vibes', draw: () => `
+      <path d="M28 52 V70 Q50 82 72 70 V52" fill="#2d2d40" ${S}/>
+      <path d="M50 22 L94 40 L50 58 L6 40 Z" fill="#3a3a52" ${S}/>
+      <path d="M50 40 L80 50 V70" fill="none" stroke="#f2b33d" stroke-width="3" stroke-linecap="round"/>
+      <rect x="76" y="68" width="8" height="14" rx="2" fill="#f2b33d" ${T}/>
+      <circle cx="50" cy="40" r="3.5" fill="#f2b33d"/>` },
+
+    /* ---------------- Hobbies ---------------- */
+    code: { label: 'Code', cat: 'Hobbies', draw: () => `
+      <rect x="14" y="14" width="72" height="52" rx="5" fill="#232836" ${S}/>
+      <rect x="19" y="19" width="62" height="42" rx="2" fill="#2d3346"/>
+      <text x="50" y="47" text-anchor="middle" font-family="Consolas,Menlo,monospace" font-weight="700" font-size="22" fill="#7fd1ae">&lt;/&gt;</text>
+      <rect x="24" y="24" width="14" height="3" rx="1.5" fill="#f2a03d"/><rect x="41" y="24" width="20" height="3" rx="1.5" fill="#9fb6ff"/>
+      <rect x="24" y="53" width="24" height="3" rx="1.5" fill="#ff9fb2"/><rect x="51" y="53" width="10" height="3" rx="1.5" fill="#9fb6ff"/>
+      <path d="M6 70 H94 L88 82 H12Z" fill="#c9ccd1" ${S}/>
+      <rect x="40" y="72" width="20" height="4" rx="2" fill="#9aa0a8"/>` },
+
+    music: { label: 'Music Notes', cat: 'Music', draw: () => `
+      <path d="M36 70 V22 L82 12 V60" fill="none" stroke="${O}" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M36 22 L82 12 V24 L36 34Z" fill="${O}"/>
+      <ellipse cx="26" cy="72" rx="12" ry="9" fill="#7a5ad9" ${S} transform="rotate(-20 26 72)"/>
+      <ellipse cx="72" cy="62" rx="12" ry="9" fill="#7a5ad9" ${S} transform="rotate(-20 72 62)"/>
+      ${sparkle(14, 30, 7, '#ffd166')}` },
+
+    book: { label: 'Books', cat: 'Hobbies', draw: () => `
+      <path d="M50 28 Q32 16 10 22 V78 Q32 72 50 84 Q68 72 90 78 V22 Q68 16 50 28Z" fill="#fffaf0" ${S}/>
+      <path d="M50 28 V84" stroke="${O}" stroke-width="2.5"/>
+      <path d="M18 34 Q30 32 42 38 M18 44 Q30 42 42 48 M18 54 Q30 52 42 58 M58 38 Q70 32 82 34 M58 48 Q70 42 82 44" stroke="#c9b8a6" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M66 20 V44 L71 40 L76 44 V18" fill="#c8553d" ${T}/>` },
+
+    camera: { label: 'Camera', cat: 'Hobbies', draw: () => `
+      <path d="M36 28 L42 18 H58 L64 28Z" fill="#3a3a52" ${S}/>
+      <rect x="8" y="28" width="84" height="56" rx="8" fill="#5a5f7a" ${S}/>
+      <rect x="8" y="40" width="84" height="8" fill="#3a3a52"/>
+      <circle cx="50" cy="56" r="20" fill="#e7ddd0" ${S}/><circle cx="50" cy="56" r="12" fill="#2d3346" ${S}/>
+      <circle cx="45" cy="51" r="3.5" fill="#9fb6ff"/><rect x="72" y="32" width="12" height="6" rx="2" fill="#f2b33d"/>` },
+
+    mountain: { label: 'Hiking', cat: 'Hobbies', draw: () => `
+      <circle cx="74" cy="24" r="10" fill="#f6c343" ${T}/>
+      <path d="M4 86 L36 30 L56 64 L66 48 L96 86Z" fill="#6c8bb3" ${S}/>
+      <path d="M36 30 L28 44 L34 42 L38 48 L44 42Z" fill="#fff" ${T}/>
+      <path d="M4 86 Q40 74 96 86" fill="#7fbf5a" ${S}/>` },
+
+    plane: { label: 'Travel', cat: 'Hobbies', draw: () => `
+      <path d="M6 60 q20 -2 30 6" fill="none" stroke="#c9b8a6" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round"/>
+      <g transform="rotate(-30 56 46)">
+        <path d="M20 46 Q20 40 30 40 H86 Q96 46 86 52 H30 Q20 52 20 46Z" fill="#fdfaf3" ${S}/>
+        <path d="M50 40 L38 16 H48 L66 40Z M50 52 L38 76 H48 L66 52Z" fill="#4c7bd9" ${S}/>
+        <path d="M24 40 L18 28 H26 L34 40Z" fill="#4c7bd9" ${S}/>
+        <path d="M74 44 h4 M66 44 h4 M58 44 h4" stroke="#4c7bd9" stroke-width="2.5" stroke-linecap="round"/>
+      </g>` },
+
+    paw: { label: 'Pets', cat: 'Hobbies', draw: () => `
+      <path d="M50 52 Q72 52 74 72 Q74 86 60 84 Q50 80 40 84 Q26 86 26 72 Q28 52 50 52Z" fill="#8a5a3a" ${S}/>
+      <ellipse cx="26" cy="44" rx="8" ry="10" fill="#8a5a3a" ${S} transform="rotate(-20 26 44)"/>
+      <ellipse cx="42" cy="28" rx="8" ry="11" fill="#8a5a3a" ${S}/>
+      <ellipse cx="60" cy="28" rx="8" ry="11" fill="#8a5a3a" ${S}/>
+      <ellipse cx="76" cy="44" rx="8" ry="10" fill="#8a5a3a" ${S} transform="rotate(20 76 44)"/>` },
+
+    /* ================= Added set ================= */
+    /* ---- Sports ---- */
+    baseball: { label: 'Baseball', cat: 'Sports', draw: () => {
+      const seam = (x0, xc) => {
+        const dir = xc > x0 ? 1 : -1;
+        let s = `<path d="M${x0} 21 Q${xc} 50 ${x0} 79" fill="none" stroke="#d94b3d" stroke-width="2.5"/>`;
+        for (let t = 0.14; t < 0.9; t += 0.12) {
+          const x = (1 - t) ** 2 * x0 + 2 * (1 - t) * t * xc + t * t * x0, y = (1 - t) ** 2 * 21 + 2 * (1 - t) * t * 50 + t * t * 79;
+          s += `<path d="M${f(x - 4 * dir)} ${f(y - 3)} L${f(x + 1 * dir)} ${f(y)} L${f(x - 4 * dir)} ${f(y + 3)}" fill="none" stroke="#d94b3d" stroke-width="1.6" stroke-linecap="round"/>`;
+        }
+        return s;
+      };
+      return `<circle cx="50" cy="50" r="38" fill="#fffaf0" ${S}/>${seam(25, 44)}${seam(75, 56)}<circle cx="50" cy="50" r="38" fill="none" ${S}/>`; } },
+
+    volleyball: { label: 'Volleyball', cat: 'Sports', draw: (u) => `
+      <clipPath id="${u}v"><circle cx="50" cy="50" r="38"/></clipPath>
+      <circle cx="50" cy="50" r="38" fill="#fffaf0"/>
+      <g clip-path="url(#${u}v)">
+        <path d="M50 50 Q54 26 76 16 L100 0 V100 H60 L58 88 Q64 66 50 50Z" fill="#4c7bd9"/>
+        <path d="M50 50 Q28 44 12 60 L0 100 H58 Q64 66 50 50Z" fill="#f6c343"/>
+        <g fill="none" stroke="${O}" stroke-width="2.6"><path d="M50 50 Q54 26 76 16"/><path d="M50 50 Q28 44 12 60"/><path d="M50 50 Q64 66 58 88"/>
+          <path d="M40 14 Q50 34 50 50" opacity=".35"/></g>
+      </g>
+      <circle cx="50" cy="50" r="38" fill="none" ${S}/>` },
+
+    golf: { label: 'Golf', cat: 'Sports', draw: () => `
+      <ellipse cx="50" cy="80" rx="44" ry="13" fill="#7fbf5a" ${S}/>
+      <ellipse cx="62" cy="80" rx="7" ry="2.8" fill="${O}"/>
+      <line x1="62" y1="80" x2="62" y2="10" stroke="${O}" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M62 10 L90 19 L62 28Z" fill="#d94b3d" ${T}/>
+      <circle cx="28" cy="66" r="11" fill="#ffffff" ${S}/>
+      ${[[24,62],[30,61],[27,68],[33,67],[22,69]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.4" fill="#c9c2b8"/>`).join('')}` },
+
+    hockey: { label: 'Hockey', cat: 'Sports', draw: () => `
+      <path d="M26 8 L35 6 L56 66 H86 Q92 66 92 72 V76 Q92 82 86 82 H52 Q45 82 44 74 Z" fill="#c98b4f" ${S}/>
+      <rect x="62" y="66" width="12" height="16" fill="#2d2d33"/>
+      <path d="M26 8 L35 6 L56 66 H86 Q92 66 92 72 V76 Q92 82 86 82 H52 Q45 82 44 74 Z" fill="none" ${S}/>
+      <rect x="27" y="14" width="10" height="12" fill="#2d2d33" transform="rotate(-19 32 20)"/>
+      <path d="M8 76 V82 A14 5 0 0 0 36 82 V76" fill="#2d2d33" ${S}/>
+      <ellipse cx="22" cy="76" rx="14" ry="5" fill="#45454f" ${S}/>` },
+
+    cycling: { label: 'Cycling', cat: 'Sports', draw: () => `
+      ${[[24, 66], [76, 66]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="17" fill="#fffaf0" stroke="${O}" stroke-width="4"/><circle cx="${x}" cy="${y}" r="2.5" fill="${O}"/>
+        <path d="M${x - 12} ${y} H${x + 12} M${x} ${y - 12} V${y + 12}" stroke="#c9c2b8" stroke-width="1.4"/>`).join('')}
+      <path d="M24 66 L42 38 L48 66 Z M42 38 H66 L48 66 M66 38 L76 66" fill="none" stroke="#d94b3d" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M66 38 L63 28 H72" fill="none" stroke="${O}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M42 38 L39 30" stroke="${O}" stroke-width="3.5"/><rect x="32" y="26" width="15" height="5" rx="2.5" fill="${O}"/>
+      <circle cx="48" cy="66" r="4" fill="#5a5f7a" ${T}/>` },
+
+    surfing: { label: 'Surfing', cat: 'Sports', draw: () => `
+      <path d="M2 82 Q14 70 26 80 T50 80 T74 80 T98 80 V98 H2Z" fill="#4c9fd9" ${S}/>
+      <g transform="rotate(28 52 46)">
+        <path d="M52 4 Q76 38 52 90 Q28 38 52 4Z" fill="#f2a03d" ${S}/>
+        <path d="M52 8 V88" stroke="#fff" stroke-width="3"/>
+        <path d="M45 34 Q52 30 59 34 M43 46 Q52 42 61 46" stroke="#d9773a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </g>
+      <path d="M10 86 q6 -4 12 0" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>` },
+
+    climbing: { label: 'Climbing', cat: 'Sports', draw: () => `
+      <path d="M14 6 H86 Q92 6 92 12 V94 H8 V12 Q8 6 14 6Z" fill="#d9c7ad" ${S}/>
+      <path d="M8 40 L30 34 L48 46 M60 20 L92 30 M40 70 L70 62 L92 72" fill="none" stroke="#c4ae8e" stroke-width="2"/>
+      ${[[26,22,'#d94b3d',9,6],[66,40,'#4c7bd9',8,6],[34,58,'#f6c343',10,7],[72,78,'#6cbf6a',9,6],[50,30,'#7a5ad9',6,4],[20,82,'#f2a03d',7,5]].map(([x,y,c,rx,ry],i)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${c}" ${T} transform="rotate(${i*35} ${x} ${y})"/><circle cx="${x}" cy="${y}" r="1.4" fill="${O}"/>`).join('')}
+      <path d="M58 6 Q54 40 62 60 Q70 80 60 94" fill="none" stroke="#e8546f" stroke-width="3.5" stroke-linecap="round"/>` },
+
+    boxing: { label: 'Boxing', cat: 'Sports', draw: () => `
+      <path d="M32 20 Q32 6 52 6 Q80 6 82 34 Q84 58 70 64 H36 Q26 60 27 46 Z" fill="#d94b3d" ${S}/>
+      <path d="M28 46 Q12 46 14 32 Q18 22 32 28" fill="#d94b3d" ${S}/>
+      <path d="M40 18 Q56 12 70 22" fill="none" stroke="#f08a7f" stroke-width="4" stroke-linecap="round"/>
+      <rect x="34" y="62" width="38" height="28" rx="4" fill="#fffaf0" ${S}/>
+      <rect x="34" y="70" width="38" height="6" fill="#d94b3d"/>
+      <path d="M53 64 V88" stroke="#c9c2b8" stroke-width="2"/>` },
+
+    bowling: { label: 'Bowling', cat: 'Sports', draw: () => `
+      <path d="M68 8 Q76 8 76 20 Q76 28 72 33 Q84 48 80 72 Q78 90 68 90 Q58 90 56 72 Q52 48 64 33 Q60 28 60 20 Q60 8 68 8Z" fill="#fffdf6" ${S}/>
+      <path d="M62 30 Q68 32 74 30 M61 36 Q68 38 75 36" stroke="#d94b3d" stroke-width="3" fill="none"/>
+      <circle cx="34" cy="68" r="24" fill="#2f5fa8" ${S}/>
+      <circle cx="26" cy="58" r="3.5" fill="${O}"/><circle cx="36" cy="56" r="3.5" fill="${O}"/><circle cx="31" cy="66" r="3.5" fill="${O}"/>
+      <path d="M18 76 a18 18 0 0 0 10 8" fill="none" stroke="#6c97d6" stroke-width="3" stroke-linecap="round"/>` },
+
+    skateboard: { label: 'Skateboarding', cat: 'Sports', draw: () => `
+      <g transform="rotate(-12 50 50)">
+        <path d="M6 40 Q8 54 22 54 H78 Q92 54 94 40" fill="none" stroke="${O}" stroke-width="11" stroke-linecap="round"/>
+        <path d="M6 40 Q8 54 22 54 H78 Q92 54 94 40" fill="none" stroke="#7a5ad9" stroke-width="6" stroke-linecap="round"/>
+        <rect x="24" y="58" width="16" height="5" fill="#9aa0a8" ${T}/><rect x="60" y="58" width="16" height="5" fill="#9aa0a8" ${T}/>
+        ${[24, 40, 60, 76].map((x) => `<circle cx="${x}" cy="68" r="6" fill="#f6c343" ${T}/>`).join('')}
+      </g>
+      ${sparkle(50, 18, 8, '#ff9fb2')}` },
+
+    dumbbell: { label: 'Gym', cat: 'Sports', draw: () => `
+      <g transform="rotate(-25 50 50)">
+        <rect x="22" y="46" width="56" height="8" rx="3" fill="#9aa0a8" ${S}/>
+        <rect x="12" y="28" width="12" height="44" rx="4" fill="#3d3d4a" ${S}/><rect x="76" y="28" width="12" height="44" rx="4" fill="#3d3d4a" ${S}/>
+        <rect x="4" y="36" width="9" height="28" rx="3" fill="#5a5f7a" ${S}/><rect x="87" y="36" width="9" height="28" rx="3" fill="#5a5f7a" ${S}/>
+      </g>` },
+
+    curling: { label: 'Curling', cat: 'Sports', draw: () => `
+      <ellipse cx="50" cy="82" rx="44" ry="8" fill="#dcecf5" ${T}/>
+      <path d="M12 60 Q12 40 50 40 Q88 40 88 60 Q88 80 50 80 Q12 80 12 60Z" fill="#9aa0a8" ${S}/>
+      <path d="M13 62 Q50 72 87 62" fill="none" stroke="#6b707a" stroke-width="5"/>
+      <ellipse cx="50" cy="48" rx="26" ry="7" fill="#b8bdc5"/>
+      <path d="M38 46 V32 Q38 26 46 26 H78 Q84 26 84 32" fill="none" stroke="${O}" stroke-width="10" stroke-linecap="round"/>
+      <path d="M38 46 V32 Q38 26 46 26 H78 Q84 26 84 32" fill="none" stroke="#d94b3d" stroke-width="6" stroke-linecap="round"/>` },
+
+    /* ---- Food & Drink ---- */
+    burger: { label: 'Burger', cat: 'Food & Drink', draw: () => `
+      <path d="M12 74 H88 Q88 90 72 90 H28 Q12 90 12 74Z" fill="#e9a650" ${S}/>
+      <rect x="10" y="58" width="80" height="16" rx="8" fill="#7a3f24" ${S}/>
+      <path d="M12 56 H88 L82 64 L74 58 L62 68 L52 58 L38 66 L28 58 L12 62Z" fill="#f6c343" ${T}/>
+      <path d="M8 52 q5 -6 10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t6 0 v4 H8Z" fill="#7fbf5a" ${T}/>
+      <path d="M12 48 Q12 14 50 14 Q88 14 88 48Z" fill="#e9a650" ${S}/>
+      <path d="M24 32 a20 16 0 0 1 14 -10" fill="none" stroke="#f6c98a" stroke-width="4" stroke-linecap="round"/>
+      ${[[40,26,-20],[52,22,10],[64,28,30],[48,36,-10],[70,40,15],[30,40,-30]].map(([x,y,r])=>`<ellipse cx="${x}" cy="${y}" rx="3" ry="1.6" fill="#fffaf0" transform="rotate(${r} ${x} ${y})"/>`).join('')}` },
+
+    taco: { label: 'Taco', cat: 'Food & Drink', draw: () => {
+      const ring = (r, a0, a1, n) => Array.from({ length: n }, (_, i) => { const a = (a0 + (a1 - a0) * i / (n - 1)) * Math.PI / 180; return [50 + r * Math.cos(a), 78 + r * Math.sin(a)]; });
+      return `
+      ${ring(41, 192, 348, 9).map(([x, y]) => `<circle cx="${f(x)}" cy="${f(y)}" r="8.5" fill="#7fbf5a" ${T}/>`).join('')}
+      ${ring(37, 205, 335, 5).map(([x, y], i) => `<circle cx="${f(x)}" cy="${f(y)}" r="${i % 2 ? 5 : 6}" fill="${i % 2 ? '#d94b3d' : '#8a4b2a'}" ${T}/>`).join('')}
+      ${ring(39, 215, 325, 4).map(([x, y]) => `<path d="M${f(x - 3)} ${f(y - 3)} l6 6" stroke="#f6c343" stroke-width="3" stroke-linecap="round"/>`).join('')}
+      <path d="M12 82 A38 38 0 0 1 88 82 Z" fill="#f2c35a" ${S}/>
+      <path d="M24 70 A28 28 0 0 1 44 52" fill="none" stroke="#f9dc8e" stroke-width="4" stroke-linecap="round"/>
+      ${[[34,72],[50,64],[66,72],[58,78],[42,79],[72,80]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.8" fill="#d99a3a"/>`).join('')}`; } },
+
+    donut: { label: 'Donut', cat: 'Food & Drink', draw: () => {
+      let w = ''; for (let i = 0; i <= 48; i++) { const a = i / 48 * Math.PI * 2, r = 31 + 3 * Math.sin(a * 8); w += (i ? 'L' : 'M') + f(50 + r * Math.cos(a)) + ' ' + f(50 + r * Math.sin(a)); }
+      const spr = ['#4c7bd9','#f6c343','#fffaf0','#6cbf6a','#7a5ad9'];
+      return `
+      <path d="${circ(50, 52, 39)} ${circ(50, 52, 11)}" fill="#d99a52" fill-rule="evenodd" ${S}/>
+      <path d="${w}Z ${circ(50, 50, 13)}" fill="#f28fb1" fill-rule="evenodd" ${T}/>
+      ${Array.from({ length: 14 }, (_, i) => { const a = i / 14 * Math.PI * 2 + 0.2, r = i % 2 ? 19 : 25; const x = 50 + r * Math.cos(a), y = 50 + r * Math.sin(a); return `<rect x="${f(x - 3)}" y="${f(y - 1.2)}" width="6" height="2.4" rx="1.2" fill="${spr[i % 5]}" transform="rotate(${(i * 47) % 180} ${f(x)} ${f(y)})"/>`; }).join('')}`; } },
+
+    icecream: { label: 'Ice Cream', cat: 'Food & Drink', draw: (u) => `
+      <clipPath id="${u}k"><path d="M30 52 L50 96 L70 52Z"/></clipPath>
+      <path d="M30 52 L50 96 L70 52Z" fill="#e3a85a"/>
+      <g clip-path="url(#${u}k)" stroke="#b9772f" stroke-width="2">${[0,1,2,3,4].map(i=>`<path d="M${20+i*10} 50 l30 40 M${80-i*10} 50 l-30 40"/>`).join('')}</g>
+      <path d="M30 52 L50 96 L70 52Z" fill="none" ${S}/>
+      <circle cx="50" cy="44" r="19" fill="#9fe0c3" ${S}/>
+      <path d="M31 48 Q36 58 41 50 Q46 60 51 51 Q56 59 61 50 Q66 56 69 48" fill="#9fe0c3" ${T}/>
+      <circle cx="50" cy="26" r="15" fill="#f7a8c4" ${S}/>
+      <path d="M44 18 q4 -3 8 -1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M52 12 q2 -8 10 -8" fill="none" stroke="#4c8a44" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="51" cy="11" r="5.5" fill="#d94b3d" ${T}/>` },
+
+    cake: { label: 'Cake', cat: 'Food & Drink', draw: () => `
+      <ellipse cx="50" cy="88" rx="42" ry="6" fill="#f4f1ec" ${S}/>
+      <rect x="16" y="48" width="68" height="38" rx="5" fill="#f7c6d4" ${S}/>
+      <rect x="17.5" y="66" width="65" height="6" fill="#fffaf0"/>
+      <path d="M14 52 Q14 44 22 44 H78 Q86 44 86 52 Q82 60 77 54 Q72 63 66 54 Q60 63 54 54 Q48 63 42 54 Q36 63 30 54 Q24 61 19 54 Q16 57 14 52Z" fill="#fffaf0" ${S}/>
+      ${[32, 48, 64].map((x, i) => `<rect x="${x}" y="24" width="6" height="20" rx="2" fill="${['#9fd8ff','#ffd166','#b7e4a0'][i]}" ${T}/>
+        <path d="M${x + 3} 10 Q${x + 9} 18 ${x + 3} 22 Q${x - 3} 18 ${x + 3} 10Z" fill="#f6a623" ${T}/>`).join('')}
+      ${[[26,78],[44,80],[62,78],[76,80]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2.2" fill="#e8546f"/>`).join('')}` },
+
+    croissant: { label: 'Croissant', cat: 'Food & Drink', draw: () => {
+      const seg = [[-152, 8, 11], [-28, 8, 11], [-124, 11, 16], [-56, 11, 16], [-90, 14, 21]];
+      return seg.map(([a, w, h]) => { const r = a * Math.PI / 180, x = 50 + 42 * Math.cos(r), y = 88 + 42 * Math.sin(r);
+        return `<ellipse cx="${f(x)}" cy="${f(y)}" rx="${w}" ry="${h}" fill="#e9a650" ${S} transform="rotate(${a + 90} ${f(x)} ${f(y)})"/>`; }).join('') +
+        `<path d="M40 40 q10 -6 20 0" stroke="#f6c98a" stroke-width="3" fill="none" stroke-linecap="round"/>`; } },
+
+    matcha: { label: 'Matcha', cat: 'Food & Drink', draw: () => `
+      <rect x="80" y="6" width="8" height="24" rx="3" fill="#d9b77a" ${T}/>
+      <path d="M76 30 Q68 50 76 64 H92 Q100 50 92 30Z" fill="#efdcb2" ${T}/>
+      <path d="M80 34 Q76 48 80 62 M84 32 V63 M88 34 Q92 48 88 62" stroke="#c9a86a" stroke-width="1.5" fill="none"/>
+      <path d="M8 46 H80 Q78 84 44 86 Q10 84 8 46Z" fill="#6b4a3a" ${S}/>
+      <path d="M10 52 Q44 62 78 52 Q77 58 72 62 Q66 56 60 64 Q52 58 44 66 Q36 58 28 64 Q20 58 14 62 Q11 58 10 52Z" fill="#a48468"/>
+      <rect x="32" y="85" width="24" height="6" rx="2" fill="#5a3d30" ${T}/>
+      <ellipse cx="44" cy="46" rx="36" ry="10" fill="#8cbf4a" ${S}/>
+      <path d="M30 46 q8 -5 14 0 q6 5 14 0" fill="none" stroke="#c6e59a" stroke-width="2.5" stroke-linecap="round"/>` },
+
+    bao: { label: 'Bao', cat: 'Food & Drink', draw: () => `
+      ${steam([38, 62], 26, 14)}
+      <rect x="8" y="64" width="84" height="26" rx="6" fill="#d9a85a" ${S}/>
+      <path d="M10 76 H90" stroke="#b5813a" stroke-width="2"/>
+      ${[22, 36, 50, 64, 78].map((x) => `<path d="M${x} 66 V88" stroke="#b5813a" stroke-width="1.5"/>`).join('')}
+      <path d="M16 68 Q14 32 50 30 Q86 32 84 68Z" fill="#fffaf0" ${S}/>
+      <path d="M50 32 l-9 8 M50 32 l9 8 M50 32 v10 M50 32 l-14 4 M50 32 l14 4" stroke="${O}" stroke-width="1.8" stroke-linecap="round"/>
+      ${face(50, 54, 0.95)}` },
+
+    fries: { label: 'Fries', cat: 'Food & Drink', draw: () => `
+      ${[[28,-12],[36,-6],[44,-2],[52,3],[60,8],[68,13],[40,0],[56,5]].map(([x,r],i)=>`<rect x="${x}" y="${10+(i%3)*5}" width="8" height="44" rx="1.5" fill="${i%2?'#f6c343':'#f2b33d'}" ${T} transform="rotate(${r} ${x+4} 50)"/>`).join('')}
+      <path d="M20 40 L30 92 H70 L80 40 Q66 50 50 50 Q34 50 20 40Z" fill="#d94b3d" ${S}/>
+      <path d="M40 66 l10 -8 l10 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M30 56 L34 84" stroke="#ef7a6c" stroke-width="3" stroke-linecap="round"/>` },
+
+    eggtart: { label: 'Egg Tart', cat: 'Food & Drink', draw: () => `
+      <path d="M10 52 V62 Q12 82 50 84 Q88 82 90 62 V52" fill="#c98a3a" ${S}/>
+      ${Array.from({length:12},(_,i)=>`<path d="M${14+i*6.6} 60 Q${17+i*6.6} 72 ${14+i*6.6} 80" fill="none" stroke="#a96c25" stroke-width="1.5"/>`).join('')}
+      <ellipse cx="50" cy="52" rx="40" ry="22" fill="#e9a650" ${S}/>
+      <ellipse cx="50" cy="52" rx="31" ry="15" fill="#f8d34a" ${T}/>
+      <ellipse cx="42" cy="48" rx="7" ry="4" fill="#c9762a" opacity=".55"/><ellipse cx="60" cy="56" rx="5" ry="3" fill="#c9762a" opacity=".45"/><ellipse cx="56" cy="45" rx="3" ry="2" fill="#c9762a" opacity=".5"/>
+      <path d="M34 46 q6 -4 12 -3" stroke="#fff3b0" stroke-width="2.5" fill="none" stroke-linecap="round"/>` },
+
+    watermelon: { label: 'Watermelon', cat: 'Food & Drink', draw: () => `
+      <path d="M8 40 A42 42 0 0 0 92 40 Z" fill="#7fbf5a" ${S}/>
+      <path d="M15 40 A35 35 0 0 0 85 40 Z" fill="#fffaf0"/>
+      <path d="M19 40 A31 31 0 0 0 81 40 Z" fill="#ef5b5b"/>
+      ${[[36,50],[50,56],[64,50],[43,64],[57,64],[50,46],[28,44],[72,44]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="1.8" ry="3" fill="${O}"/>`).join('')}
+      <path d="M8 40 A42 42 0 0 0 92 40 Z" fill="none" ${S}/>
+      <path d="M8 40 H92" ${S}/>` },
+
+    chili: { label: 'Spicy', cat: 'Food & Drink', draw: () => `
+      <path d="M30 32 Q18 62 44 80 Q66 94 90 82 Q62 78 52 58 Q44 40 42 30Z" fill="#d94b3d" ${S}/>
+      <path d="M32 46 Q34 64 50 74" fill="none" stroke="#f08a7f" stroke-width="4" stroke-linecap="round"/>
+      <path d="M26 32 Q30 22 44 24 Q46 32 38 34 Q30 36 26 32Z" fill="#5b9a3a" ${S}/>
+      <path d="M36 24 Q34 12 46 8" fill="none" stroke="#5b9a3a" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M74 16 q4 6 0 10 q-4 -4 0 -10Z M86 26 q3 5 0 8 q-3 -3 0 -8Z" fill="#f2a03d"/>` },
+
+    popcorn: { label: 'Popcorn', cat: 'Food & Drink', draw: () => `
+      ${[[30,30],[42,22],[56,22],[68,30],[36,40],[50,34],[64,40],[24,42],[76,42],[46,12],[60,14]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="9" fill="#fff6dc" ${T}/>`).join('')}
+      ${[[44,24],[62,34],[30,38]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2.5" fill="#f6c343"/>`).join('')}
+      <path d="M18 42 H82 L74 92 H26Z" fill="#fffdf6" ${S}/>
+      <path d="M30 42 L35 92 H45 L42 42Z M54 42 L55 92 H65 L66 42Z" fill="#d94b3d"/>
+      <path d="M18 42 H82 L74 92 H26Z" fill="none" ${S}/>
+      <rect x="14" y="40" width="72" height="8" rx="3" fill="#d94b3d" ${S}/>` },
+
+    /* ---- Games ---- */
+    chess: { label: 'Chess', cat: 'Games', draw: () => `
+      <path d="M28 88 H76 Q78 80 70 78 H34 Q26 80 28 88Z" fill="#3a3a52" ${S}/>
+      <path d="M38 78 Q34 62 46 52 L30 50 Q20 46 24 36 L40 22 Q44 14 52 10 L55 18 Q74 22 74 48 Q74 66 68 78Z" fill="#3a3a52" ${S}/>
+      <path d="M57 20 Q68 30 66 50" fill="none" stroke="#6b6f8f" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="44" cy="30" r="2.8" fill="#fffaf0"/><circle cx="29" cy="43" r="1.6" fill="#fffaf0"/>` },
+
+    puzzle: { label: 'Puzzles', cat: 'Games', draw: () => `
+      <path d="M20 28 H40 Q35 14 50 12 Q65 14 60 28 H80 V46 Q94 41 94 54 Q94 67 80 62 V84 H20 V62 Q32 67 34 54 Q32 41 20 46Z" fill="#6cbf6a" ${S}/>
+      <path d="M28 38 q4 -4 10 -3" stroke="#a7dd8e" stroke-width="3.5" fill="none" stroke-linecap="round"/>` },
+
+    cube: { label: 'Speed Cube', cat: 'Games', draw: () => {
+      const faces = [[[50, 10], [86, 28], [50, 46], [14, 28]], [[14, 28], [50, 46], [50, 90], [14, 72]], [[50, 46], [86, 28], [86, 72], [50, 90]]];
+      const cols = ['#f6c343', '#d94b3d', '#4c7bd9', '#6cbf6a', '#fffaf0', '#f2a03d'];
+      const base = [0, 1, 2];
+      let s = faces.map((q) => `<polygon points="${q.map((p) => p.join(',')).join(' ')}" fill="#232328" ${S}/>`).join('');
+      faces.forEach((q, fi) => {
+        for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+          const g = 0.05, us = [i / 3 + g, (i + 1) / 3 - g], vs = [j / 3 + g, (j + 1) / 3 - g];
+          const pts = [[us[0], vs[0]], [us[1], vs[0]], [us[1], vs[1]], [us[0], vs[1]]].map(([u, v]) => quad(...q, u, v).map(f).join(','));
+          const c = (i * 3 + j + fi) % 4 === 0 ? cols[(fi + i + j + 3) % 6] : cols[base[fi]];
+          s += `<polygon points="${pts.join(' ')}" fill="${c}" stroke="#232328" stroke-width=".5" stroke-linejoin="round"/>`;
+        }
+      });
+      return s; } },
+
+    go: { label: 'Go (Weiqi)', cat: 'Games', draw: () => `
+      <rect x="8" y="12" width="84" height="80" rx="6" fill="#b5813a" ${S}/>
+      <rect x="8" y="8" width="84" height="78" rx="6" fill="#e3b46b" ${S}/>
+      <g stroke="#8a5a2f" stroke-width="1.5">${[20, 34, 48, 62, 76].map((v) => `<path d="M20 ${v - 1} H80 M${v + 1} 19 V75"/>`).join('')}</g>
+      ${[[35,33,1],[49,47,1],[63,33,0],[49,33,0],[35,61,1],[63,61,0],[77,47,1]].map(([x,y,b])=>`<circle cx="${x}" cy="${y}" r="6.5" fill="${b?'#2d2d33':'#fffdf6'}" ${T}/>${b?`<circle cx="${x-2}" cy="${y-2}" r="1.6" fill="#6b6f8f"/>`:''}`).join('')}` },
+
+    meeple: { label: 'Board Games', cat: 'Games', draw: () => `
+      <path d="M50 10 Q61 10 61 22 Q61 28 57 32 L80 40 Q90 44 85 53 L66 53 L75 88 H56 L50 72 L44 88 H25 L34 53 L15 53 Q10 44 20 40 L43 32 Q39 28 39 22 Q39 10 50 10Z" fill="#e07a2e" ${S}/>
+      <path d="M44 18 q4 -3 8 -1" stroke="#f6b07a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      ${sparkle(86, 16, 7, '#ffd166')}` },
+
+    headset: { label: 'Gaming Headset', cat: 'Games', draw: () => `
+      <path d="M18 56 Q18 14 50 14 Q82 14 82 56" fill="none" stroke="${O}" stroke-width="11" stroke-linecap="round"/>
+      <path d="M18 56 Q18 14 50 14 Q82 14 82 56" fill="none" stroke="#5a5f7a" stroke-width="6" stroke-linecap="round"/>
+      <rect x="8" y="46" width="22" height="32" rx="10" fill="#ff4f6d" ${S}/><rect x="70" y="46" width="22" height="32" rx="10" fill="#ff4f6d" ${S}/>
+      <path d="M14 52 v20 M86 52 v20" stroke="#ff9fb2" stroke-width="3" stroke-linecap="round"/>
+      <path d="M22 76 Q24 90 46 88" fill="none" stroke="${O}" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="48" cy="88" r="4.5" fill="#2d2d33" ${T}/>` },
+
+    /* ---- Music ---- */
+    guitar: { label: 'Guitar', cat: 'Music', draw: () => `
+      <g transform="rotate(40 50 50)">
+        <rect x="46.5" y="8" width="7" height="46" fill="#8a5a3a" ${S}/>
+        <path d="M44 2 H56 L55 12 H45Z" fill="#5b3a24" ${S}/>
+        <circle cx="50" cy="74" r="20" fill="#e3a85a" ${S}/><circle cx="50" cy="52" r="14" fill="#e3a85a" ${S}/>
+        <circle cx="50" cy="74" r="18.5" fill="#e3a85a"/><circle cx="50" cy="52" r="12.5" fill="#e3a85a"/>
+        <rect x="46.5" y="36" width="7" height="22" fill="#8a5a3a"/>
+        <circle cx="50" cy="62" r="6.5" fill="${O}"/>
+        <rect x="43" y="79" width="14" height="4" rx="1" fill="#5b3a24"/>
+        <path d="M48.5 10 V81 M50 10 V81 M51.5 10 V81" stroke="#fffaf0" stroke-width=".7"/>
+      </g>` },
+
+    piano: { label: 'Piano', cat: 'Music', draw: () => `
+      <rect x="6" y="18" width="88" height="68" rx="6" fill="#2d2d33" ${S}/>
+      <rect x="11" y="34" width="78" height="46" rx="2" fill="#fffdf6"/>
+      <path d="M22 34 V80 M33 34 V80 M44 34 V80 M56 34 V80 M67 34 V80 M78 34 V80" stroke="#c9c2b8" stroke-width="1.5"/>
+      ${[22, 33, 56, 67, 78].map((x) => `<rect x="${x - 3.5}" y="34" width="7" height="26" rx="1.5" fill="#2d2d33"/>`).join('')}
+      <rect x="40" y="23" width="20" height="5" rx="2.5" fill="#f2b33d"/>` },
+
+    headphones: { label: 'Headphones', cat: 'Music', draw: () => `
+      <path d="M20 58 Q20 14 50 14 Q80 14 80 58" fill="none" stroke="${O}" stroke-width="10" stroke-linecap="round"/>
+      <path d="M20 58 Q20 14 50 14 Q80 14 80 58" fill="none" stroke="#7a5ad9" stroke-width="5" stroke-linecap="round"/>
+      <rect x="8" y="48" width="22" height="36" rx="10" fill="#7a5ad9" ${S}/><rect x="70" y="48" width="22" height="36" rx="10" fill="#7a5ad9" ${S}/>
+      <rect x="26" y="54" width="8" height="24" rx="4" fill="#2d2d33" ${T}/><rect x="66" y="54" width="8" height="24" rx="4" fill="#2d2d33" ${T}/>
+      <path d="M44 46 V36 L58 32 V42" fill="none" stroke="#f2a03d" stroke-width="2.5"/><circle cx="42" cy="46" r="3" fill="#f2a03d"/><circle cx="56" cy="42" r="3" fill="#f2a03d"/>` },
+
+    microphone: { label: 'Karaoke', cat: 'Music', draw: () => `
+      <path d="M24 36 V44 Q24 64 50 64 Q76 64 76 44 V36" fill="none" stroke="${O}" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50 64 V84" stroke="${O}" stroke-width="4"/>
+      <ellipse cx="50" cy="88" rx="18" ry="5" fill="#5a5f7a" ${S}/>
+      <rect x="34" y="8" width="32" height="44" rx="16" fill="#c9ccd1" ${S}/>
+      <path d="M36 20 H64 M35 28 H65 M42 10 V30 M50 9 V30 M58 10 V30" stroke="#9aa0a8" stroke-width="1.5"/>
+      <rect x="34" y="32" width="32" height="6" fill="#5a5f7a"/>
+      ${sparkle(14, 16, 7, '#ffd166')}${sparkle(86, 20, 6, '#ff9fb2')}` },
+
+    drum: { label: 'Drums', cat: 'Music', draw: () => `
+      <path d="M14 46 V72 A36 12 0 0 0 86 72 V46" fill="#d94b3d" ${S}/>
+      <path d="M16 50 L28 76 L40 52 L52 78 L64 52 L76 76 L84 52" fill="none" stroke="#fffaf0" stroke-width="2.2" stroke-linejoin="round"/>
+      <ellipse cx="50" cy="46" rx="36" ry="12" fill="#fffaf0" ${S}/>
+      <path d="M22 8 L52 40 M80 6 L50 40" stroke="#c98b4f" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="22" cy="8" r="4" fill="#e3a85a" ${T}/><circle cx="80" cy="6" r="4" fill="#e3a85a" ${T}/>` },
+
+    violin: { label: 'Violin', cat: 'Music', draw: () => `
+      <g transform="rotate(-35 50 50)">
+        <path d="M50 30 Q34 30 34 42 Q34 50 40 54 Q32 58 32 70 Q32 90 50 90 Q68 90 68 70 Q68 58 60 54 Q66 50 66 42 Q66 30 50 30Z" fill="#b5651d" ${S}/>
+        <path d="M42 58 q-3 6 0 12 M58 58 q3 6 0 12" stroke="${O}" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="47" y="8" width="6" height="58" rx="2" fill="#2d2d33"/>
+        <circle cx="50" cy="6" r="4.5" fill="#8a5a3a" ${T}/>
+        <path d="M46 74 H54 L53 86 H47Z" fill="#2d2d33"/>
+        <path d="M48.5 10 V84 M51.5 10 V84" stroke="#e7ddd0" stroke-width=".7"/>
+      </g>
+      <path d="M14 30 L86 76" stroke="${O}" stroke-width="4" stroke-linecap="round"/><path d="M14 30 L86 76" stroke="#c98b4f" stroke-width="2" stroke-linecap="round"/>
+      <path d="M16 34 L84 79" stroke="#fffaf0" stroke-width="1.2"/>` },
+
+    vinyl: { label: 'Vinyl', cat: 'Music', draw: () => `
+      <circle cx="50" cy="50" r="40" fill="#232328" ${S}/>
+      <circle cx="50" cy="50" r="33" fill="none" stroke="#3a3a46" stroke-width="1.5"/><circle cx="50" cy="50" r="27" fill="none" stroke="#3a3a46" stroke-width="1.5"/><circle cx="50" cy="50" r="21" fill="none" stroke="#3a3a46" stroke-width="1.5"/>
+      <path d="M24 30 A32 32 0 0 1 40 19" fill="none" stroke="#6b6b7a" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="12" fill="#e8546f"/><circle cx="50" cy="50" r="2.5" fill="#fffaf0"/>` },
+
+    /* ---- Hobbies ---- */
+    art: { label: 'Painting', cat: 'Hobbies', draw: () => `
+      <path d="M50 12 Q88 12 90 46 Q92 70 70 70 Q58 70 60 80 Q62 90 50 90 Q12 88 10 50 Q10 12 50 12Z" fill="#e9c08a" ${S}/>
+      <ellipse cx="70" cy="52" rx="7" ry="6" fill="#fffaf0" ${T}/>
+      ${[[30,32,'#d94b3d'],[48,24,'#f6c343'],[66,28,'#4c7bd9'],[26,52,'#6cbf6a'],[36,70,'#7a5ad9']].map(([x,y,c])=>`<circle cx="${x}" cy="${y}" r="6.5" fill="${c}" ${T}/>`).join('')}
+      <path d="M58 94 L92 52" stroke="${O}" stroke-width="6" stroke-linecap="round"/><path d="M58 94 L92 52" stroke="#c98b4f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M86 56 L94 46 Q98 40 94 38 Q90 38 86 46Z" fill="#4c7bd9" ${T}/>` },
+
+    yarn: { label: 'Knitting', cat: 'Hobbies', draw: () => `
+      <path d="M58 8 L90 70 M90 10 L62 72" stroke="#c98b4f" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="58" cy="8" r="4" fill="#f2a03d" ${T}/><circle cx="90" cy="10" r="4" fill="#f2a03d" ${T}/>
+      <circle cx="42" cy="56" r="30" fill="#e8546f" ${S}/>
+      <g fill="none" stroke="#f7a3b5" stroke-width="2.5" stroke-linecap="round">
+        <path d="M17 44 Q42 34 68 48"/><path d="M14 58 Q42 46 72 62"/><path d="M20 72 Q44 62 66 76"/><path d="M34 27 Q26 56 38 85"/><path d="M50 27 Q40 56 54 85"/></g>
+      <path d="M70 66 q12 4 10 14 q-2 10 12 12" fill="none" stroke="#e8546f" stroke-width="3" stroke-linecap="round"/>` },
+
+    tent: { label: 'Camping', cat: 'Hobbies', draw: () => `
+      ${sparkle(18, 16, 6, '#ffd166')}<polygon points="${starPts(82, 14, 6, 2.6)}" fill="#ffd166" ${T}/>
+      <path d="M50 18 V6 M50 6 L60 9 L50 12" stroke="${O}" stroke-width="2.5" fill="#d94b3d" stroke-linejoin="round"/>
+      <path d="M50 18 L90 84 H10Z" fill="#e07a2e" ${S}/>
+      <path d="M50 18 L62 84 H38Z" fill="#b5532a" ${T}/>
+      <path d="M50 48 L57 84 H43Z" fill="${O}"/>
+      <path d="M4 86 H96" ${S}/>` },
+
+    telescope: { label: 'Stargazing', cat: 'Hobbies', draw: () => `
+      <path d="M48 58 L30 92 M48 58 L50 94 M48 58 L68 92" stroke="${O}" stroke-width="3.5" stroke-linecap="round"/>
+      <g transform="rotate(-25 50 50)">
+        <rect x="16" y="38" width="54" height="18" rx="4" fill="#4c7bd9" ${S}/>
+        <rect x="66" y="33" width="18" height="28" rx="3" fill="#2f5fa8" ${S}/>
+        <rect x="6" y="42" width="12" height="10" rx="2" fill="#5a5f7a" ${S}/>
+        <rect x="40" y="38" width="7" height="18" fill="#f6c343" ${T}/>
+      </g>
+      <polygon points="${starPts(84, 14, 8, 3.4)}" fill="#ffd166" ${T}/>${sparkle(18, 18, 6, '#ffd166')}` },
+
+    clapper: { label: 'Movies', cat: 'Hobbies', draw: () => `
+      <rect x="12" y="42" width="76" height="48" rx="4" fill="#2d2d33" ${S}/>
+      <path d="M20 60 H80 M20 70 H64 M20 80 H72" stroke="#6b6f8f" stroke-width="3" stroke-linecap="round"/>
+      <rect x="12" y="42" width="76" height="10" fill="#fffaf0" ${S}/>
+      ${[0,1,2,3].map(i=>`<path d="M${22+i*18} 42 h8 l-6 10 h-8Z" fill="${O}"/>`).join('')}
+      <g transform="rotate(-16 13 40)">
+        <rect x="12" y="28" width="76" height="12" rx="2" fill="#fffaf0" ${S}/>
+        ${[0,1,2,3].map(i=>`<path d="M${20+i*18} 28 h8 l-6 12 h-8Z" fill="${O}"/>`).join('')}
+      </g>
+      <circle cx="14" cy="41" r="3.5" fill="#c9ccd1" ${T}/>` },
+
+    crane: { label: 'Origami', cat: 'Hobbies', draw: () => `
+      <g stroke="${O}" stroke-width="2.2" stroke-linejoin="round">
+        <polygon points="50,42 12,12 36,62" fill="#f7a8c4"/>
+        <polygon points="50,42 90,8 64,62" fill="#e8546f"/>
+        <polygon points="36,62 6,52 42,70" fill="#f28fb1"/>
+        <polygon points="64,62 88,36 94,40 60,72" fill="#d6455d"/>
+        <polygon points="36,62 50,42 64,62 50,80" fill="#f28fb1"/>
+      </g>
+      <path d="M50 42 L50 80" stroke="#c23a55" stroke-width="1.5"/>` },
+
+    chef: { label: 'Cooking', cat: 'Hobbies', draw: () => `
+      ${[[32,38,16],[50,28,19],[68,38,16]].map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#fffdf6" ${S}/>`).join('')}
+      ${[[32,38,16],[50,28,19],[68,38,16]].map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r - 1.6}" fill="#fffdf6"/>`).join('')}
+      <path d="M30 44 V84 H70 V44" fill="#fffdf6" ${S}/>
+      <path d="M30 72 H70" stroke="${O}" stroke-width="2"/>
+      <path d="M40 50 V66 M50 48 V66 M60 50 V66" stroke="#e7ddd0" stroke-width="2.5" stroke-linecap="round"/>` },
+
+    /* ---- Vibes ---- */
+    moon: { label: 'Moon', cat: 'Vibes', draw: () => `
+      <path d="M58 10 A40 40 0 1 0 90 66 A32 32 0 1 1 58 10Z" fill="#f6d365" ${S}/>
+      <path d="M30 46 q4 4 8 0 M44 60 q4 4 8 0" fill="none" ${T}/>
+      <circle cx="28" cy="64" r="3.5" fill="#f2b33d" opacity=".6"/><circle cx="42" cy="78" r="2.5" fill="#f2b33d" opacity=".6"/>
+      <polygon points="${starPts(82, 22, 9, 4)}" fill="#fde49a" ${T}/>${sparkle(70, 46, 5, '#fde49a')}` },
+
+    clover: { label: 'Lucky Clover', cat: 'Vibes', draw: () => `
+      <path d="M50 52 Q58 74 70 92" fill="none" stroke="#3f7a3a" stroke-width="5" stroke-linecap="round"/>
+      ${[0, 90, 180, 270].map((r) => `<path d="${heartD(50, 30, 34)}" fill="#4c9a44" ${S} transform="rotate(${r + 45} 50 48)"/>`).join('')}
+      <circle cx="50" cy="48" r="3.5" fill="#3f7a3a"/>` },
+
+    rocket: { label: 'Rocket', cat: 'Vibes', draw: () => `
+      <g transform="rotate(40 50 50)">
+        <path d="M42 70 Q50 98 58 70Z" fill="#f2a03d" ${T}/><path d="M46 70 Q50 86 54 70Z" fill="#ffd166"/>
+        <path d="M34 50 L20 70 L36 66Z" fill="#d94b3d" ${S}/><path d="M66 50 L80 70 L64 66Z" fill="#d94b3d" ${S}/>
+        <path d="M50 4 Q70 22 66 66 H34 Q30 22 50 4Z" fill="#f4f1ec" ${S}/>
+        <path d="M43 12 Q50 6 57 12" fill="none" stroke="#d94b3d" stroke-width="5"/>
+        <circle cx="50" cy="34" r="9" fill="#9fd8ff" ${S}/><path d="M46 31 q3 -3 6 -2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </g>
+      ${sparkle(16, 20, 7, '#ffd166')}${sparkle(84, 84, 6, '#ff9fb2')}` },
+
+    lightbulb: { label: 'Big Ideas', cat: 'Vibes', draw: () => `
+      <g stroke="#f2a03d" stroke-width="3.5" stroke-linecap="round"><path d="M50 2 V8 M16 16 l5 5 M84 16 l-5 5 M4 42 H11 M89 42 H96"/></g>
+      <path d="M50 12 Q76 12 76 40 Q76 54 64 63 V70 H36 V63 Q24 54 24 40 Q24 12 50 12Z" fill="#ffd166" ${S}/>
+      <path d="M42 56 L44 42 L50 52 L56 42 L58 56" fill="none" stroke="${O}" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M34 28 Q38 20 46 18" stroke="#fff2b3" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <rect x="36" y="70" width="28" height="8" rx="2" fill="#c9ccd1" ${S}/><rect x="38" y="78" width="24" height="7" rx="2" fill="#9aa0a8" ${S}/>
+      <path d="M44 85 H56 Q54 92 50 92 Q46 92 44 85Z" fill="#5a5f7a" ${T}/>` },
+
+    flower: { label: 'Flowers', cat: 'Vibes', draw: () => `
+      <path d="M50 54 V94" stroke="#4c8a44" stroke-width="5" stroke-linecap="round"/>
+      <path d="M50 80 Q30 82 24 66 Q42 62 50 80Z" fill="#7fbf5a" ${T}/>
+      ${[0,1,2,3,4,5].map(i=>`<ellipse cx="50" cy="20" rx="10" ry="17" fill="#ff9fb2" ${S} transform="rotate(${i*60} 50 38)"/>`).join('')}
+      <circle cx="50" cy="38" r="10" fill="#f6c343" ${S}/>` },
+
+    crown: { label: 'Crown', cat: 'Vibes', draw: () => `
+      <path d="M12 72 L16 28 L34 48 L50 16 L66 48 L84 28 L88 72Z" fill="#f6c343" ${S}/>
+      <rect x="12" y="70" width="76" height="14" rx="3" fill="#e0a92a" ${S}/>
+      <circle cx="16" cy="26" r="4.5" fill="#f6c343" ${T}/><circle cx="50" cy="14" r="4.5" fill="#f6c343" ${T}/><circle cx="84" cy="26" r="4.5" fill="#f6c343" ${T}/>
+      <circle cx="30" cy="77" r="3.5" fill="#d94b3d"/><circle cx="50" cy="77" r="4" fill="#4c7bd9"/><circle cx="70" cy="77" r="3.5" fill="#6cbf6a"/>
+      <path d="M26 56 L30 64" stroke="#fff2b3" stroke-width="3" stroke-linecap="round"/>` },
+
+    /* ---- Thanksgiving ---- */
+    acorn: { label: 'Acorn', cat: 'Thanksgiving', draw: () => `
+      <path d="M28 46 Q28 82 50 92 Q72 82 72 46Z" fill="#c98b4f" ${S}/>
+      <path d="M36 56 Q38 74 48 82" stroke="#e0ad78" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M20 48 Q20 20 50 20 Q80 20 80 48 Q50 56 20 48Z" fill="#8a5a3a" ${S}/>
+      <path d="M30 30 L40 46 M42 24 L52 48 M56 23 L64 48 M68 28 L74 44 M26 40 L66 26" stroke="#6b4228" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M50 20 Q52 10 62 8" fill="none" stroke="#5b3a24" stroke-width="5" stroke-linecap="round"/>` },
+
+    corn: { label: 'Corn', cat: 'Thanksgiving', draw: (u) => {
+      const cob = 'M50 8 Q68 12 66 56 Q62 82 50 84 Q38 82 34 56 Q32 12 50 8Z';
+      let k = '';
+      for (let y = 14; y < 84; y += 7) for (let x = 35 + ((y / 7) % 2) * 3; x < 66; x += 6.5) k += `<rect x="${f(x)}" y="${y}" width="5.2" height="5.6" rx="2.2" fill="#f2b33d" stroke="#d99a1f" stroke-width=".8"/>`;
+      return `
+      <clipPath id="${u}cn"><path d="${cob}"/></clipPath>
+      <path d="${cob}" fill="#f6c343"/>
+      <g clip-path="url(#${u}cn)">${k}</g>
+      <path d="${cob}" fill="none" ${S}/>
+      <path d="M50 94 Q18 76 22 30 Q38 60 50 94Z" fill="#7fbf5a" ${S}/>
+      <path d="M50 94 Q82 76 78 30 Q62 60 50 94Z" fill="#6cb04e" ${S}/>`; } },
+
+    candle: { label: 'Candlelight', cat: 'Thanksgiving', draw: () => `
+      <circle cx="50" cy="24" r="18" fill="#ffe9a8" opacity=".55"/>
+      <ellipse cx="50" cy="86" rx="26" ry="7" fill="#c8553d" ${S}/>
+      <rect x="36" y="38" width="28" height="48" rx="3" fill="#f4e3c8" ${S}/>
+      <path d="M36 42 Q36 38 40 38 H60 Q64 38 64 42 Q62 48 60 44 Q58 52 55 44 Q50 48 46 44 Q42 54 40 44 Q38 48 36 42Z" fill="#fffaf0" ${T}/>
+      <path d="M50 38 V31" stroke="${O}" stroke-width="2"/>
+      <path d="M50 10 Q61 23 50 32 Q39 23 50 10Z" fill="#f6a623" ${T}/><path d="M50 19 Q55 25 50 30 Q45 25 50 19Z" fill="#ffe08a"/>` },
+    /* ---- Round 4 additions ---- */
+    yoga: { label: 'Yoga', cat: 'Sports', draw: () => `
+      <ellipse cx="50" cy="88" rx="28" ry="6" fill="#e8ddd0" opacity=".7"/>
+      <circle cx="50" cy="22" r="11" fill="#f4c7a5" ${S}/>
+      <path d="M42 20 q8 -6 16 0" fill="none" stroke="#3a2a1f" stroke-width="2" stroke-linecap="round"/>
+      <path d="M50 34 V58" stroke="#5b8fd9" stroke-width="8" stroke-linecap="round"/>
+      <path d="M50 42 L22 58 M50 42 L78 58" stroke="#5b8fd9" stroke-width="7" stroke-linecap="round"/>
+      <path d="M50 58 L34 84 M50 58 L66 84" stroke="#3d3d4a" stroke-width="7" stroke-linecap="round"/>
+      ${sparkle(18, 28, 5, '#f6c343')}` },
+
+    ski: { label: 'Skiing', cat: 'Sports', draw: () => `
+      <path d="M18 78 L82 86" stroke="#2f6f8f" stroke-width="5" stroke-linecap="round" ${T}/>
+      <path d="M22 84 L86 92" stroke="#2f6f8f" stroke-width="5" stroke-linecap="round" ${T}/>
+      <circle cx="48" cy="22" r="9" fill="#f4c7a5" ${S}/>
+      <path d="M48 32 L52 58 L40 78" stroke="#c8553d" stroke-width="7" stroke-linecap="round"/>
+      <path d="M52 40 L70 34 M52 48 L68 58" stroke="#c8553d" stroke-width="6" stroke-linecap="round"/>
+      <path d="M40 78 L28 90 M40 78 L48 90" stroke="#3d3d4a" stroke-width="5" stroke-linecap="round"/>
+      <rect x="66" y="20" width="4" height="42" rx="2" fill="#8a5a3a" transform="rotate(20 68 41)" ${T}/>` },
+
+    pretzel: { label: 'Pretzel', cat: 'Food & Drink', draw: () => `
+      <path d="M28 70 Q10 40 32 22 Q50 8 68 22 Q90 40 72 70 Q62 84 50 78 Q38 84 28 70Z" fill="none" stroke="#c98b4f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M34 62 Q50 40 66 62" fill="none" stroke="#c98b4f" stroke-width="12" stroke-linecap="round"/>
+      <path d="M28 70 Q10 40 32 22 Q50 8 68 22 Q90 40 72 70 Q62 84 50 78 Q38 84 28 70Z" fill="none" stroke="#8a5a3a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      ${[[36,34],[50,28],[64,34],[42,52],[58,52]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2" fill="#fffaf0"/>`).join('')}` },
+
+    apple: { label: 'Apple', cat: 'Food & Drink', draw: () => `
+      <path d="M50 28 C28 28 16 48 18 68 C20 88 36 94 50 94 C64 94 80 88 82 68 C84 48 72 28 50 28Z" fill="#d94b3d" ${S}/>
+      <path d="M50 28 C40 40 40 54 48 62" stroke="#fff2b3" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M50 28 Q54 12 66 10" fill="none" stroke="#5b3a24" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50 30 Q62 18 74 28 Q60 36 50 30Z" fill="#7fbf5a" ${T}/>` },
+
+    soup: { label: 'Soup', cat: 'Food & Drink', draw: () => `
+      <ellipse cx="50" cy="78" rx="34" ry="10" fill="#c9b6a3" opacity=".5"/>
+      <path d="M18 48 H82 Q86 48 86 54 V70 Q86 86 50 90 Q14 86 14 70 V54 Q14 48 18 48Z" fill="#f4f1ec" ${S}/>
+      <ellipse cx="50" cy="52" rx="30" ry="10" fill="#e0a92a" ${T}/>
+      <path d="M30 50 q6 6 12 0 M48 48 q6 8 14 0 M66 50 q4 5 10 0" fill="none" stroke="#c98b4f" stroke-width="2.5" stroke-linecap="round"/>
+      ${steam([38,50,62], 34, 16)}
+      <path d="M82 56 Q96 50 94 66 Q92 74 82 70" fill="none" stroke="#c9ccd1" stroke-width="5" stroke-linecap="round"/>` },
+
+    blocks: { label: 'Blocks', cat: 'Games', draw: () => `
+      <rect x="18" y="58" width="28" height="28" rx="3" fill="#d94b3d" ${S}/>
+      <rect x="40" y="40" width="28" height="28" rx="3" fill="#f6c343" ${S}/>
+      <rect x="54" y="22" width="28" height="28" rx="3" fill="#5b8fd9" ${S}/>
+      <path d="M24 68 H40 M54 50 H62 M60 32 H76" stroke="#fffaf0" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+      <circle cx="32" cy="72" r="3" fill="#fffaf0" opacity=".8"/><circle cx="48" cy="54" r="3" fill="#fffaf0" opacity=".8"/>` },
+
+    dartboard: { label: 'Darts', cat: 'Games', draw: () => `
+      <circle cx="50" cy="52" r="38" fill="#f4f1ec" ${S}/>
+      <circle cx="50" cy="52" r="30" fill="#d94b3d"/>
+      <circle cx="50" cy="52" r="22" fill="#f4f1ec"/>
+      <circle cx="50" cy="52" r="14" fill="#d94b3d"/>
+      <circle cx="50" cy="52" r="6" fill="#f6c343" ${T}/>
+      ${[0,45,90,135].map(a=>`<line x1="50" y1="52" x2="${50+36*Math.cos(a*Math.PI/180)}" y2="${50+36*Math.sin(a*Math.PI/180)}" stroke="${O}" stroke-width="1.5"/>`).join('')}
+      <path d="M78 18 L70 42 L82 36Z" fill="#3d3d4a" ${T}/><circle cx="78" cy="16" r="3" fill="#d94b3d"/>` },
+
+    flute: { label: 'Flute', cat: 'Music', draw: () => `
+      <rect x="10" y="44" width="80" height="12" rx="6" fill="#d4c4a8" ${S}/>
+      <rect x="10" y="46" width="14" height="8" rx="4" fill="#c9b6a3"/>
+      ${[32,42,52,62,72].map(x=>`<circle cx="${x}" cy="50" r="3" fill="#3a2a1f"/>`).join('')}
+      <path d="M86 42 L96 36 L96 64 L86 58Z" fill="#c9b6a3" ${T}/>
+      ${sparkle(22, 28, 5, '#f6c343')}` },
+
+    fish: { label: 'Fishing', cat: 'Hobbies', draw: () => `
+      <ellipse cx="48" cy="50" rx="28" ry="18" fill="#5b8fd9" ${S}/>
+      <path d="M72 50 L92 34 L88 50 L92 66Z" fill="#3d6eb0" ${S}/>
+      <path d="M40 34 Q48 28 56 34" fill="#7eb0e8"/>
+      <circle cx="34" cy="46" r="3.5" fill="#fffaf0"/><circle cx="34" cy="46" r="1.8" fill="${O}"/>
+      <path d="M20 50 q6 6 0 10" fill="none" stroke="#3d6eb0" stroke-width="3"/>
+      <path d="M60 18 V40" stroke="#8a5a3a" stroke-width="3" stroke-linecap="round"/>
+      <path d="M60 18 Q72 14 70 26" fill="none" stroke="#c9b6a3" stroke-width="2"/>` },
+
+    butterfly: { label: 'Butterfly', cat: 'Vibes', draw: () => `
+      <path d="M50 30 V78" stroke="${O}" stroke-width="3" stroke-linecap="round"/>
+      <path d="M50 34 Q20 10 12 40 Q18 62 50 52Z" fill="#9b6bc9" ${S}/>
+      <path d="M50 34 Q80 10 88 40 Q82 62 50 52Z" fill="#c48ad9" ${S}/>
+      <path d="M50 52 Q24 58 20 78 Q36 82 50 66Z" fill="#6b4fa0" ${S}/>
+      <path d="M50 52 Q76 58 80 78 Q64 82 50 66Z" fill="#8a6bb8" ${S}/>
+      <circle cx="30" cy="40" r="4" fill="#f6c343"/><circle cx="70" cy="40" r="4" fill="#f6c343"/>
+      <path d="M44 22 Q40 10 34 14 M56 22 Q60 10 66 14" fill="none" stroke="${O}" stroke-width="2" stroke-linecap="round"/>` },
+
+    peace: { label: 'Peace', cat: 'Vibes', draw: () => `
+      <circle cx="50" cy="50" r="36" fill="#e8f0e4" ${S}/>
+      <circle cx="50" cy="50" r="28" fill="none" stroke="#5f7f5a" stroke-width="5"/>
+      <path d="M50 22 V78 M50 50 L28 72 M50 50 L72 72" fill="none" stroke="#5f7f5a" stroke-width="5" stroke-linecap="round"/>
+      ${sparkle(78, 22, 6, '#f6c343')}` },
+
+    wheat: { label: 'Wheat', cat: 'Thanksgiving', draw: () => `
+      <path d="M50 92 V28" stroke="#c98b4f" stroke-width="4" stroke-linecap="round"/>
+      ${[0,1,2,3,4,5].map(i=>{
+        const y=30+i*10;
+        return `<ellipse cx="38" cy="${y}" rx="10" ry="5" fill="#f6c343" ${T} transform="rotate(-28 38 ${y})"/>`+
+               `<ellipse cx="62" cy="${y+2}" rx="10" ry="5" fill="#e0a92a" ${T} transform="rotate(28 62 ${y+2})"/>`;
+      }).join('')}
+      <ellipse cx="50" cy="22" rx="8" ry="12" fill="#f6c343" ${S}/>` },
+
+    mittens: { label: 'Mittens', cat: 'Vibes', draw: () => `
+      <path d="M28 38 Q18 38 18 52 V78 Q18 88 30 88 H44 Q52 88 52 78 V52 Q52 38 42 38Z" fill="#e8546f" ${S}/>
+      <path d="M18 52 Q8 48 10 60 Q12 68 22 64" fill="#e8546f" ${S}/>
+      <path d="M28 38 H42 Q40 28 35 28 Q30 28 28 38Z" fill="#f28fb1" ${T}/>
+      <path d="M58 40 Q50 40 50 54 V78 Q50 88 62 88 H76 Q86 88 86 78 V54 Q86 40 76 40Z" fill="#5b8fd9" ${S}/>
+      <path d="M86 54 Q96 50 94 62 Q92 70 82 66" fill="#5b8fd9" ${S}/>
+      <path d="M58 40 H76 Q74 30 67 30 Q60 30 58 40Z" fill="#7eb0e8" ${T}/>
+      ${sparkle(50, 18, 5, '#f6c343')}` },
+
+    journal: { label: 'Journal', cat: 'Hobbies', draw: () => `
+      <rect x="22" y="14" width="56" height="72" rx="4" fill="#f4e3c8" ${S}/>
+      <rect x="22" y="14" width="10" height="72" fill="#c98b4f" ${S}/>
+      <path d="M38 32 H70 M38 44 H66 M38 56 H70 M38 68 H58" stroke="#c9b6a3" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="27" cy="36" r="2.2" fill="#8a5a3a"/><circle cx="27" cy="56" r="2.2" fill="#8a5a3a"/><circle cx="27" cy="76" r="2.2" fill="#8a5a3a"/>
+      <path d="M48 20 Q56 12 64 20" stroke="#e8546f" stroke-width="2.5" fill="none" stroke-linecap="round"/>` },
+
+    hotcocoa: { label: 'Hot Cocoa', cat: 'Food & Drink', draw: () => `
+      <path d="M24 38 H68 Q74 38 74 46 V70 Q74 82 50 86 Q26 82 26 70 V46 Q26 38 24 38Z" fill="#f4f1ec" ${S}/>
+      <ellipse cx="49" cy="42" rx="22" ry="8" fill="#6b4228" ${T}/>
+      <path d="M34 40 q6 4 10 0 q5 5 12 0" fill="#fffaf0" opacity=".9"/>
+      <path d="M74 50 Q90 46 88 62 Q86 72 74 66" fill="none" stroke="#c9ccd1" stroke-width="5" stroke-linecap="round"/>
+      ${steam([40,50,60], 28, 14, '#d4c4a8')}
+      <path d="M42 88 H58" stroke="#c9b6a3" stroke-width="4" stroke-linecap="round"/>` },
+
+    kite: { label: 'Kite', cat: 'Vibes', draw: () => `
+      <path d="M50 12 L78 50 L50 88 L22 50Z" fill="#5b8fd9" ${S}/>
+      <path d="M50 12 L50 88 M22 50 H78" stroke="#fffaf0" stroke-width="2.5"/>
+      <path d="M50 12 L78 50 L50 50Z" fill="#e8546f" opacity=".9"/>
+      <path d="M50 88 Q62 78 58 70 Q70 74 66 60" fill="none" stroke="#f6c343" stroke-width="3" stroke-linecap="round"/>
+      <path d="M66 60 Q74 64 70 72 M70 72 Q78 68 76 78" fill="none" stroke="#e8546f" stroke-width="2.5" stroke-linecap="round"/>
+      ${sparkle(84, 24, 5, '#f6c343')}` },
+
+  };
+
+  const CATEGORIES = ['Sports', 'Food & Drink', 'Games', 'Music', 'Hobbies', 'Vibes', 'Thanksgiving'];
+
+  let n = 0;
+  function iconSVG(key, uidPrefix) {
+    const ic = ICONS[key];
+    if (!ic) return '';
+    return ic.draw(`${uidPrefix || 'i'}${key}${n++}`);
+  }
+
+  window.CardIcons = { ICONS, CATEGORIES, iconSVG };
+})();
+
+// Card renderer: turns a card "state" into a 500x700 SVG string.
+(function () {
+  const { ICONS, iconSVG } = window.CardIcons;
+
+  // Every page theme has a cover palette of the same name, plus a few cover-only extras.
+  const PALETTES = {
+    harvest:   { name: 'Harvest',   bg: '#fff6ea', accent: '#c04a2e', ink: '#3a2a1f', sticker: '#fffaf4', deco: '#f0d9b8', tints: ['#ffe8d2', '#fff0c8', '#eef5d8', '#ffe4da'] },
+    pumpkin:   { name: 'Pumpkin',   bg: '#ffe8cc', accent: '#d4652e', ink: '#3a2416', sticker: '#fff8ee', deco: '#f5c896', tints: ['#fff1dc', '#ffe2b8', '#ffe0d0', '#fff5e8'] },
+    cranberry: { name: 'Cranberry', bg: '#fff0f3', accent: '#c0455c', ink: '#3a1f22', sticker: '#fff8f9', deco: '#f0c8d0', tints: ['#ffe0e6', '#ffeeda', '#f8e4f0', '#ffe8e0'] },
+    sage:      { name: 'Sage',      bg: '#f3f8ec', accent: '#6a8f5e', ink: '#2f3a2a', sticker: '#fbfcf8', deco: '#d4e2c4', tints: ['#e6f0d8', '#f6f2dc', '#e4f0ea', '#f5ecd8'] },
+    maple:     { name: 'Maple',     bg: '#fff1e8', accent: '#c45e3a', ink: '#3a2418', sticker: '#fffaf6', deco: '#f0d0bc', tints: ['#ffdcc8', '#f8e4c8', '#f5d4d0', '#fff0e4'] },
+    cider:     { name: 'Cider',     bg: '#fff8e4', accent: '#d4892a', ink: '#3f2e14', sticker: '#fffdf4', deco: '#f0dca0', tints: ['#ffe9b4', '#f8d898', '#f2ecd0', '#fff0d8'] },
+    mist:      { name: 'Soft Mist', bg: '#f4f7fc', accent: '#6a7fa8', ink: '#2a3348', sticker: '#fbfcfe', deco: '#d0dceb', tints: ['#e4ecf8', '#ebe8f5', '#e4f0f0', '#f5efe4'] },
+    juniper:   { name: 'Juniper',   bg: '#eef8f5', accent: '#2f7f78', ink: '#1f3532', sticker: '#f9fdfc', deco: '#cde6df', tints: ['#d9f0ea', '#f3efdc', '#e2ecf6', '#f9e8e2'] },
+    ocean:     { name: 'Ocean',     bg: '#eaf5fa', accent: '#3a86a8', ink: '#1f3340', sticker: '#f8fcfd', deco: '#c0dceb', tints: ['#d8eef8', '#e4f5ee', '#ece8f8', '#f8f0e4'] },
+    sunny:     { name: 'Sunny',     bg: '#fff6d4', accent: '#e09028', ink: '#4a3214', sticker: '#fffcef', deco: '#f8de90', tints: ['#fff0b8', '#ffe2c4', '#eef6cc', '#ffe8e4'] },
+    lavender:  { name: 'Petal',     bg: '#f5eef9', accent: '#8a6bb8', ink: '#2e2440', sticker: '#fcf9fe', deco: '#dfd0ee', tints: ['#ebe0f6', '#fce6f0', '#e4eef8', '#f8f0dc'] },
+    dusk:      { dark: true, name: 'Dusk', bg: '#2a2038', accent: '#f2b46a', ink: '#faf0e4', sticker: '#3a2e52', deco: '#4a3e68', tints: ['#3a3260', '#4a3060', '#2e4060', '#483858'] },
+  };
+  const ALIASES = { midnight: 'dusk' }; // older share links
+
+  // [x, y, size, rotation] for each icon count. Index 0 is the spotlight spot where there is one.
+  const LAYOUTS = {
+    1: [[250, 378, 280, 0]],
+    2: [[170, 335, 200, -8], [332, 445, 190, 8]],
+    3: [[250, 290, 190, 0], [148, 460, 160, -9], [352, 460, 160, 9]],
+    4: [[160, 292, 165, -8], [340, 292, 165, 8], [160, 464, 165, 6], [340, 464, 165, -6]],
+    5: [[250, 376, 178, 0], [115, 254, 125, -10], [385, 254, 125, 10], [115, 496, 125, 8], [385, 496, 125, -8]],
+    6: [[125, 296, 122, -7], [250, 296, 122, 5], [375, 296, 122, -4], [125, 462, 122, 6], [250, 462, 122, -6], [375, 462, 122, 7]],
+    7: [[250, 380, 145, 0], [150, 262, 112, -9], [350, 262, 112, 9], [95, 384, 104, 6], [405, 384, 104, -6], [150, 504, 112, 8], [350, 504, 112, -8]],
+    8: [[125, 266, 110, -7], [250, 266, 110, 5], [375, 266, 110, -5], [180, 386, 110, 6], [320, 386, 110, -6], [125, 506, 110, 7], [250, 506, 110, -4], [375, 506, 110, 6]],
+    9: [[125, 264, 106, -7], [250, 264, 106, 5], [375, 264, 106, -5], [125, 384, 106, 6], [250, 384, 106, -3], [375, 384, 106, 6], [125, 504, 106, 7], [250, 504, 106, -4], [375, 504, 106, 6]],
+  };
+  const MAX_ICONS = 9;
+  const STYLES = { sticker: 'Stickers', tinted: 'Tinted', plain: 'Plain' };
+
+  // Title Case: capitalizes every word except short words (a, of, the, for...) in the middle,
+  // which keep whatever case was typed -- so "All In on Our Friendship" stays as written.
+  const SMALL = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor', 'of', 'on', 'or', 'per', 'so', 'the', 'to', 'vs', 'via', 'yet', 'with']);
+  function titleCase(str) {
+    const words = String(str || '').split(/(\s+)/);
+    const idx = words.map((w, i) => (/\S/.test(w) ? i : -1)).filter((i) => i >= 0);
+    const first = idx[0], last = idx[idx.length - 1];
+    return words.map((w, i) => {
+      if (!/\S/.test(w)) return w;
+      const lower = w.toLowerCase();
+      if (i !== first && i !== last && SMALL.has(lower.replace(/[^a-z]/g, ''))) return w;
+      return w.split('-').map((p) => (/[A-Z].*[A-Z]|\d/.test(p) ? p : p.replace(/^([^a-zA-Z]*)([a-z])/, (m, a, b) => a + b.toUpperCase()))).join('-');
+    }).join('');
+  }
+
+  const esc = (s) => String(s || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  function jitter(seed, i) { const h = (seed * 9301 + i * 49297 + 233) % 233280; return (h / 233280) * 8 - 4; }
+  const fitSize = (text, max, width, k = 0.5) => Math.min(max, Math.floor(width / Math.max(1, String(text).length * k)));
+
+  const LEAF = 'M0 -10 L2 -5 L5 -6 L4 -1 L9 -3 L7 1 L10 3 L5 5 L6 8 L1 7 L0.5 11 L-0.5 11 L-1 7 L-6 8 L-5 5 L-10 3 L-7 1 L-9 -3 L-4 -1 L-5 -6 L-2 -5 Z';
+  const DECO = [[52, 60, 1.6, -20], [450, 64, 1.3, 25], [40, 330, 1.1, 40], [462, 420, 1.2, -35], [56, 652, 1.4, 15], [446, 646, 1.7, -10], [470, 210, 0.9, 60], [32, 520, 0.9, -50]];
+
+  function normalize(state) {
+    const s = { ...state };
+    s.palette = ALIASES[s.palette] || s.palette;
+    if (!PALETTES[s.palette]) s.palette = 'harvest';
+    if (!STYLES[s.style]) s.style = 'sticker';
+    s.icons = (s.icons || []).filter((k) => ICONS[k]).slice(0, MAX_ICONS);
+    return s;
+  }
+
+  function renderCard(raw, uid = 'c') {
+    const state = normalize(raw);
+    const p = PALETTES[state.palette];
+    const tc = state.titleCase !== false ? titleCase : (x) => x;
+    const icons = state.icons, seed = state.seed || 1;
+    const title = tc(state.title || 'Happy Thanksgiving');
+    const kicker = tc(state.kicker ?? 'With Gratitude');
+    const tag = tc(state.tagline || '');
+    const out = [];
+    out.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="500" height="700" font-family="Georgia, 'Times New Roman', serif">`);
+    out.push(`<defs><pattern id="${uid}grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".9" fill="${p.ink}" opacity=".05"/><circle cx="10" cy="11" r=".7" fill="${p.ink}" opacity=".04"/></pattern></defs>`);
+    out.push(`<rect width="500" height="700" rx="22" fill="${p.bg}"/><rect width="500" height="700" rx="22" fill="url(#${uid}grain)"/>`);
+    for (const [x, y, s, r] of DECO) out.push(`<path d="${LEAF}" fill="${p.deco}" transform="translate(${x} ${y}) rotate(${r}) scale(${s * 1.6})"/>`);
+    out.push(`<rect x="20" y="20" width="460" height="660" rx="16" fill="none" stroke="${p.accent}" stroke-width="2.5" stroke-dasharray="1 9" stroke-linecap="round"/>`);
+
+    if (kicker) out.push(`<text x="250" y="80" text-anchor="middle" font-size="15" letter-spacing="3" fill="${p.accent}">${esc(kicker)}</text>`);
+    out.push(`<text x="250" y="134" text-anchor="middle" font-size="${fitSize(title, 48, 430, 0.5)}" font-style="italic" fill="${p.ink}">${esc(title)}</text>`);
+    out.push(`<g transform="translate(250 164)"><path d="M-70 0 H-16 M16 0 H70" stroke="${p.accent}" stroke-width="2" stroke-linecap="round"/><path d="${LEAF}" fill="${p.accent}" transform="scale(1.05)"/></g>`);
+
+    if (!icons.length) out.push(`<text x="250" y="384" text-anchor="middle" font-size="20" font-style="italic" fill="${p.accent}" opacity=".7">Pick a Few Icons</text>`);
+    const L = LAYOUTS[icons.length];
+    icons.forEach((key, i) => {
+      const [x, y, s, r0] = L[i];
+      const r = r0 + jitter(seed, i);
+      const framed = state.style !== 'plain';
+      const inner = framed ? 0.7 : 1;
+      const k = (s * inner) / 100, off = (s - s * inner) / 2;
+      out.push(`<g transform="translate(${x - s / 2} ${y - s / 2}) rotate(${r.toFixed(1)} ${s / 2} ${s / 2})">`);
+      if (framed) {
+        const fill = state.style === 'tinted' ? p.tints[i % p.tints.length] : p.sticker;
+        out.push(`<circle cx="${s / 2 + 3}" cy="${s / 2 + 5}" r="${s * 0.5}" fill="${p.deco}"/>`);
+        out.push(`<circle cx="${s / 2}" cy="${s / 2}" r="${s * 0.5}" fill="${fill}" stroke="${p.accent}" stroke-width="2" stroke-opacity=".35"/>`);
+        out.push(`<circle cx="${s / 2}" cy="${s / 2}" r="${s * 0.5 - 6}" fill="none" stroke="${p.accent}" stroke-width="1.2" stroke-opacity=".18" stroke-dasharray="3 5"/>`);
+      }
+      if (!framed && p.dark) out.push(`<circle cx="${s / 2}" cy="${s / 2}" r="${s * 0.46}" fill="${p.deco}" opacity=".75"/>`);
+      out.push(`<g transform="translate(${off} ${off}) scale(${k.toFixed(3)})">${iconSVG(key, uid)}</g></g>`);
+    });
+
+    if (tag) out.push(`<text x="250" y="610" text-anchor="middle" font-size="${fitSize(tag, 25, 420, 0.48)}" font-style="italic" fill="${p.ink}">${esc(tag)}</text>`);
+    const bits = [];
+    if (state.to) bits.push(`For ${tc(state.to)}`);
+    if (state.from) bits.push(`From ${tc(state.from)}`);
+    if (bits.length) {
+      const line = bits.join('  ·  ');
+      out.push(`<text x="250" y="648" text-anchor="middle" font-size="${fitSize(line, 17, 400, 0.5)}" letter-spacing="1.5" fill="${p.accent}">${esc(line)}</text>`);
+    }
+    out.push(`</svg>`);
+    return out.join('');
+  }
+
+  window.CardRender = { PALETTES, LAYOUTS, MAX_ICONS, STYLES, renderCard, titleCase, normalize };
+})();
+
+</script>
+
+<script>
 (() => {
 "use strict";
 /* Snapshot the untouched page first; the editor uses it to export personalized cards. */
@@ -647,7 +1939,11 @@ let C = window.CARD || {};
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const EDIT = /(^|[?&#])edit(&|$)/.test(location.search + location.hash);
+const HASH_RAW = location.hash.slice(1);
+const EDIT = /(^|[?&#])(edit|create)(=|&|$)/.test(location.search + location.hash) || /(?:^|&)edit(?:&|$)/.test(HASH_RAW);
+const CREATE_MODE = /(^|[?&#])create(=|&|$)/.test(location.search + location.hash);
+const WANT_DEFAULT = /create=default/.test(location.search + location.hash) || /(?:^|&)create=default(?:&|$)/.test(HASH_RAW);
+var editorAPI = null;
 
 function el(tag, props = {}, ...kids) {
   const n = document.createElement(tag);
@@ -690,7 +1986,7 @@ let unlocked = false;
 /* ---------- apply config to the desk ---------- */
 function applyConfig() {
   document.body.dataset.theme = C.theme || "harvest";
-  const greet = C.greeting || (C.to ? `Happy Thanksgiving, ${C.to}` : "Happy Thanksgiving");
+  const greet = C.greeting || (C.to ? `Happy Thanksgiving, ${C.to}` : "Happy Thanksgiving, You");
   document.title = greet;
   const h1 = $("#greeting"); h1.textContent = "";
   const comma = greet.lastIndexOf(", ");
@@ -721,11 +2017,11 @@ function updateProgress() {
   const rest = list.filter((k) => k !== "finale" && !seen.has(k));
   for (const [k, sel] of Object.entries(GIFTS)) $(sel).classList.toggle("seen", seen.has(k));
   $(".box").classList.toggle("next", unlocked && on("finale") && !rest.length && !seen.has("finale"));
-  if (!unlocked) { hint.textContent = "open the letter to begin"; return; }
+  if (!unlocked) { hint.textContent = "Open the Letter to Begin"; return; }
   const n = list.filter((k) => seen.has(k)).length;
   if (list.length && n === list.length) hint.textContent = "Happy Thanksgiving ♡";
-  else if (on("finale") && !rest.length) hint.textContent = "one last thing: open the box";
-  else hint.textContent = `${n} of ${list.length} opened · any order`;
+  else if (on("finale") && !rest.length) hint.textContent = "One Last Thing: Open the Box";
+  else hint.textContent = `${n} of ${list.length} Opened · Any Order`;
 }
 
 /* ---------- toast ---------- */
@@ -827,7 +2123,7 @@ const Music = (() => {
 })();
 const mt = $("#musicToggle");
 mt.addEventListener("click", Music.toggle);
-Music.sub((p) => { mt.classList.toggle("on", p); mt.setAttribute("aria-label", p ? "Pause music" : "Play music"); mt.title = p ? "Pause music" : "Play music"; });
+Music.sub((p) => { mt.classList.toggle("on", p); mt.setAttribute("aria-label", p ? "Pause Music" : "Play Music"); mt.title = p ? "Pause Music" : "Play Music"; });
 
 /* ---------- calendar invite ---------- */
 function icsFor(T) {
@@ -848,21 +2144,160 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l
 const pauseIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
 let cleanup = null;
 
+/* ---------- card cover ---------- */
+let coverSeen = false;
+// Only icons that still exist count, so an older card that used a removed icon still opens cleanly.
+const coverOn = () => on("cover") && !!window.CardRender && Array.isArray(C.cover.icons) && C.cover.icons.some((k) => window.CardIcons.ICONS[k]);
+function coverSVG(uid) {
+  const V = C.cover || {};
+  const themes = { harvest: "harvest", cranberry: "cranberry", sage: "sage", maple: "maple", cider: "cider", mist: "mist", juniper: "juniper", dusk: "dusk" };
+  return window.CardRender.renderCard({
+    icons: V.icons || [], palette: V.palette || themes[C.theme] || "harvest", style: V.style || "sticker",
+    title: V.title || "Happy Thanksgiving", tagline: V.tagline || "", seed: V.seed || 3, titleCase: V.titleCase !== false,
+    to: V.showNames === false ? "" : C.to, from: V.showNames === false ? "" : C.from,
+  }, uid);
+}
+
+/* ---------- drink pictures for the opened "warm drink" gift (same soft style as the cider mug) ---------- */
+const DRINK_STEAM = '<g class="steam" stroke="#c9b6a3" stroke-width="3" fill="none" stroke-linecap="round"><path d="M52 30 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M70 28 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M88 30 q-8 -10 0 -20 q8 -10 0 -20"/></g>';
+const DRINK_GLASS = '<path d="M26 42 L34 150 Q36 162 48 162 H92 Q104 162 106 150 L114 42" fill="rgba(255,255,255,.35)" stroke="#d8cbbb" stroke-width="2.5"/><path d="M40 70 L45 140" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>';
+const DRINKS = {
+  cider: { label: "Apple Cider" },
+  matcha: { label: "Iced Matcha", draw: (u) => `
+    <defs>
+      <linearGradient id="${u}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfdc7a"/><stop offset="1" stop-color="#7fa848"/></linearGradient>
+      <linearGradient id="${u}m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf5e8"/><stop offset="1" stop-color="#ecdcc0"/></linearGradient>
+      <clipPath id="${u}c"><path d="M32 58 L38 148 Q40 157 49 157 H91 Q100 157 102 148 L108 58 Z"/></clipPath>
+    </defs>
+    <rect x="78" y="6" width="9" height="84" rx="4" fill="#5f9a52" transform="rotate(14 82 48)"/>
+    <rect x="84" y="8" width="3" height="80" rx="1.5" fill="#86bf78" transform="rotate(14 82 48)"/>
+    <g clip-path="url(#${u}c)">
+      <rect x="20" y="54" width="100" height="110" fill="url(#${u}m)"/>
+      <path d="M20 54 H120 V104 Q100 114 82 106 Q62 98 44 108 Q30 114 20 108 Z" fill="url(#${u}g)"/>
+      <path d="M20 104 Q34 112 44 106 Q62 96 82 104 Q100 112 120 102" fill="none" stroke="#d9e9b4" stroke-width="3" opacity=".7"/>
+    </g>
+    <ellipse cx="70" cy="58" rx="38" ry="6" fill="#d4e8a0"/>
+    <rect x="42" y="50" width="20" height="18" rx="5" fill="#fff" fill-opacity=".55" stroke="#fff" stroke-opacity=".8" transform="rotate(-12 52 59)"/>
+    <rect x="66" y="56" width="18" height="16" rx="5" fill="#fff" fill-opacity=".5" stroke="#fff" stroke-opacity=".8" transform="rotate(10 75 64)"/>
+    ${DRINK_GLASS}` },
+  coffee: { label: "Coffee", draw: (u) => `
+    <defs>
+      <linearGradient id="${u}b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fffaf2"/><stop offset="1" stop-color="#e6d6c2"/></linearGradient>
+      <radialGradient id="${u}s" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#9a6440"/><stop offset="1" stop-color="#5e3820"/></radialGradient>
+    </defs>
+    <ellipse cx="70" cy="160" rx="58" ry="8" fill="#e9dccb"/>
+    ${DRINK_STEAM}
+    <path d="M106 74 Q134 74 132 102 Q130 128 102 126" fill="none" stroke="#e6d6c2" stroke-width="11" stroke-linecap="round"/>
+    <path d="M106 74 Q134 74 132 102 Q130 128 102 126" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M30 56 L36 144 Q38 156 52 156 H88 Q102 156 104 144 L110 56 Z" fill="url(#${u}b)"/>
+    <path d="M33 96 L107 96 L106 110 L34 110 Z" fill="#c8693f" opacity=".85"/>
+    <ellipse cx="70" cy="56" rx="40" ry="8" fill="#f7efe3"/>
+    <ellipse cx="70" cy="57" rx="34" ry="6" fill="url(#${u}s)"/>
+    <path d="M70 62 C60 56 60 51 65 50.5 C68 50 70 52.5 70 54 C70 52.5 72 50 75 50.5 C80 51 80 56 70 62Z" fill="#f2dcbc" opacity=".95"/>
+    <path d="M42 70 L46 138" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>` },
+  cocoa: { label: "Hot Cocoa", draw: (u) => `
+    <defs>
+      <linearGradient id="${u}b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9574a"/><stop offset="1" stop-color="#a8352c"/></linearGradient>
+      <radialGradient id="${u}s" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#8a5234"/><stop offset="1" stop-color="#5a3020"/></radialGradient>
+    </defs>
+    ${DRINK_STEAM}
+    <path d="M106 74 Q134 74 132 102 Q130 128 102 126" fill="none" stroke="#a8352c" stroke-width="11" stroke-linecap="round"/>
+    <path d="M106 74 Q134 74 132 102 Q130 128 102 126" fill="none" stroke="#e98a7e" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M30 56 L36 144 Q38 158 52 158 H88 Q102 158 104 144 L110 56 Z" fill="url(#${u}b)"/>
+    <ellipse cx="70" cy="56" rx="40" ry="8" fill="#f3e3d0"/>
+    <ellipse cx="70" cy="57" rx="34" ry="6" fill="url(#${u}s)"/>
+    <g stroke="#e8dccb" stroke-width="1">
+      <rect x="48" y="44" width="15" height="13" rx="4" fill="#fffaf4" transform="rotate(-14 55 50)"/>
+      <rect x="64" y="40" width="15" height="13" rx="4" fill="#ffe8ec" transform="rotate(12 71 46)"/>
+      <rect x="78" y="46" width="14" height="12" rx="4" fill="#fffaf4" transform="rotate(-6 85 52)"/>
+      <rect x="58" y="51" width="13" height="11" rx="4" fill="#fffaf4" transform="rotate(20 64 56)"/>
+    </g>
+    <path d="M38 118 q8 -6 16 0 t16 0 t16 0 t16 0" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42 70 L46 138" stroke="#fff" stroke-opacity=".4" stroke-width="5" stroke-linecap="round"/>` },
+  tea: { label: "Tea", draw: (u) => `
+    <defs>
+      <linearGradient id="${u}b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6e0d6"/></linearGradient>
+      <radialGradient id="${u}s" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#e3a052"/><stop offset="1" stop-color="#b66f2a"/></radialGradient>
+    </defs>
+    <g transform="translate(0 24)">
+      ${DRINK_STEAM}
+    </g>
+    <ellipse cx="70" cy="146" rx="62" ry="12" fill="#ece5da"/>
+    <ellipse cx="70" cy="143" rx="44" ry="7" fill="#e0d7c9"/>
+    <path d="M110 92 Q132 92 130 108 Q128 124 106 122" fill="none" stroke="#e6e0d6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M18 82 Q20 134 70 138 Q120 134 122 82 Z" fill="url(#${u}b)"/>
+    <path d="M22 100 Q70 112 118 100" fill="none" stroke="#7aa6c9" stroke-width="3" opacity=".8"/>
+    <ellipse cx="70" cy="82" rx="52" ry="9" fill="#f4efe6"/>
+    <ellipse cx="70" cy="83" rx="46" ry="7" fill="url(#${u}s)"/>
+    <path d="M94 82 Q100 96 104 112" fill="none" stroke="#c9b9a3" stroke-width="1.4"/>
+    <rect x="98" y="110" width="14" height="17" rx="2" fill="#e9b85a" transform="rotate(8 105 118)"/>
+    <path d="M30 96 Q34 122 56 130" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="5" stroke-linecap="round"/>` },
+  boba: { label: "Boba", draw: (u) => `
+    <defs>
+      <linearGradient id="${u}t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ead2b0"/><stop offset="1" stop-color="#c99a68"/></linearGradient>
+      <clipPath id="${u}c"><path d="M32 56 L38 148 Q40 157 49 157 H91 Q100 157 102 148 L108 56 Z"/></clipPath>
+    </defs>
+    <rect x="74" y="0" width="12" height="96" rx="5" fill="#e98ca3" transform="rotate(10 80 48)"/>
+    <rect x="82" y="2" width="3" height="92" rx="1.5" fill="#f7c2cf" transform="rotate(10 80 48)"/>
+    <g clip-path="url(#${u}c)">
+      <rect x="20" y="56" width="100" height="110" fill="url(#${u}t)"/>
+      ${[[46,148],[58,150],[70,151],[82,150],[94,148],[52,139],[64,141],[76,141],[88,139],[58,130],[70,132],[82,130]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="5.6" fill="#3d2618"/><circle cx="${x-1.6}" cy="${y-1.8}" r="1.4" fill="#7a5640"/>`).join("")}
+    </g>
+    ${DRINK_GLASS}
+    <path d="M22 44 Q70 10 118 44 Z" fill="rgba(255,255,255,.55)" stroke="#d8cbbb" stroke-width="2.5"/>
+    <rect x="20" y="40" width="100" height="7" rx="3" fill="#f3ece2" stroke="#d8cbbb" stroke-width="2"/>` },
+};
+// Title suggested for each drink; only applied while the title is still one of these defaults.
+const DRINK_TEXTS = {
+  cider: "Hot apple cider, extra cinnamon. Next time we're both home, the first round is mine.",
+  matcha: "An iced matcha, just how you like it. Next time we're both home, the first round is mine.",
+  coffee: "Your usual coffee order, my treat. Next time we're both home, the first round is mine.",
+  cocoa: "Hot cocoa with extra marshmallows. Next time we're both home, the first round is mine.",
+  tea: "A pot of your favorite tea. Next time we're both home, the first round is mine.",
+  boba: "Boba, your usual order. Next time we're both home, the first round is mine.",
+};
+const DRINK_TITLES = { cider: "a warm drink, on me", matcha: "a matcha treat, on me", coffee: "a coffee, on me", cocoa: "a hot cocoa, on me", tea: "a cup of tea, on me", boba: "a boba run, on me" };
+function drinkSVG(kind, uid) {
+  if (DRINKS[kind] && DRINKS[kind].draw) return svgEl(`<svg viewBox="0 0 140 170">${DRINKS[kind].draw(uid)}</svg>`);
+  return $(".cider svg").cloneNode(true); // the desk's own cider mug
+}
+// Thankful-list lines can be plain text or { text, icon } where icon is a cover-icon name.
+const thanksItem = (x) => (typeof x === "string" ? { text: x } : x && typeof x === "object" ? { text: String(x.text || ""), icon: x.icon || "" } : { text: "" });
+
 const builders = {
   letter() {
     const L = C.letter || {};
-    return el("div", {}, el("h2", { id: "sheetTitle", class: "vh", text: "A letter for you" }),
+    const showLetter = () => el("div", {}, el("h2", { id: "sheetTitle", class: "vh", text: "A Letter for You" }),
       el("div", { class: "body" }, stagger(paras(L.text))),
-      el("p", { class: "sign", style: `--i:${paras(L.text).length}`, text: L.signoff || (C.from ? `— ${C.from}` : "") }));
+      el("p", { class: "sign", style: `--i:${paras(L.text).length}`, text: L.signoff || (C.from ? `— ${C.from}` : "") }),
+      coverOn() && el("button", { class: "btn ghost cover-again", text: "↺ See the Cover", onclick: () => { coverSeen = false; body.replaceChildren(builders.letter()); sheet.scrollTop = 0; } }));
+    if (!coverOn() || coverSeen) return showLetter();
+    // The card's cover comes first; "open the card" flips it to reveal the letter.
+    const wrap = el("div", { class: "cover-wrap" }, el("h2", { id: "sheetTitle", class: "vh", text: "A Card for You" }));
+    const art = el("div", { class: "cover-art" }); art.append(svgEl(coverSVG("lc")));
+    const open = el("button", { class: "btn", text: "Open the Card →", onclick: () => {
+      coverSeen = true; wrap.classList.add("flip");
+      setTimeout(() => { body.replaceChildren(showLetter()); sheet.scrollTop = 0; $(".close", modal).focus({ preventScroll: true }); }, reduced ? 0 : 480);
+    } });
+    wrap.append(art, open);
+    return wrap;
   },
   cider() {
-    const art = $(".cider svg").cloneNode(true); art.setAttribute("class", "art");
+    const photo = safeUrl(C.cider.image || "");
+    let art;
+    if (photo) art = el("img", { class: "art-photo", src: photo, alt: "" });
+    else { art = drinkSVG(C.cider.art || "cider", "sd"); art.setAttribute("class", "art"); }
     return el("div", { class: "center" }, art, el("h2", { id: "sheetTitle", text: C.cider.title || "a warm drink, on me" }), el("div", { class: "hand" }, paras(C.cider.text)));
   },
   gratitude() {
     const colors = ["#b5452a", "#d9792b", "#e0ad4a", "#8a5a2b"];
     return el("div", {}, el("h2", { id: "sheetTitle", text: C.gratitude.title || "things I'm thankful for" }),
-      el("ul", { class: "gratitude-list" }, (C.gratitude.items || []).map((t, i) => el("li", { style: `--i:${i * 0.6}` }, leafIcon(colors[i % colors.length]), el("span", { text: t })))));
+      el("ul", { class: "gratitude-list" }, (C.gratitude.items || []).map(thanksItem).filter((t) => t.text.trim()).map((t, i) => {
+        const pic = t.icon && window.CardIcons && window.CardIcons.ICONS[t.icon]
+          ? svgEl(`<svg class="g-icon" viewBox="0 0 100 100" aria-hidden="true">${window.CardIcons.iconSVG(t.icon, "gl" + i)}</svg>`)
+          : leafIcon(colors[i % colors.length]);
+        return el("li", { style: `--i:${i * 0.6}` }, pic, el("span", { text: t.text }));
+      })));
   },
   ticket() {
     const T = C.ticket, ics = icsFor(T);
@@ -905,8 +2340,8 @@ const builders = {
     if (items.length > 1) {
       album.addEventListener("click", () => show(i + 1, 1));
       g.append(el("div", { class: "nav" },
-        el("button", { "aria-label": "Previous photo", text: "←", onclick: () => show(i - 1, -1) }), count,
-        el("button", { "aria-label": "Next photo", text: "→", onclick: () => show(i + 1, 1) })));
+        el("button", { "aria-label": "Previous Photo", text: "←", onclick: () => show(i - 1, -1) }), count,
+        el("button", { "aria-label": "Next Photo", text: "→", onclick: () => show(i + 1, 1) })));
       let x0 = null;
       album.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
       album.addEventListener("touchend", (e) => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) { e.preventDefault(); show(i + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); } x0 = null; });
@@ -935,7 +2370,7 @@ const builders = {
     return out;
   },
   music() {
-    const M = C.music, btn = el("button", { "aria-label": "Play / pause" });
+    const M = C.music, btn = el("button", { "aria-label": "Play / Pause" });
     const player = el("div", { class: "player" },
       el("div", { class: "screen" }, el("div", { class: "cover" }, el("div", { class: "sun" })),
         el("div", { class: "t", text: M.title || "a song for you" }), el("div", { class: "a", text: M.artist || "" }),
@@ -994,7 +2429,7 @@ const env = $(".env");
 const flap = $(".flap", env), flapFront = $(".flapfront", env), flapWrap = $(".flapwrap", env);
 flapFront.append(flap); // flap sits on top while sealed; tucks behind the letter once open
 function resetExperience() {
-  closeSheet(); seen.clear(); unlocked = false;
+  closeSheet(); seen.clear(); unlocked = false; coverSeen = false;
   document.body.classList.add("sealed"); document.body.classList.remove("unlocked");
   env.classList.remove("open"); flapFront.append(flap); $(".box").classList.remove("opened");
   updateProgress(); window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1010,7 +2445,7 @@ $$(".stage .item").forEach((b) => b.addEventListener("click", () => {
   }
   if (!unlocked) {
     env.classList.remove("wiggle"); void env.offsetWidth; env.classList.add("wiggle");
-    return toast("open the letter first 💌");
+    return toast("Open the letter first 💌");
   }
   if (kind === "finale") b.classList.add("opened");
   openSheet(kind);
@@ -1126,39 +2561,119 @@ const HASH = location.hash.slice(1).split("&");
 const linkPart = HASH.find((p) => /^[cu]=/.test(p));
 
 $(".garland.r").innerHTML = $(".garland.l").innerHTML;
+const SAMPLE_CARD = JSON.parse(JSON.stringify(window.CARD));
+function blankCard(withCover) {
+  const c = JSON.parse(JSON.stringify(SAMPLE_CARD));
+  c.to = "You"; c.from = "Me";
+  c.greeting = "Happy Thanksgiving, You";
+  c.subtitle = "a few little things, because I'm grateful for you";
+  c.letter = {
+    text: "Hey You,\n\nThanksgiving always makes me stop and think about the people who made my year better — and you're right at the top of that list.\n\nThanks for showing up. I put together a few little things for you. Open them in any order.",
+    signoff: "— Me"
+  };
+  c.cover = {
+    enabled: !!withCover,
+    title: "Happy Thanksgiving",
+    tagline: "Thankful for You",
+    icons: withCover ? ["turkey", "pie", "pumpkin"] : [],
+    palette: "",
+    style: "sticker",
+    seed: 3
+  };
+  if (c.giftcard) { c.giftcard.code = ""; c.giftcard.link = ""; c.giftcard.brand = ""; c.giftcard.enabled = false; }
+  if (c.photos) c.photos.items = [];
+  if (c.ticket) { c.ticket.when = ""; c.ticket.where = ""; c.ticket.date = ""; c.ticket.enabled = false; }
+  if (c.finale) { c.finale.text = "Thank you for being you. I'm so grateful we're in each other's lives."; c.finale.signoff = "with love, Me"; }
+  return c;
+}
 (async () => {
   if (linkPart) {
-    try { C = await decodeCard(linkPart[0], linkPart.slice(2)); window.CARD = C; }
+    try { C = await decodeCard(linkPart[0], linkPart.slice(2)); window.CARD = C; document.body.classList.add("has-card-link", "personal-card"); }
     catch { toast("This card link looks incomplete. Ask for it again?"); }
+  } else if (CREATE_MODE) {
+    C = blankCard(!WANT_DEFAULT);
+    window.CARD = C;
   }
   applyConfig();
-  if (EDIT) initEditor();
+  if (EDIT || CREATE_MODE) initEditor({ startDefault: WANT_DEFAULT, fromCreate: CREATE_MODE && !linkPart });
+  const bCreate = document.getElementById("btnCreate");
+  const bDefault = document.getElementById("btnCreateDefault");
+  if (bCreate) bCreate.addEventListener("click", () => startCreateFlow("cover"));
+  if (bDefault) bDefault.addEventListener("click", () => startCreateFlow("default"));
+  window.addEventListener("hashchange", () => {
+    const h = location.hash.slice(1);
+    if (/^create(=default)?$/.test(h) || h === "edit") {
+      if (!editorAPI) {
+        if (/^create/.test(h) && !linkPart) { C = blankCard(h !== "create=default"); window.CARD = C; applyConfig(); }
+        initEditor({ startDefault: h === "create=default", fromCreate: /^create/.test(h) });
+      } else if (/^create/.test(h)) {
+        startCreateFlow(h === "create=default" ? "default" : "cover");
+      } else {
+        document.body.classList.remove("ed-collapsed");
+      }
+    }
+  });
 })();
 
 
 /* =====================================================================
-   EDITOR: open this file with #edit at the end of the address
-   (or open customize.html). Everything runs locally; nothing is uploaded.
+   EDITOR: open with #create (guided) or #edit.
+   Everything runs locally; nothing is uploaded.
    ===================================================================== */
-function initEditor() {
-  const DRAFT = "tg-card-draft";
-  const SCHEMA = [
-    { sec: "Basics", fields: [["to", "Recipient's name"], ["from", "Your name"], ["greeting", "Header greeting", "text", "Happy Thanksgiving, …"], ["subtitle", "Subtitle"], ["theme", "Color theme", "select", [["harvest", "Harvest (warm cream)"], ["cranberry", "Cranberry"], ["sage", "Sage"], ["dusk", "Dusk (cozy dark)"]]], ["leaves", "Falling leaves", "select", [["normal", "Normal"], ["light", "A few"], ["lots", "Lots"], ["off", "Off"]]]] },
-    { sec: "Letter (open me first)", key: "letter", fields: [["text", "Your letter (blank line = new paragraph)", "textarea"], ["signoff", "Sign-off"]] },
-    { sec: "Warm drink", key: "cider", toggle: true, fields: [["title", "Title"], ["text", "Message", "textarea"]] },
-    { sec: "Thankful list", key: "gratitude", toggle: true, fields: [["title", "Title"], ["items", "One thing per line", "lines"]] },
-    { sec: "Invitation ticket", key: "ticket", toggle: true, fields: [["stub", "Ticket text (e.g. ADMIT TWO)"], ["title", "Title"], ["text", "Details", "textarea"], ["when", "When (shown)"], ["where", "Where"], ["date", "Calendar date & time (adds an “Add to Calendar” button)", "datetime-local"]] },
-    { sec: "Photos", key: "photos", toggle: true, fields: [["title", "Title"], ["items", "Photos", "photos"]] },
-    { sec: "Gift card", key: "giftcard", toggle: true, fields: [["title", "Title"], ["brand", "Store name"], ["amount", "Amount"], ["code", "Gift code"], ["link", "Redeem link (https://…)"], ["image", "Card picture (optional)", "image"], ["note", "Note", "textarea"]] },
-    { sec: "Music", key: "music", toggle: true, fields: [["title", "Song title"], ["artist", "Artist / subtitle"], ["mode", "Built-in sound", "select", [["both", "Melody + fireplace"], ["melody", "Melody only"], ["fireside", "Fireplace + soft pad"]]], ["src", "Your own audio file (optional, otherwise a built-in tune plays)", "audio"]] },
-    { sec: "Gift box finale", key: "finale", toggle: true, fields: [["title", "Title"], ["text", "Closing message", "textarea"], ["signoff", "Sign-off"]] },
+function startCreateFlow(kind = "cover") {
+  const wantDefault = kind === "default";
+  if (editorAPI) {
+    C = blankCard(!wantDefault); window.CARD = C; applyConfig();
+    editorAPI.restart(wantDefault);
+    history.replaceState(null, "", wantDefault ? "#create=default" : "#create");
+    document.body.classList.remove("ed-collapsed");
+    return;
+  }
+  C = blankCard(!wantDefault); window.CARD = C; applyConfig();
+  history.replaceState(null, "", wantDefault ? "#create=default" : "#create");
+  initEditor({ startDefault: wantDefault, fromCreate: true });
+}
+function initEditor(opts = {}) {
+  if (editorAPI) { editorAPI.restart(!!opts.startDefault); return; }
+  const DRAFT = "tg-card-draft-v2";
+  const COVER_PRESETS = [
+    { name: "Harvest", icons: ["turkey", "pie", "pumpkin"], palette: "harvest", tagline: "Thankful for You", seed: 3 },
+    { name: "Game Night", icons: ["pickleball", "pokerchips", "hotpot"], palette: "harvest", tagline: "All In on Our Friendship", seed: 3 },
+    { name: "Sunshine", icons: ["sun", "smile", "sparkles"], palette: "sunny", tagline: "Grateful for Your Light", seed: 4 },
+    { name: "Cozy", icons: ["tea", "book", "candle"], palette: "sage", tagline: "Warm Thoughts for You", seed: 5 },
+    { name: "Good Times", icons: ["basketball", "ramen", "boba"], palette: "pumpkin", tagline: "Thankful for the Good Times", seed: 8 },
+    { name: "Classic", icons: ["leaf", "cornucopia", "acorn"], palette: "cranberry", tagline: "With All My Thanks", seed: 2 },
+    { name: "Trail Day", icons: ["mountain", "fish", "leaf"], palette: "maple", tagline: "Grateful for the Trails", seed: 7 },
+    { name: "Brunch", icons: ["croissant", "coffee", "apple"], palette: "cider", tagline: "Thanks for Brunch & You", seed: 4 },
+    { name: "Studio", icons: ["art", "crane", "flute"], palette: "mist", tagline: "Making Things Together", seed: 6 },
+    { name: "Petal", icons: ["butterfly", "flower", "peace"], palette: "lavender", tagline: "Soft Thanks for You", seed: 5 },
+    { name: "Fresh Air", icons: ["kite", "cycling", "tea"], palette: "juniper", tagline: "Grateful for Every Adventure", seed: 6 },
   ];
+
+  const STEPS = [
+    { id: "start", label: "Start" },
+    { id: "write", label: "Write" },
+    { id: "cover", label: "Cover" },
+    { id: "gifts", label: "Gifts" },
+    { id: "send", label: "Send" },
+  ];
+
+  let step = opts.fromCreate ? "start" : "write";
+  let path = opts.startDefault ? "default" : (C.cover && C.cover.enabled === false ? "default" : (coverOn() ? "cover" : null));
   let saveT;
-  const saveDraft = () => { clearTimeout(saveT); saveT = setTimeout(() => {
-    try { localStorage.setItem(DRAFT, JSON.stringify(C)); note.textContent = "Draft saved on this device."; }
-    catch { note.textContent = "Too big to autosave (photos). Download the card to keep your work."; }
-  }, 400); };
-  const changed = () => { applyConfig(); saveDraft(); };
+  const saveDraft = () => {
+    clearTimeout(saveT);
+    saveT = setTimeout(() => {
+      try {
+        localStorage.setItem(DRAFT, JSON.stringify({ path, card: C }));
+        note.textContent = "Draft Saved on This Device Only.";
+      } catch {
+        note.textContent = "Too big to autosave (photos). Download the card to keep your work.";
+      }
+    }, 400);
+  };
+  let coverPreview = null;
+  const changed = () => { applyConfig(); if (coverPreview) coverPreview(); saveDraft(); };
 
   function compress(file, max = 1400, q = 0.85) {
     return new Promise((res, rej) => {
@@ -1177,10 +2692,10 @@ function initEditor() {
   const fileBtn = (label, accept, multiple, onFiles) => el("label", { class: "file-btn mini" }, label,
     el("input", { type: "file", accept, multiple: multiple ? "" : null, onchange: (e) => { const fs = [...e.target.files]; e.target.value = ""; if (fs.length) onFiles(fs); } }));
 
-  function field(target, [name, label, type = "text", extra], rerender) {
+  function field(target, [name, label, type = "text", extra], opts = {}) {
     const wrap = el("label", { text: label });
     let input;
-    if (type === "textarea") input = el("textarea", { value: target[name] || "" });
+    if (type === "textarea") input = el("textarea", { value: target[name] || "", class: opts.tall ? "tall" : null });
     else if (type === "select") input = el("select", {}, extra.map(([v, l]) => el("option", { value: v, text: l, selected: (target[name] || extra[0][0]) === v ? "" : null })));
     else if (type === "lines") input = el("textarea", { value: (target[name] || []).join("\n") });
     else if (type === "datetime-local") input = el("input", { type: "datetime-local", value: target[name] || "" });
@@ -1194,41 +2709,153 @@ function initEditor() {
         el("button", { class: "mini", title: "Remove", text: "✕", onclick: (e) => { e.preventDefault(); target.items.splice(i, 1); draw(); changed(); } }))));
       draw();
       return el("div", {}, el("label", { text: label }), list,
-        fileBtn("+ Add photos", "image/*", true, async (fs) => {
+        fileBtn("+ Add Photos", "image/*", true, async (fs) => {
           for (const f of fs) { try { target.items.push({ src: await compress(f), caption: "" }); } catch { toast(`Couldn't read ${f.name}. Try a JPG.`); } }
           draw(); changed();
         }),
         el("div", { class: "ph-row" }, el("input", { type: "text", placeholder: "or paste an image link (https://…)", onkeydown: (e) => { if (e.key === "Enter") { e.preventDefault(); e.target.nextSibling.click(); } } }),
           el("button", { class: "mini", text: "Add", onclick: (e) => { e.preventDefault(); const i = e.target.previousSibling, v = i.value.trim();
             if (!/^https:\/\//i.test(v)) return toast("Use a direct https:// image link"); target.items.push({ src: v, caption: "" }); i.value = ""; draw(); changed(); } })),
-        el("div", { class: "ed-note", text: "Uploaded photos are resized and go into the downloaded file. Share links can only carry image links." }));
+        el("div", { class: "ed-note", text: "Photos stay in the downloaded file. Private share links can only carry https image links." }));
+    } else if (type === "drink") {
+      const row = el("div", { class: "drink-row", role: "group", "aria-label": label });
+      const drawRow = () => row.replaceChildren(...Object.entries(DRINKS).map(([k, d]) => {
+        const on = (target[name] || "cider") === k;
+        return el("button", { type: "button", class: "drink-opt" + (on ? " on" : ""), "aria-pressed": String(on), onclick: (e) => {
+          e.preventDefault();
+          const was = target[name] || "cider";
+          target[name] = k;
+          if (!target.title || target.title === DRINK_TITLES[was] || Object.values(DRINK_TITLES).includes(target.title)) {
+            target.title = DRINK_TITLES[k];
+            const t = row.closest(".ed-fields") && row.closest(".ed-fields").querySelector('[data-name="title"]');
+            if (t) t.value = target.title;
+          }
+          if (!target.text || Object.values(DRINK_TEXTS).includes(target.text)) {
+            target.text = DRINK_TEXTS[k];
+            const m = row.closest(".ed-fields") && row.closest(".ed-fields").querySelector('[data-name="text"]');
+            if (m) m.value = target.text;
+          }
+          drawRow(); changed();
+        } }, drinkSVG(k, "dp" + k), el("small", { text: d.label }));
+      }));
+      drawRow();
+      return el("div", {}, el("label", { text: label }), row);
+    } else if (type === "thanks") {
+      const { ICONS, CATEGORIES, iconSVG } = window.CardIcons;
+      target[name] = (target[name] || []).map(thanksItem);
+      const list = el("div", { class: "thanks-list" });
+      let openRow = -1;
+      const pic = (k) => (k && ICONS[k] ? svgEl(`<svg viewBox="0 0 100 100" aria-hidden="true">${iconSVG(k, "te")}</svg>`) : leafIcon("#b5452a"));
+      const picker = (item) => {
+        const grid = el("div", { class: "cov-grid" });
+        const q = el("input", { type: "text", placeholder: `Search ${Object.keys(ICONS).length} Icons`, "aria-label": "Search Icons", oninput: () => fill() });
+        const choose = (k) => { item.icon = k; openRow = -1; draw(); changed(); };
+        const fill = () => {
+          const t = q.value.trim().toLowerCase();
+          grid.replaceChildren(
+            el("button", { type: "button", class: "cov-ib" + (!item.icon ? " on" : ""), onclick: (e) => { e.preventDefault(); choose(""); } }, leafIcon("#b5452a"), el("small", { text: "Leaf (Default)" })),
+            ...CATEGORIES.flatMap((cat) => {
+              const ks = Object.keys(ICONS).filter((k) => ICONS[k].cat === cat && (!t || ICONS[k].label.toLowerCase().includes(t) || cat.toLowerCase().includes(t)));
+              return ks.length ? [el("div", { class: "cov-cat", text: cat }), ...ks.map((k) => el("button", { type: "button", class: "cov-ib" + (item.icon === k ? " on" : ""), onclick: (e) => { e.preventDefault(); choose(k); } }, pic(k), el("small", { text: ICONS[k].label })))] : [];
+            }));
+        };
+        fill();
+        setTimeout(() => q.focus({ preventScroll: true }), 0);
+        return el("div", { class: "thanks-picker" }, q, grid);
+      };
+      const draw = () => {
+        const items = target[name];
+        list.replaceChildren(...items.map((item, i) => {
+          const row = el("div", { class: "thanks-row" },
+            el("button", { type: "button", class: "thanks-pic" + (openRow === i ? " on" : ""), title: "Choose a Picture", "aria-label": `Choose a Picture for Line ${i + 1}`, onclick: (e) => { e.preventDefault(); openRow = openRow === i ? -1 : i; draw(); } }, pic(item.icon)),
+            el("input", { type: "text", value: item.text, placeholder: "Something you're thankful for", "aria-label": `Line ${i + 1}`, oninput: (e) => { item.text = e.target.value; changed(); } }),
+            el("button", { class: "mini", type: "button", title: "Move Up", "aria-label": `Move Line ${i + 1} Up`, text: "↑", disabled: i ? null : "", onclick: (e) => { e.preventDefault(); items.splice(i - 1, 0, items.splice(i, 1)[0]); openRow = -1; draw(); changed(); } }),
+            el("button", { class: "mini", type: "button", title: "Remove", "aria-label": `Remove Line ${i + 1}`, text: "✕", onclick: (e) => { e.preventDefault(); items.splice(i, 1); openRow = -1; draw(); changed(); } }));
+          return openRow === i ? el("div", {}, row, picker(item)) : row;
+        }), el("button", { class: "mini thanks-add", type: "button", text: "+ Add a Line", onclick: (e) => { e.preventDefault(); items.push({ text: "" }); openRow = -1; draw(); const ins = list.querySelectorAll(".thanks-row input"); if (ins.length) ins[ins.length - 1].focus(); } }));
+      };
+      draw();
+      return el("div", {}, el("label", { text: label }), list, el("div", { class: "ed-note", text: "Tap the leaf next to a line to give it its own picture." }));
+    } else if (type === "icons") {
+      const { ICONS, CATEGORIES, iconSVG } = window.CardIcons, MAX = window.CardRender.MAX_ICONS;
+      target.icons = Array.isArray(target.icons) ? target.icons : [];
+      const thumb = (k) => svgEl(`<svg viewBox="0 0 100 100" aria-hidden="true">${iconSVG(k, "e")}</svg>`);
+      const prev = el("div", { class: "cov-prev" }), chosen = el("div", { class: "cov-chosen" }), grid = el("div", { class: "cov-grid" });
+      const search = el("input", { type: "search", placeholder: `Search ${Object.keys(ICONS).length} Icons…`, "aria-label": "Search Icons", oninput: () => drawGrid() });
+      let cat = "All";
+      const pills = el("div", { class: "cov-pills", role: "group", "aria-label": "Icon Categories" });
+      const setCat = (c) => { cat = c; [...pills.children].forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cat === cat))); drawGrid(); };
+      ["All", ...CATEGORIES].forEach((c) => {
+        const b = el("button", { class: "cov-pill", type: "button", "data-cat": c, "aria-pressed": String(c === cat), text: c, onclick: (e) => { e.preventDefault(); setCat(c); } });
+        pills.append(b);
+      });
+      const pick = (k) => { const i = target.icons.indexOf(k); if (i >= 0) target.icons.splice(i, 1); else if (target.icons.length < MAX) target.icons.push(k); drawChosen(); drawGrid(); changed(); };
+      coverPreview = () => prev.replaceChildren(target.icons.length ? svgEl(coverSVG("ep")) : el("div", { class: "ed-note", text: "Pick icons for a cover, or skip — the letter can open on its own." }));
+      const drawChosen = () => chosen.replaceChildren(...target.icons.map((k, i) => el("button", {
+        class: "cov-chip", type: "button", title: i === 0 ? `Spotlight: ${ICONS[k].label}` : `Remove ${ICONS[k].label}`,
+        onclick: (e) => { e.preventDefault(); pick(k); }
+      }, thumb(k), (i === 0 ? "★ " : "") + ICONS[k].label + " ✕")));
+      const drawGrid = () => {
+        const q = search.value.trim().toLowerCase();
+        grid.replaceChildren(...CATEGORIES.flatMap((c) => {
+          if (cat !== "All" && cat !== c) return [];
+          const ks = Object.keys(ICONS).filter((k) => ICONS[k].cat === c && (!q || ICONS[k].label.toLowerCase().includes(q) || c.toLowerCase().includes(q) || k.includes(q)));
+          return ks.length ? [el("div", { class: "cov-cat", text: c }), ...ks.map((k) => {
+            const sel = target.icons.includes(k);
+            return el("button", { class: "cov-ib" + (sel ? " on" : ""), type: "button", "aria-pressed": String(sel), disabled: !sel && target.icons.length >= MAX ? "" : null, onclick: (e) => { e.preventDefault(); pick(k); } }, thumb(k), el("small", { text: ICONS[k].label }));
+          })] : [];
+        }));
+      };
+      coverPreview(); drawChosen(); drawGrid();
+      return el("div", {}, el("label", { text: label }), prev,
+        el("div", { style: "text-align:center; display:flex; gap:8px; justify-content:center; flex-wrap:wrap" },
+          el("button", { class: "mini", type: "button", text: "↻ Re-Tilt", onclick: (e) => { e.preventDefault(); target.seed = 1 + Math.floor(Math.random() * 999); changed(); } }),
+          el("button", { class: "mini", type: "button", text: "Surprise Me", onclick: (e) => {
+            e.preventDefault();
+            const keys = Object.keys(ICONS);
+            const n = 2 + Math.floor(Math.random() * 3);
+            const pickN = [];
+            while (pickN.length < n) { const k = keys[Math.floor(Math.random() * keys.length)]; if (!pickN.includes(k)) pickN.push(k); }
+            target.icons = pickN; target.seed = 1 + Math.floor(Math.random() * 999); drawChosen(); drawGrid(); changed();
+          } })),
+        chosen, search, pills, grid);
     } else if (type === "image" || type === "audio") {
       const status = el("span", { class: "ed-note" });
       const draw = () => { status.textContent = target[name] ? (target[name].startsWith("data:") ? " ✓ file attached" : ` ${target[name]}`) : " none"; };
       draw();
       return el("div", {}, el("label", { text: label }), el("div", {},
-        fileBtn(type === "image" ? "Choose image" : "Choose audio", type === "image" ? "image/*" : "audio/*", false, async ([f]) => {
+        fileBtn(type === "image" ? "Choose Image" : "Choose Audio", type === "image" ? "image/*" : "audio/*", false, async ([f]) => {
           try {
             if (type === "image") target[name] = await compress(f, 1200, 0.88);
             else { if (f.size > 12e6) toast("That's a big file, so the card will be large"); target[name] = await readAsData(f); Music.stop(); }
             draw(); changed();
           } catch { toast("Couldn't read that file"); }
         }), " ",
-        el("button", { class: "mini", text: "Remove", onclick: (e) => { e.preventDefault(); target[name] = ""; draw(); changed(); } }), status));
+        el("button", { class: "mini", type: "button", text: "Remove", onclick: (e) => { e.preventDefault(); target[name] = ""; draw(); changed(); } }), status));
     } else input = el("input", { type: "text", value: target[name] || "", placeholder: extra || "" });
     input.dataset.name = name;
     input.addEventListener(type === "select" ? "change" : "input", () => {
       const old = target[name];
       target[name] = type === "lines" ? input.value.split("\n").map((s) => s.trim()).filter(Boolean) : input.value;
-      if (target === C && name === "to" && (!C.greeting || C.greeting === `Happy Thanksgiving, ${old || ""}`.replace(/, $/, ""))) {
-        C.greeting = input.value.trim() ? `Happy Thanksgiving, ${input.value.trim()}` : "Happy Thanksgiving";
+      if (target === C && name === "to" && (!C.greeting || C.greeting === `Happy Thanksgiving, ${old || ""}`.replace(/, $/, "") || C.greeting === "Happy Thanksgiving" || C.greeting === "Happy Thanksgiving, You")) {
+        C.greeting = input.value.trim() ? `Happy Thanksgiving, ${input.value.trim()}` : "Happy Thanksgiving, You";
         const g = edBody.querySelector('[data-name="greeting"]'); if (g) g.value = C.greeting;
+      }
+      if (target === C && name === "from" && C.letter) {
+        const so = C.letter.signoff || "";
+        if (!so || so === "—" || so === `— ${old || ""}` || so === "with love" || so === `with love, ${old || ""}`) {
+          C.letter.signoff = input.value.trim() ? `— ${input.value.trim()}` : "—";
+          const si = edBody.querySelector('[data-name="signoff"]'); if (si) si.value = C.letter.signoff;
+        }
+        if (C.finale && (!C.finale.signoff || C.finale.signoff === "with love" || C.finale.signoff === `with love, ${old || ""}`)) {
+          C.finale.signoff = input.value.trim() ? `with love, ${input.value.trim()}` : "with love";
+        }
       }
       if (target === C && name === "to" && C.letter && typeof C.letter.text === "string") {
         const m = C.letter.text.match(/^(Hey|Hi|Dear|Hello)\s+([^,\n]*),/i);
-        if (m && (m[2] === (old || "") || !m[2].trim())) {
+        if (m && (m[2] === (old || "") || !m[2].trim() || m[2] === "you")) {
           C.letter.text = `${m[1]} ${input.value.trim() || "you"},` + C.letter.text.slice(m[0].length);
-          const lt = edBody.querySelectorAll("textarea")[0]; if (lt) lt.value = C.letter.text;
+          const lt = edBody.querySelector('[data-name="text"]'); if (lt) lt.value = C.letter.text;
         }
       }
       if (name === "mode") Music.restart();
@@ -1237,18 +2864,32 @@ function initEditor() {
     wrap.append(input); return wrap;
   }
 
-  function buildForm() {
-    edBody.replaceChildren(...SCHEMA.map((s, idx) => {
-      const target = s.key ? (C[s.key] = C[s.key] || {}) : C;
-      const fields = el("div", { class: "ed-fields" }, s.fields.map((f) => field(target, f)));
-      const d = el("details", { open: idx < 2 ? "" : null, class: s.toggle && target.enabled === false ? "ed-off" : null },
-        el("summary", { text: s.sec }),
-        s.toggle && el("label", { class: "ed-toggle" }, el("input", { type: "checkbox", checked: target.enabled !== false, onchange: (e) => {
-          target.enabled = e.target.checked; d.classList.toggle("ed-off", !e.target.checked); changed();
-        } }), "Show this gift"),
-        fields);
-      return d;
-    }));
+  function applyPath(kind) {
+    path = kind;
+    C.cover = C.cover || {};
+    if (kind === "default") {
+      C.cover.enabled = false;
+      C.cover.icons = [];
+    } else {
+      C.cover.enabled = true;
+      if (!Array.isArray(C.cover.icons) || !C.cover.icons.length) C.cover.icons = ["turkey", "pie", "pumpkin"];
+    }
+    unlock();
+    changed();
+  }
+
+  function applyPreset(p) {
+    C.cover = C.cover || {};
+    C.cover.enabled = true;
+    C.cover.icons = p.icons.slice();
+    C.cover.palette = p.palette || "";
+    C.cover.tagline = p.tagline || C.cover.tagline;
+    C.cover.title = C.cover.title || "Happy Thanksgiving";
+    C.cover.style = "sticker";
+    C.cover.seed = p.seed || 3;
+    path = "cover";
+    changed();
+    go("cover");
   }
 
   async function openFile([f]) {
@@ -1261,60 +2902,299 @@ function initEditor() {
         if (a < 0 || b < 0) throw new Error("no config");
         cfg = JSON.parse(txt.slice(a + MARK_A.length, b).trim().replace(/^window\.CARD\s*=\s*/, "").replace(/;\s*$/, ""));
       }
-      C = cfg; window.CARD = C; Music.stop(); buildForm(); changed(); toast(`Loaded ${f.name}`);
+      C = cfg; window.CARD = C; Music.stop();
+      path = coverOn() ? "cover" : "default";
+      go("write"); changed(); toast(`Loaded ${f.name}`);
     } catch { toast("Couldn't read a card from that file"); }
   }
+
   async function copyLink() {
-    const base = /^https?:$/.test(location.protocol) ? location.origin + location.pathname.replace(/(customize|index)\.html$/, "") : (window.SITE_URL || "");
+    const base = /^https?:$/.test(location.protocol)
+      ? location.origin + location.pathname.replace(/\/(customize|create|index)\.html$/i, "/").replace(/\/index\.html$/i, "/")
+      : (window.SITE_URL || "");
     if (!base) {
-      linkOut.replaceChildren(el("div", { class: "ed-note ed-warn", text: "Links need the online version. Open customize.html on your GitHub Pages site, or set SITE_URL near the top of index.html." }));
+      linkOut.replaceChildren(el("div", { class: "ed-note ed-warn", text: "Private links need the online version (or set SITE_URL near the top of this file). Download still works offline." }));
       return;
     }
     const card = JSON.parse(JSON.stringify(C)), dropped = [], web = (u) => /^https?:/i.test(u || "");
     if (card.photos && card.photos.items) { const n = card.photos.items.length; card.photos.items = card.photos.items.filter((x) => web(x.src)); if (card.photos.items.length < n) dropped.push(`${n - card.photos.items.length} uploaded photo(s)`); }
+    if (card.cider && card.cider.image && !web(card.cider.image)) { card.cider.image = ""; dropped.push("the drink photo (the drawing shows instead)"); }
     if (card.giftcard && card.giftcard.image && !web(card.giftcard.image)) { card.giftcard.image = ""; dropped.push("the gift card picture"); }
-    if (card.music && card.music.src && !web(card.music.src)) { card.music.src = ""; dropped.push("your audio file (the built-in music plays instead)"); }
-    const url = base + "#" + (await encodeCard(card));
-    const box = el("input", { type: "text", readonly: "", value: url, onfocus: (e) => e.target.select() });
+    if (card.music && card.music.src && !web(card.music.src)) { card.music.src = ""; dropped.push("your audio file (built-in music plays instead)"); }
+    const url = base.replace(/\/?$/, "/") + "#" + (await encodeCard(card));
+    const box = el("input", { type: "text", readonly: "", value: url, onfocus: (e) => e.target.select(), "aria-label": "Private Share Link" });
     linkOut.replaceChildren(box,
-      el("div", { class: "ed-note", text: `Copied ✓ · ${url.length.toLocaleString()} characters. Anyone with this link can open the card${card.giftcard && card.giftcard.code && card.giftcard.enabled !== false ? ", including the gift code" : ""}.` }),
-      dropped.length && el("div", { class: "ed-note ed-warn", text: `Not in the link: ${dropped.join(", ")}. Use Download Card to include them.` }),
-      el("a", { class: "mini", href: url, target: "_blank", rel: "noopener", text: "Open link ↗", style: "display:inline-block; margin-top:6px; text-decoration:none" }));
-    try { await navigator.clipboard.writeText(url); } catch { box.focus(); box.select(); }
+      el("div", { class: "ed-note", text: `Copied ✓ · ${url.length.toLocaleString()} characters. The part after # never reaches a server.` }),
+      dropped.length && el("div", { class: "ed-note ed-warn", text: `Not in the link: ${dropped.join(", ")}. Use Download to include them.` }),
+      el("a", { class: "mini", href: url, target: "_blank", rel: "noopener", text: "Open Link ↗", style: "display:inline-block; margin-top:6px; text-decoration:none" }));
+    try { await navigator.clipboard.writeText(url); toast("Private Link Copied"); } catch { box.focus(); box.select(); }
   }
+
   function exportCard() {
     const a = SRC.indexOf(MARK_A), b = SRC.indexOf(MARK_B);
     const json = JSON.stringify(C, null, 2).replace(/</g, "\\u003c");
-    const html = SRC.slice(0, a + MARK_A.length) + "\nwindow.CARD = " + json + ";\n" + SRC.slice(b);
-    download(`thanksgiving-${slug(C.to)}.html`, html, "text/html");
-    toast("Card downloaded. Keep it private and send it directly ♡");
+    // Downloaded cards should open as the experience (not the editor), and stay private.
+    let html = SRC.slice(0, a + MARK_A.length) + "\nwindow.CARD = " + json + ";\n" + SRC.slice(b);
+    html = html.replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="noindex,nofollow">');
+    html = html.replace(/class="([^"]*\bsealed\b[^"]*)"/, (_, cls) => {
+      const parts = cls.split(/\s+/).filter(Boolean);
+      if (!parts.includes("personal-card")) parts.push("personal-card");
+      return `class="${parts.join(" ")}"`;
+    });
+    html = html.replace(/<div class="create-bar"[\s\S]*?<\/div>\s*/i, "");
+    html = html.replace(/<a class="skip-link"[^>]*>[\s\S]*?<\/a>\s*/i, "");
+    download(`thanksgiving-${slug(C.to || "card")}.html`, html, "text/html");
+    toast("Card Downloaded — send the file directly. Nothing was uploaded ♡");
+  }
+
+  function visibleSteps() {
+    if (path === "default") return STEPS.filter((s) => s.id !== "cover");
+    return STEPS;
+  }
+
+  function go(id) {
+    const ids = visibleSteps().map((s) => s.id);
+    if (!ids.includes(id)) id = ids[0];
+    step = id;
+    render();
+    edBody.focus({ preventScroll: true });
+  }
+
+  function next() {
+    const ids = visibleSteps().map((s) => s.id);
+    const i = ids.indexOf(step);
+    if (step === "start" && !path) { toast("Choose a starting path to continue"); return; }
+    if (i < ids.length - 1) go(ids[i + 1]);
+  }
+  function back() {
+    const ids = visibleSteps().map((s) => s.id);
+    const i = ids.indexOf(step);
+    if (i > 0) go(ids[i - 1]);
+  }
+
+  function previewDesk() {
+    document.body.classList.add("ed-collapsed");
+    resetExperience();
+    toast("Preview Mode — tap ✎ when you're ready to keep editing");
+  }
+
+  function renderStart() {
+    let hasDraft = false; try { hasDraft = !!localStorage.getItem(DRAFT); } catch {}
+    return el("div", { class: "ed-pane" },
+      el("h3", { text: "How Would You Like to Begin?" }),
+      el("div", { class: "ed-choice" },
+        el("button", { type: "button", onclick: () => { applyPath("default"); try { history.replaceState(null, "", "#create=default"); } catch {} go("write"); } },
+          el("strong", { text: "Quick Thank-You" }),
+          el("span", { text: "Default letter-first template — no cover design. Write, preview, and send." })),
+        el("button", { type: "button", onclick: () => { applyPath("cover"); try { history.replaceState(null, "", "#create"); } catch {} go("write"); } },
+          el("strong", { text: "Design a Cover" }),
+          el("span", { text: "Card Studio icons + themes on the letter front, then the full desk of gifts." })),
+        el("button", { type: "button", onclick: () => fileInput.click() },
+          el("strong", { text: "Open an Existing Card" }),
+          el("span", { text: "Load a downloaded .html or .json and keep editing privately." }))),
+      hasDraft && el("button", { class: "mini", type: "button", text: "Restore Draft from This Device", onclick: () => {
+        try {
+          const d = JSON.parse(localStorage.getItem(DRAFT));
+          C = d.card || d; window.CARD = C; path = d.path || (coverOn() ? "cover" : "default");
+          go("write"); changed(); toast("Draft Restored");
+        } catch { toast("Couldn't restore the draft"); }
+      } }),
+      el("div", { class: "ed-note", text: "Tip: Quick Default on the sample page jumps straight into the letter." }));
+  }
+
+  function renderWrite() {
+    C.letter = C.letter || {};
+    return el("div", { class: "ed-pane" },
+      field(C, ["to", "For (Their Name)", "text", "You"]),
+      field(C, ["from", "From (Your Name)", "text", "Me"]),
+      field(C, ["greeting", "Header Greeting", "text", "Happy Thanksgiving, You"]),
+      field(C, ["subtitle", "Subtitle", "text", "a few little things…"]),
+      field(C, ["theme", "Page Theme", "select", [["harvest", "Harvest"], ["cranberry", "Cranberry"], ["sage", "Sage"], ["maple", "Maple"], ["cider", "Cider"], ["mist", "Soft Mist"], ["juniper", "Juniper"], ["dusk", "Dusk"]]]),
+      field(C, ["leaves", "Falling Leaves", "select", [["normal", "Normal"], ["light", "A Few"], ["lots", "Lots"], ["off", "Off"]]]),
+      field(C.letter, ["text", "Your Letter (Blank Line = New Paragraph)", "textarea"], { tall: true }),
+      field(C.letter, ["signoff", "Sign-Off"]));
+  }
+
+  function renderCover() {
+    C.cover = C.cover || { icons: [], title: "Happy Thanksgiving", tagline: "Thankful for You", style: "sticker", palette: "", seed: 3 };
+    C.cover.enabled = true;
+    const presets = el("div", { class: "ed-presets" });
+    COVER_PRESETS.forEach((p, i) => {
+      const state = { title: "Happy Thanksgiving", tagline: p.tagline, icons: p.icons, palette: p.palette, style: "sticker", seed: p.seed, to: C.to || "", from: C.from || "" };
+      const b = el("button", { class: "ed-preset", type: "button", onclick: () => applyPreset(p) },
+        svgEl(window.CardRender.renderCard(state, "ps" + i)),
+        el("b", { text: p.name }));
+      presets.append(b);
+    });
+    return el("div", { class: "ed-pane" },
+      presets,
+      field(C.cover, ["title", "Cover Title"]),
+      field(C.cover, ["tagline", "Line Under the Icons"]),
+      field(C.cover, ["palette", "Cover Colors", "select", [["", "Match Page Theme"], ["harvest", "Harvest"], ["pumpkin", "Pumpkin"], ["cranberry", "Cranberry"], ["sage", "Sage"], ["maple", "Maple"], ["cider", "Cider"], ["mist", "Soft Mist"], ["juniper", "Juniper"], ["ocean", "Ocean"], ["sunny", "Sunny"], ["lavender", "Petal"], ["dusk", "Dusk"]]]),
+      field(C.cover, ["style", "Icon Style", "select", [["sticker", "Stickers"], ["tinted", "Tinted"], ["plain", "Plain"]]]),
+      field(C.cover, ["icons", "Icons (First One Is the Spotlight)", "icons"]),
+      el("button", { class: "mini", type: "button", text: "Prefer No Cover — Use Default Letter", onclick: () => { applyPath("default"); go("gifts"); } }));
+  }
+
+  function giftSection(key, title, fields, toggleLabel) {
+    const target = (C[key] = C[key] || {});
+    const box = el("details", { open: target.enabled !== false ? null : null, class: target.enabled === false ? "ed-off" : null },
+      el("summary", { text: title }),
+      el("label", { class: "ed-toggle" }, el("input", { type: "checkbox", checked: target.enabled !== false, onchange: (e) => {
+        target.enabled = e.target.checked; box.classList.toggle("ed-off", !e.target.checked); changed();
+      } }), toggleLabel || "Include This Gift"),
+      el("div", { class: "ed-fields" }, fields.map((f) => field(target, f))));
+    return box;
+  }
+
+  function renderGifts() {
+    return el("div", { class: "ed-pane" },
+      giftSection("cider", "Warm Drink", [["art", "Picture When Opened", "drink"], ["image", "Or Your Own Photo (Replaces the Picture)", "image"], ["title", "Title"], ["text", "Message", "textarea"]]),
+      giftSection("gratitude", "Thankful List", [["title", "Title"], ["items", "Things You're Thankful For", "thanks"]]),
+      giftSection("ticket", "Invitation Ticket", [["stub", "Ticket Stub Text"], ["title", "Title"], ["text", "Details", "textarea"], ["when", "When (Shown)"], ["where", "Where"], ["date", "Calendar Date & Time", "datetime-local"]]),
+      giftSection("photos", "Photos", [["title", "Title"], ["items", "Photos", "photos"]]),
+      giftSection("giftcard", "Gift Card", [["title", "Title"], ["brand", "Store Name"], ["amount", "Amount"], ["code", "Gift Code"], ["link", "Redeem Link (https://…)"], ["image", "Card Picture", "image"], ["note", "Note", "textarea"]]),
+      giftSection("music", "Music", [["title", "Song Title"], ["artist", "Artist / Subtitle"], ["mode", "Built-In Sound", "select", [["both", "Melody + Fireplace"], ["melody", "Melody Only"], ["fireside", "Fireplace + Soft Pad"]]], ["src", "Your Own Audio (Optional)", "audio"]]),
+      giftSection("finale", "Gift Box Finale", [["title", "Title"], ["text", "Closing Message", "textarea"], ["signoff", "Sign-Off"]]));
+  }
+
+  function renderSend() {
+    const name = (C.to || "them").trim() || "them";
+    const coverEmpty = path === "cover" && !(C.cover && Array.isArray(C.cover.icons) && C.cover.icons.length);
+    return el("div", { class: "ed-pane" },
+      coverEmpty && el("div", { class: "ed-note ed-warn", text: "Cover path has no icons — the letter will open without a cover front. Add icons in Cover, or switch to Quick Thank-You." }),
+      el("ul", { class: "ed-checklist" },
+        el("li", { text: "No account, no upload, no server copy of your words" }),
+        el("li", { text: "Download a single HTML file — works offline in any browser" }),
+        el("li", { text: "Or copy a # link — the card lives after the hash, which browsers never send to servers" })),
+      el("div", { class: "ed-send" },
+        el("div", { class: "ed-send-card" },
+          el("h4", { text: "1 · Download the Card" }),
+          el("p", { text: "Best with photos or gift codes. Text, email, or AirDrop the file." }),
+          el("button", { class: "btn", type: "button", text: "⬇ Download Private Card", onclick: exportCard })),
+        el("div", { class: "ed-send-card" },
+          el("h4", { text: "2 · Private Share Link" }),
+          el("p", { text: "Great for a short note without photos. Anyone with the link can open it." }),
+          el("button", { class: "btn secondary", type: "button", text: "🔗 Copy Private Link", onclick: copyLink }),
+          linkOut),
+        el("div", { class: "ed-send-card" },
+          el("h4", { text: "3 · Preview Once More" }),
+          el("p", { text: "Hide the editor and open the letter like they will." }),
+          el("button", { class: "btn secondary", type: "button", text: "▶ Preview the Desk", onclick: previewDesk }))),
+      el("div", { class: "ed-actions-mini" },
+        fileBtn("Open Card…", ".html,.json", false, openFile),
+        el("button", { class: "mini", type: "button", text: "Start Over", onclick: () => {
+          if (!confirm("Clear this card and start fresh?")) return;
+          C = blankCard(path !== "default"); window.CARD = C; path = path || "default"; go("start"); changed();
+        } })));
+  }
+
+  function renderPane() {
+    if (step === "start") return renderStart();
+    if (step === "write") return renderWrite();
+    if (step === "cover") return renderCover();
+    if (step === "gifts") return renderGifts();
+    return renderSend();
+  }
+
+  function render() {
+    const steps = visibleSteps();
+    stepsEl.replaceChildren(...steps.map((s) => el("button", {
+      class: "ed-step", type: "button", "aria-current": step === s.id ? "step" : null,
+      disabled: (s.id !== "start" && !path) ? "" : null,
+      onclick: () => {
+        if (s.id !== "start" && !path) { toast("Choose a starting path first"); return; }
+        go(s.id);
+      }
+    }, el("span", { class: "n", text: String(steps.findIndex((x) => x.id === s.id) + 1) }), s.label)));
+
+    const titles = {
+      start: "Create a Thank-You",
+      write: "Write Your Thanks",
+      cover: "Design the Cover",
+      gifts: "Optional Gifts",
+      send: "Send Privately",
+    };
+    titleEl.textContent = titles[step] || "Personalize";
+    const who = (C.to || "").trim() || "them";
+    ledeEl.textContent = {
+      start: "One private thank-you, made on this device. Pick a path. You can change everything later.",
+      write: "Names and the letter are the heart of the card. Everything updates live on the desk.",
+      cover: "The front of the letter. Tap a starter, then fine-tune the words, colors, and icons.",
+      gifts: "Turn gifts on or off. They unlock after the letter is read.",
+      send: `Your card for ${who} never leaves this browser unless you send it.`,
+    }[step] || "Changes show live on the desk.";
+    privacyEl.hidden = !(step === "start" || step === "send");
+
+    edBody.replaceChildren(renderPane());
+    edBody.scrollTop = 0;
+
+    const ids = steps.map((s) => s.id);
+    const i = ids.indexOf(step);
+    backBtn.hidden = i <= 0;
+    nextBtn.style.display = step === "send" ? "none" : "";
+    sendBtn.style.display = step === "send" ? "none" : "";
+    nextBtn.textContent = step === "gifts" ? "Continue to Send →" : "Continue →";
   }
 
   document.body.classList.add("editing");
-  unlock();
+  if (!opts.fromCreate || opts.startDefault || path) unlock();
+
   const note = el("div", { class: "ed-note" });
   const linkOut = el("div", { class: "ed-link" });
-  const edBody = el("div", { class: "ed-body" });
-  let hasDraft = false; try { hasDraft = !!localStorage.getItem(DRAFT); } catch {}
-  const panel = el("aside", { class: "editor", "aria-label": "Card editor" },
+  const edBody = el("div", { class: "ed-body", tabindex: "-1", "aria-live": "polite" });
+  const stepsEl = el("div", { class: "ed-steps", role: "tablist", "aria-label": "Create Steps" });
+  const titleEl = el("h2", { text: "Create a Thank-You" });
+  const ledeEl = el("p", { class: "ed-lede", text: "Changes show live. Everything stays on this device." });
+  const fileInput = el("input", { type: "file", accept: ".html,.json", hidden: "", onchange: (e) => { const fs = [...e.target.files]; e.target.value = ""; if (fs[0]) openFile(fs); } });
+
+  const backBtn = el("button", { class: "btn ghost", type: "button", text: "← Back", onclick: back });
+  const nextBtn = el("button", { class: "btn", type: "button", text: "Continue →", onclick: next });
+  const sendBtn = el("button", { class: "btn ghost", type: "button", text: "Send →", onclick: () => {
+    if (!path) { toast("Choose a starting path first"); return; }
+    go("send");
+  } });
+  const previewBtn = el("button", { class: "mini", type: "button", text: "Preview", onclick: previewDesk });
+  const privacyEl = el("div", { class: "ed-privacy" }, el("span", { text: "🔒", "aria-hidden": "true" }), el("span", {}, el("b", { text: "Fully Private. " }), "Card contents never upload. Only a download or a # link you choose to share."));
+
+  const panel = el("aside", { class: "editor", "aria-label": "Card Creator" },
     el("div", { class: "ed-head" },
-      el("button", { class: "close ed-x", "aria-label": "Hide editor", text: "✕", onclick: () => document.body.classList.add("ed-collapsed") }),
-      el("h2", { text: "Personalize Your Card" }),
-      el("p", { text: "Changes show live. Everything stays on this device; nothing is uploaded." }),
-      el("div", { class: "ed-actions" },
-        el("button", { class: "btn", text: "⬇ Download Card", onclick: exportCard }),
-        el("button", { class: "btn", text: "🔗 Copy Link", onclick: copyLink }),
-        fileBtn("Open Card…", ".html,.json", false, openFile),
-        el("button", { class: "mini", text: "Preview", onclick: () => { document.body.classList.add("ed-collapsed"); resetExperience(); } }),
-        hasDraft && el("button", { class: "mini", text: "Restore Draft", onclick: (e) => {
-          try { C = JSON.parse(localStorage.getItem(DRAFT)); window.CARD = C; buildForm(); applyConfig(); e.target.remove(); toast("Draft restored"); } catch { toast("Couldn't restore the draft"); }
-        } })),
-      note, linkOut),
-    edBody);
-  const fab = el("button", { class: "btn ed-fab", text: "✎ Edit Card", onclick: () => document.body.classList.remove("ed-collapsed") });
+      el("button", { class: "close ed-x", type: "button", "aria-label": "Hide Editor", text: "✕", onclick: () => document.body.classList.add("ed-collapsed") }),
+      titleEl, ledeEl, stepsEl,
+      privacyEl,
+      note),
+    edBody,
+    el("div", { class: "ed-nav" }, backBtn, previewBtn, el("span", { class: "spacer" }), sendBtn, nextBtn),
+    fileInput);
+
+  const fab = el("div", { class: "ed-fab" },
+    el("button", { class: "btn", type: "button", text: "✎ Edit Card", onclick: () => document.body.classList.remove("ed-collapsed") }),
+    el("button", { class: "btn send", type: "button", text: "Send", onclick: () => { document.body.classList.remove("ed-collapsed"); go("send"); } }));
+
   document.body.append(panel, fab);
-  buildForm();
+
+  function restart(wantDefault) {
+    path = wantDefault ? "default" : null;
+    if (wantDefault) applyPath("default");
+    step = wantDefault ? "write" : "start";
+    document.body.classList.remove("ed-collapsed");
+    linkOut.replaceChildren();
+    render();
+    changed();
+    toast(wantDefault ? "Quick Default Template" : "Fresh Card — Choose a Path");
+  }
+  editorAPI = { restart, go, exportCard, copyLink };
+
+  // Deep-links: #create=default skips chooser
+  if (opts.startDefault) { applyPath("default"); step = "write"; }
+  else if (opts.fromCreate && !opts.startDefault) { step = "start"; }
+  else if (path) { step = "write"; }
+  else { step = "start"; }
+
+  render();
+  changed();
 }
+
 })();
 </script>
 </body>

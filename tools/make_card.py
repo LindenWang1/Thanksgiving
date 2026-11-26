@@ -7,7 +7,7 @@ Usage:
     python3 tools/make_card.py private/you/you.json -o ~/Desktop/you.html
 
 The JSON file uses the same fields as the CONFIG block in index.html
-(see people.example.json). Any local photo / music / gift-card image paths
+(see people.example.json). Any local photo / music / gift-card / drink image paths
 are read relative to the JSON file and embedded directly into the HTML, so
 the output is ONE self-contained file you can text, email, or AirDrop.
 
@@ -45,6 +45,27 @@ def to_data_uri(path_str: str, base: Path) -> str:
     return f"data:{mime};base64,{data}"
 
 
+def make_private(html: str) -> str:
+    """Same privacy steps the in-browser editor applies to a downloaded card:
+    hide it from search engines, mark it as a personal card (opens as the card,
+    not the sample), and drop the public "Create a Thank-You" bar + skip link."""
+    html = re.sub(r'<meta name="robots"[^>]*>', '<meta name="robots" content="noindex,nofollow">', html, count=1, flags=re.I)
+
+    body = re.search(r'<body([^>]*?)class="([^"]*)"', html)
+    if body:
+        parts = body.group(2).split()
+        if "personal-card" not in parts:
+            parts.append("personal-card")
+        html = html[: body.start(2)] + " ".join(parts) + html[body.end(2):]
+    # Only the real markup, never the copies of these strings inside the page's own script.
+    main = html.find("<main")
+    for pat in (r'<div class="create-bar"[^>]*>[\s\S]*?</div>\s*', r'<a class="skip-link"[^>]*>[\s\S]*?</a>\s*'):
+        m = re.search(pat, html)
+        if m and 0 <= m.start() < main:
+            html = html[: m.start()] + html[m.end():]
+    return html
+
+
 def slugify(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") or "card"
 
@@ -62,6 +83,8 @@ def main() -> None:
         item["src"] = to_data_uri(item.get("src", ""), base)
     if cfg.get("music", {}).get("src"):
         cfg["music"]["src"] = to_data_uri(cfg["music"]["src"], base)
+    if cfg.get("cider", {}).get("image"):
+        cfg["cider"]["image"] = to_data_uri(cfg["cider"]["image"], base)
     if cfg.get("giftcard", {}).get("image"):
         cfg["giftcard"]["image"] = to_data_uri(cfg["giftcard"]["image"], base)
 
@@ -71,6 +94,7 @@ def main() -> None:
         sys.exit("CONFIG markers not found in index.html")
     blob = json.dumps(cfg, ensure_ascii=False, indent=2).replace("</", "<\\/")
     html = html[: i + len(START)] + "\nwindow.CARD = " + blob + ";\n" + html[j:]
+    html = make_private(html)
 
     out = args.out or base / f"thanksgiving-{slugify(cfg.get('to', 'card'))}.html"
     out = out.expanduser()
